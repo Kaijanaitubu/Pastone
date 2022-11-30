@@ -1,7 +1,8 @@
 ;ティラノスクリプトサンプルゲーム
 
 *start
-
+[voconfig name="akane" sebuf="yoursebuf" vostorage="sound/laz1-1_{number}.wav" number=1]
+[vostart]
 [cm  ]
 [clearfix]
 [start_keyconfig]
@@ -58,7 +59,7 @@
 
 ;キャラクター登場
 [chara_show  name="akane"  ]
-#?
+#
 こんにちは。[p]
 私の名前はあかね。[p]
 #あかね

@@ -18,16 +18,23 @@
 [hidemenubutton]
 
 ;プラグイン呼び出し
-[plugin name="textbox_ex"]
-[plugin name="backlog"]
-[plugin name="tsex"]
+; [plugin name="textbox_ex"]
+; [plugin name="backlog"]
+; [plugin name="tsex"]
 [plugin name="voiceplay_ex"]
-[plugin name="ambient_light"]
-[plugin name="slider_ui"]
-[plugin name="auto_indent"]
+;[plugin name="ambient_light"]
+; [plugin name="slider_ui"]
+; [plugin name="auto_indent"]
+
+;ボタン関連
+
+
+; [vrepeat_config graphic=".button_voice.png" x="400" y="500"]
+;[logrepeat_config element=".backlog_chara_name" insert="after"]
+; [logrepeat_config]element=".backlog_chara_name" insert="intoafter"]
+; [logrepeat_config]element=".backlog_chara_name" insert="self"]
 ;タイトル画面へ移動
 @jump storage="title.ks"
 
 [s]
-
 
