@@ -1,9 +1,9 @@
 ;ティラノスクリプトサンプルゲーム
 
 *start
-[voconfig name="akane" sebuf="yoursebuf" vostorage="sound/laz1-1_{number}.wav" number=1]
+[voconfig  sebuf=0 name="akane" vostorage="sound/laz1-1_{number}.ogg" number=1]
 [vostart]
-[cm  ]
+[cm]
 [clearfix]
 [start_keyconfig]
 
