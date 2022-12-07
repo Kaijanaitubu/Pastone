@@ -21,7 +21,7 @@
 ; [plugin name="textbox_ex"]
 ; [plugin name="backlog"]
 ; [plugin name="tsex"]
-[plugin name="voiceplay_ex"]
+; [plugin name="voiceplay_ex"]
 ;[plugin name="ambient_light"]
 ; [plugin name="slider_ui"]
 ; [plugin name="auto_indent"]

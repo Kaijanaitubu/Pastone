@@ -15,3 +15,34 @@
     [stopse buf="7"]
     [stopse buf="8"]
 [endmacro]
+
+;各キャラの表情表示マクロ
+[macro name="mizuka"]
+    [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait"]
+    [chara_show name="mizuka" top="%top" zindex="%z" wait="%s_wait"]
+[endmacro]
+
+[macro name="yukito"]
+    [chara_mod name="yukito" face="%f" cross="false" wait="%m_wait"]
+    [chara_show name="yukito" top="%top" zindex="%z" wait="%s_wait"]
+[emdmacro]
+
+[macro name="raz"]
+    [chara_mod name="raz" face="%f" cross="false" wait="%m_wait"]
+    [chara_show name="raz" top="%top" zindex="%z" wait="%s_wait"]
+[emdmacro]
+
+[macro name="loz"]
+    [chara_mod name="loz" face="%f" cross="false" wait="%m_wait"]
+    [chara_show name="loz" top="%top" zindex="%z" wait="%s_wait"]
+[emdmacro]
+
+[macro name="kouki"]
+    [chara_mod name="kouki" face="%f" cross="false" wait="%m_wait"]
+    [chara_show name="kouki" top="%top" zindex="%z" wait="%s_wait"]
+[emdmacro]
+
+[macro name="ayana"]
+    [chara_mod name="ayana" face="%f" cross="false" wait="%m_wait"]
+    [chara_show name="ayana" top="%top" zindex="%z" wait="%s_wait"]
+[emdmacro]
