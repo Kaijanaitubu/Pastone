@@ -94,7 +94,6 @@
             //1桁の場合はゼロ埋めしない
             return num
         } else {
-            debugger
             return (Array(len).join("0") + num).slice(-len)
         }
     }
