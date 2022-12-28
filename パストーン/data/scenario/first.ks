@@ -15,11 +15,6 @@
 ;このゲームで登場するキャラクターを宣言(立ち絵は仮)
 @call storage="chara.ks"
 
-;ゲームで必ず必要な初期化処理はこのファイルに記述するのがオススメ
-
-;メッセージボックスは非表示
-@layopt layer="message" visible=false
-
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
 
@@ -31,6 +26,7 @@
 
 ;キャラクターの名前が表示される文字領域
 [ptext name="chara_name_area" layer="message0" color="white" shadow="0x333333" size="28" bold="true" x="140" y="505"]
+[chara_config ptext="chara_name_area"]
 
 ;プラグイン呼び出し
 [plugin name="textbox_ex"]
@@ -48,6 +44,10 @@
 ;[logrepeat_config element=".backlog_chara_name" insert="after"]
 ; [logrepeat_config]element=".backlog_chara_name" insert="intoafter"]
 ; [logrepeat_config]element=".backlog_chara_name" insert="self"]
+
+;メッセージボックスは非表示
+@layopt layer="message" visible=false
+
 ;タイトル画面へ移動
 @jump storage="title.ks"
 

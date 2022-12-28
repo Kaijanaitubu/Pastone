@@ -5,8 +5,8 @@
 [voconfig sebuf="6" name="???" vostorage="other/1-2_{number}.ogg" number="1"]
 [vostart]
 
-[camera zoom="2" x="-300" y="0" time="10" wait="true"]
-[bg storage="living.png" ]
+;[camera zoom="2" x="-300" y="0" time="10" wait="true"]
+[bg storage="living_big.png"]
 
 #???
 「───あと、食材はここにあるから、後で…」[vp]
@@ -46,9 +46,13 @@
 …いや、考えていても仕方ない。[vp]
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
 
-#雪翔
+[bg storage="living.png" ]
+
+[kouki f=bishou]
+#黄樹
 「お、やっと起きた。」[vp]
 
+[kouki f=shinpai]
 #黄樹
 「中々降りてこなかったから体調でも悪いのかと思ったんだが…」[vp]
 
@@ -56,8 +60,11 @@
 ≪……≫[vp]
 
 申し訳ないが、今は父さんの言葉に反応する余裕はなかった。[vp]
-俺の意識は、キッチンに立つ父さんではなく…[vp]
 
+俺の意識は、キッチンに立つ父さんではなく…[vp]
+[chara_hide_all]
+
+[mizuka f=egao]
 #美寿花
 「…雪翔君、だよね？　おはよう」[vp]
 
@@ -71,6 +78,7 @@
 いや、そうでなければただの不審者なのだが…と、自分の考えに自分で突っ込む。[vp]
 ;演出 ズームアウトを立ち絵と
 
+[kouki f=kyoton]
 #黄樹
 「ん？　何をそこでボーっとしてるんだ？」[vp]
 
@@ -78,18 +86,24 @@
 そりゃするだろ。なんだよこの状況。[vp]
 困惑の視線を父さんに送るが、ああ、と納得したように笑い受け流される。[vp]
 
+[kouki f=shinpai]
 #黄樹
 「そうか。そういえばまだ説明してなかったな。彼女は…」[vp]
 
+;効果音 電話の音
+
+[kouki f=komarimayu]
 #黄樹
 「…んん？」[vp]
 
 タイミング悪く、どこからか聞こえてくる着信音。[vp]
 
+[kouki f=kushou]
 #黄樹
 「ああ、僕の携帯か。すまん。ちょっと出てくるから、二人でゆっくりしていてくれ」[vp]
 
 #黄樹
+[chara_hide name="kouki" time="500" wait="false" ]
 「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
 
 #雪翔
