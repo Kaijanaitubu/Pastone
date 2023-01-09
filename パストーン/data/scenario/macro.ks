@@ -27,9 +27,6 @@
 
 	;システムボタンの表示
 	[layopt layer="fix" visible="true" ]
-
-	;喋っていないキャラが暗くなる機能をオフに
-	[chara_config  talk_focus="none"]
 	
 	#
 [endmacro]
@@ -58,6 +55,22 @@
 [macro name="ayana"]
     [chara_mod name="ayana" face="%f" cross="false" wait="%m_wait|true"]
     [chara_show name="ayana" top="%top" zindex="%z" wait="%s_wait|true"]
+[endmacro]
+
+;効果音再生
+[macro name="se"]
+    [playse storage="%s" ]
+[endmacro]
+
+;画像表示用
+[macro name="cg" ]
+    [image storage="%storage" width="%w|1280" height="%h|720" layer="%layer|1" visible="%visible|true" time="%time|1000" name="%name|cg" ]
+[endmacro]
+
+;画像削除用
+[macro name="freecg" ]
+    [free layer="1" name="cg" time="10" ]
+    [freeimage layer="1" time="%time|1000" wait="%wait|true" ]
 [endmacro]
 
 [return]

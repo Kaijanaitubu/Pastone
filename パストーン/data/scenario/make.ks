@@ -5,13 +5,13 @@
 ;
 ;
 
-;オートスキップ拡張機能プラグイン
-;[autoskip_ex]
+オートスキップ拡張機能プラグイン
+[autoskip_ex]
 
 ;ボイス機能拡張プラグイン
 [voiceplay_ex_restore]
-;環境光プラグイン
-;[ambient_light_restore]
+環境光プラグイン
+[ambient_light_restore]
 ;make.ks はロード時にcallとして呼ばれるため、return必須です。
 [return]
 

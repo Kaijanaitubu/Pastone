@@ -391,11 +391,11 @@
 // ◆ 影を描画するか
 // する場合は true, しない場合は false を指定します。
 // 注意：文字の縁取りと同時に使用することはできません。その場合、影は無効になります。
-;defaultShadow = false;  // deffont タグの shadow 属性に相当
+;defaultShadow = true;  // deffont タグの shadow 属性に相当
 
 // ◆ 影の色
 // 影の色を 0xRRGGBB 形式で指定します。
-;defaultShadowColor = 0x000000;  // deffont タグの shadowcolor に属性に相当
+;defaultShadowColor = 0x303030;  // deffont タグの shadowcolor に属性に相当
 
 // ◆ 縁取りをするか
 // する場合は true, しない場合は false を指定します。
