@@ -32,6 +32,7 @@
 [plugin name="ambient_light" link="bg"]
 [plugin name="slider_ui"]
 [plugin name="auto_indent"]
+[plugin name=manpu]
 
 ;マクロやキーフレームの定義
 @call storage="macro.ks"

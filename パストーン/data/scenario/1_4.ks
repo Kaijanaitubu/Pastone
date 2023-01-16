@@ -94,7 +94,7 @@
 
 [chara_hide_all]
 ;CG表示用にcgというマクロを作ってみました。詳細はmacro.ksを確認してください
-[cg storage="cg/1_4/bishou.png" width="1280" height="720" layer="1" visible="true" time="1200"]
+[cg s="cg/1_4/bishou.png" width="1280" height="720" layer="1" visible="true" time="1200"]
 
 そう言って、俺のすぐ後ろまで美寿花が近づいてくる。[vp]
 それと同時に、俺の肩にそっと手が置かれた。[vp]
@@ -107,7 +107,7 @@
 なんだ、今の…？[vp]
 ほんの少しの違和感。[vp]
 
-[cg storage="cg/1_4/kyoton.png"]
+[cg s="cg/1_4/kyoton.png"]
 
 #美寿花
 「へぇ、こんな感じで作ってるんだ…」[vp]
@@ -142,7 +142,7 @@
 歌は、声があって初めて成立するものだ。[vp]
 …でも、俺には…[vp]
 
-[cg storage="cg/1_4/magao.png"]
+[cg s="cg/1_4/magao.png"]
 ;ボイス更新予定
 #美寿花
 「意味ないことなんてないよ。この歌詞が、少年君の『声』なんでしょ？」[vp]
@@ -153,14 +153,14 @@
 ただ、悔しいのが俺の表情に出てて、それに反応して言った言葉なんだと…[vp]
 …でも、今のは…[vp]
 
-[cg storage="cg/1_4/egao.png"]
+[cg s="cg/1_4/egao.png"]
 #美寿花
 「やっと聞けたね。君の声」[vp]
 
 #雪翔
 ≪…なん、で…？≫[vp]
 
-[cg storage="cg/1_4/kanashi.png" name="last"]
+[cg s="cg/1_4/kanashi.png" name="last"]
 #美寿花
 「…ごめんね、雪翔君。私、薄谷教授から聞いてたんだ」[vp]
 
@@ -174,7 +174,7 @@
 …だから、俺が喋ろうとしても、それが人に届くことはない。[vp]
 …そのはず、なのに。[vp]
 
-[cg storage="cg/1_4/magao.png"]
+[cg s="cg/1_4/magao.png"]
 #雪翔
 ≪‥‥‥≫[vp]
 
@@ -188,7 +188,7 @@
 俺の『言葉』に、美寿花は首を横に振って『反応』する。[vp]
 
 ;ボイス更新予定
-[cg storage="cg/1_4/bishou.png"]
+[cg s="cg/1_4/bishou.png"]
 #美寿花
 「そんな大したものじゃないよ。その人が伝えようって意志を持った言葉しか聞くことはできない」[vp]
 
@@ -199,7 +199,7 @@
 #美寿花
 「…だから、大抵の人には使ってもあまり意味はないんだけど…」[vp]
 
-[cg storage="cg/1_4/magao.png"]
+[cg s="cg/1_4/magao.png"]
 #美寿花
 「私なら、君が自分の声を取り戻すまで、『その代わり』ができる」[vp]
 
@@ -207,7 +207,7 @@
 ≪…俺、の…≫[vp]
 
 ;前回表示した差分をすぐに表示する場合は、こういう風に要素名を付けて（下に続く）
-[cg storage="cg/1_4/egao.png" name="egao" ]
+[cg s="cg/1_4/egao.png" name="egao" ]
 #美寿花
 「少年君はさ、夢とかある？」[vp]
 
@@ -222,7 +222,7 @@
 #雪翔
 ≪…作るだけじゃなくて、自分で、歌ってみたい≫[vp]
 
-[cg storage="cg/1_4/egao.png"]
+[cg s="cg/1_4/egao.png"]
 #美寿花
 「いいじゃん！」[vp]
 
@@ -234,27 +234,27 @@
 
 言い出しておいてなんだが、やっぱり人に歌詞を見られるのは恥ずかしい。[vp]
 
-[cg storage="cg/1_4/bishou.png"]
+[cg s="cg/1_4/bishou.png"]
 #美寿花
 「じゃ、少年君の目標も聞けたことだし…」[vp]
 
 #雪翔
 ≪…あ、ちょっといいか？≫[vp]
 
-[cg storage="cg/1_4/kyoton.png"]
+[cg s="cg/1_4/kyoton.png"]
 #美寿花
 「ん？」[vp]
 
 #雪翔
 ≪その、『少年君』っていうの、ちょっとむず痒いっていうか…≫[vp]
 
-[cg storage="cg/1_4/bishou.png"]
+[cg s="cg/1_4/bishou.png"]
 #美寿花
 「ああ、だって君、どうも同い年って感じがしなくて…」[vp]
 
 それはまぁ、分かる。俺も美寿花とは真逆の意味で同い年とは思えない。[vp]
 
-[cg storage="cg/1_4/egao.png"]
+[cg s="cg/1_4/egao.png"]
 #美寿花
 「…じゃあ、これからしばらくの間『君の声』として…よろしく、雪翔君」[vp]
 
