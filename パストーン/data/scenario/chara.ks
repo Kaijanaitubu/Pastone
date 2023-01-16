@@ -10,6 +10,11 @@
 [chara_new  name="RozLaz" storage="chara/RozLaz/normal.png" width="523" height="552.51" jname="ロズラズ"  ]
 [chara_new  name="eijyurou" storage="chara/eijyurou.png" width="320" height="720" jname="永寿郎"  ]
 [chara_new  name="CG" storage="singlepic/1_4/bishou.png" width="1280" height="720" jname="一枚絵"  ]
+[chara_new name="mizuka_big" storage="chara/mizuka/kushou.png" width="" height="" jname="美寿花"]
+[chara_new name="kouki_big" storage="chara/kouki/bishou.png" width="" height="" jname="黄樹"]
+[chara_new name="roz_big" storage="chara/RozLaz/roz_neutral.png" width="" height="" jname="ロズ"]
+[chara_new name="loz_big" storage="chara/RozLaz/laz_normal.png" width="" height="" jname="ラズ"]
+[chara_new name="ayana_big" storage="chara/ayana/normal.png" width="" height="" jname="文永"]
 
 ;------------------------------------------------------------------------------------------------------
 ; キャラ表情定義

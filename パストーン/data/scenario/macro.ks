@@ -27,6 +27,9 @@
 
 	;システムボタンの表示
 	[layopt layer="fix" visible="true" ]
+
+	;喋っていないキャラが暗くなる機能をオフに
+	[chara_config  talk_focus="none"]
 	
 	#
 [endmacro]
@@ -71,6 +74,48 @@
 [macro name="freecg" ]
     [free layer="1" name="cg" time="10" ]
     [freeimage layer="1" time="%time|1000" wait="%wait|true" ]
+[endmacro]
+
+;ズーム用
+[macro name="big_layer1"]
+    [chara_show name="layer1" top="%top" time="%time" wait="false" layer="%layer|1"]
+[endmacro]
+
+[macro name="big_layer2" ]
+    [chara_show name="layer2" top="%top" time="%time" wait="false" layer="%layer|1"]
+[endmacro]
+
+[macro name="big_layer3"]
+    [chara_show name="layer3" top="%top" time="%time" wait="false" layer="%layer|1"]
+[endmacro]
+
+[macro name="big_layer4"]
+    [chara_show name="layer4" top="%top" time="%time" wait="false" layer="%layer|1"]
+[endmacro]
+
+[macro name="big_layer5"]
+    [chara_show name="layer5" top="%top" time="%time" wait="false" layer="%layer|1"]
+[endmacro]
+
+;立ち絵アニメーション
+[macro name="mizuka_anim"]
+    [chara_hide name="mizuka" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="raz_anim"]
+    [chara_hide name="raz" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="loz_anim"]
+    [chara_hide name="loz" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="kouki_anim"]
+    [chara_hide name="kouki" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="ayana_anim"]
+    [chara_hide name="ayana" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
 [return]
