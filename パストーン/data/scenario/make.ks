@@ -5,12 +5,13 @@
 ;
 ;
 
-オートスキップ拡張機能プラグイン
+;オートスキップ拡張機能プラグイン
 [autoskip_ex]
-
+;漫符プラグイン
+[manpu_reset]
 ;ボイス機能拡張プラグイン
 [voiceplay_ex_restore]
-環境光プラグイン
+;環境光プラグイン
 [ambient_light_restore]
 ;make.ks はロード時にcallとして呼ばれるため、return必須です。
 [return]
