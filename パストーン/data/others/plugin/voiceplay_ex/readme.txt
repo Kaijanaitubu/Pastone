@@ -52,7 +52,8 @@ vlanim_set_end：アニメーション定義終了
 vlanim_config：アニメーション設定
 属性：
 speed               ：画像を切り替える速度を指定します。単位はミリ秒です。初期値は50です。
-bgm_volume          ：ボイス再生中にBGM音量を変更する場合は音量を指定します。
+bgm_volume          ：ボイス再生中にBGM音量を変更する場合はtrueを指定します。
+bgm_volume_change   ：ボイス再生中のBGM音量を指定します。
 
 vrepeat_config：ボイスリピートボタン設定
 属性：
@@ -72,11 +73,9 @@ vrepeat_delete：ボイスリピートボタン消去
 属性：
 なし
 
-logrepeat_config：バックログのボイスリピートボタン設定
+logrepeat：バックログにボイスリピートボタン追加
 属性：
-img：ボイスを再生するボタンの画像パスを指定します。画像はimageフォルダ下に配置します。
-element（必須）：ボイスを再生するボタンを配置する要素を指定します。cssのセレクタ記法が使用できます。
-insert：repeat_button_elementで指定した要素のどこにボタンを追加するかを指定します。before（要素の前）, after（要素の後）, intobefore（要素の中の先頭）, intoafter（要素の中の最後尾）, self（要素自体）のいずれかを指定
+なし
 
 voiceplay_ex_restore：make.ks記述用
 属性：
@@ -106,8 +105,11 @@ voiceplay_ex_restore：make.ks記述用
 [vrepeat]
 なにかのセリフ
 
+;発言直後にバックログにボタン追加させる
+[logrepeat]
+[l][cm]
+
 ;改ページのタイミングでリピートボタン消去
-[p]
 [vrepeat_delete]
 
 
@@ -123,35 +125,7 @@ voiceplay_ex_restore：make.ks記述用
 
 ・[vrepeat]タグは発言するキャラ名の後に記述します。
 
-・[logrepeat_config]タグのelement属性には、ボイス再生ボタンを表示する前または後の要素をセレクタ記法で指定します。
-　セレクタ記法については「css セレクタ 書き方」とかでググってください。
-　例えば以下のようなDOM構成の場合↓
-<b class="backlog_chara_name キャラ名">キャラ名</b>：
-<span class="backlog_text キャラ名">セリフ</span>
-
-①このように記述すると↓
-[logrepeat_config]element=".backlog_chara_name" insert="after"]
-
-①こうなります↓
-<b class="backlog_chara_name キャラ名">キャラ名</b>
-<img src="./data/image/button/auto.png" class="backlog_chara_name backlog_repeat">：
-<span class="backlog_text キャラ名">セリフ</span>
-
-②このように記述すると↓
-[logrepeat_config]element=".backlog_chara_name" insert="intoafter"]
-
-②こうなります↓
-<b class="backlog_chara_name キャラ名">キャラ名
-<img src="./data/image/button/auto.png" class="backlog_chara_name backlog_repeat"></b>：
-<span class="backlog_text キャラ名">セリフ</span>
-
-③このように記述すると↓
-[logrepeat_config]element=".backlog_chara_name" insert="self"]
-
-③こうなります↓
-<b class="backlog_chara_name キャラ名">キャラ名</b>：
-<span class="backlog_text キャラ名">セリフ</span>
-※insert="self"を指定した場合、element属性で指定した要素自身がリピートボタンの役割を持ちます。
+・[logrepeat]タグは発言完了後に記述します。
 
 
 ■注意事項
@@ -166,15 +140,9 @@ https://skt-pnt.netlify.app
 
 
 ■更新履歴
-2022/10/30  ver.0.3.0α公開
-・v520対応、v514以前との互換性なし
-・logrepeatタグ廃止
-・logrepeat_configタグ追加
-・stopbgm関連バグ修正
-
 2022/05/22  ver.0.2.0α公開
 ・音量設定が0の場合でも口パクするように修正
-・ボイス再生中のBGM音量を変更できる機能を追加
+・ボイス再生中にBGM音量を変更できる機能を追加
 
 2022/02/11  ver.0.1.2α公開
 ・ロード時にループ効果音が再生されない不具合を修正

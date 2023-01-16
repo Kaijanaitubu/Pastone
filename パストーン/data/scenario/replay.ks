@@ -49,11 +49,6 @@
 *backtitle
 [cm]
 [freeimage layer=1]
-
-[iscript]
-tf.system.flag_replay = false;
-[endscript]
-
 @jump storage=title.ks
 
 *nextpage
@@ -69,7 +64,7 @@ tf.system.flag_replay = false;
 [cm]
 
 [iscript]
-    tf.system.flag_replay = true;
+    tf.flag_replay = true;
 [endscript]
 
 [free layer=1 name="label_replay"]

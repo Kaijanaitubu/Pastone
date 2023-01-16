@@ -1,23 +1,38 @@
-
 [cm]
-
-@clearstack
-@bg storage ="title.jpg" time=100
-@wait time = 200
 
 *start 
 
-[button x=135 y=230 graphic="title/button_start.png" enterimg="title/button_start2.png"  target="gamestart" keyfocus="1"]
-[button x=135 y=320 graphic="title/button_load.png" enterimg="title/button_load2.png" role="load" keyfocus="2"]
-[button x=135 y=410 graphic="title/button_cg.png" enterimg="title/button_cg2.png" storage="cg.ks" keyfocus="3"]
-[button x=135 y=500 graphic="title/button_replay.png" enterimg="title/button_replay2.png" storage="replay.ks" keyfocus="4"]
-[button x=135 y=590 graphic="title/button_config.png" enterimg="title/button_config2.png" role="sleepgame" storage="config.ks" keyfocus="5"]
+@clearstack
+@bg storage="title.png" time="100"
+@wait time="200"
+@layopt layer="message0" visible="false"
+[hidemenubutton]
+[layopt layer="fix" visible="false" ]
+
+
+;リリースするときには消す
+;[iscript]
+;localStorage.clear();
+;[endscript]
+;ここまで
+
+[afterjumpmaskNormal]
+
+[button x="130" y="350" graphic="title/START.png" enterimg="title/START_c.png"  target="gamestart"]
+[button name="title" x="130" y="460" graphic="title/LOAD.png" enterimg="title/LOAD_c.png" role="load" ]
+;[button name="title" x="130" y="480" graphic="title/GALLERY.png" enterimg="title/GALLERY_u.png" storage="cg.ks"]
+;[button name="title" x=135 y=500 graphic="title/button_replay.png" enterimg="title/button_replay2.png" storage="replay.ks"]
+;[button name="title" x="130" y="590" graphic="title/CONFIG.png" enterimg="title/CONFIG_c.png" role="sleepgame" storage="config.ks"]
+
+[image x="10" y="30" width="692" height="232" storage="logo_title.png" layer="0" visible="true"]
+
+;[fadeinbgm storage="title_intro.ogg" loop="false" time="1000"]
+;[wait time="7000"]
+[playbgm storage="title.ogg" loop="true"]
 
 [s]
 
 *gamestart
+[clearfix name="title" ]
 ;一番最初のシナリオファイルへジャンプする
-@jump storage="scene1.ks"
-
-
-
+@jump storage="01fade.ks"
