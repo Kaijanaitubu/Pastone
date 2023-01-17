@@ -5,7 +5,6 @@
 @layopt layer=message0 visible=false
 
 @clearfix
-[freeimage layer="0"]
 [hidemenubutton]
 [cm]
 
