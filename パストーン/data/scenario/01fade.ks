@@ -6,13 +6,15 @@
 ;[chara_show name="kouki" top="20" wait="true" layer=0]
 ;[chara_show name="ayana" top="20" wait="true" layer=0]
 ;[chara_show name="RozLaz" top="20" wait="true" layer=0 ]
-クリックしたらマスクかかる[p]
+クリックしたらズームかかる[p]
+
 
 [chara_hide name="mizuka" time="500"]
 ;[chara_hide name="kouki" time="500"]
 ;[chara_hide name="ayana" time="500"]
 ;[chara_hide name="RozLaz" time="500"]
-[bg  storage="living.png" wait="false" time="1000"]
+
+;[bg  storage="living.png" wait="false" time="1000"]
 
 ;[capimg ui=false filename="mizuka_fade.png" saveas="true"]
 ;[mask time=500 effec=fadeIn graphic="フェード演出/mizuka_fade.png"]
@@ -22,6 +24,7 @@
 ;[chara_show name="kouki_big" top="-50" wait="false" time="800" layer=1]
 ;[chara_show name="ayana_big" top="-50" wait="false" time="800" layer=1]
 ;[chara_show name="RozLaz_big" top="-50" wait="false" time="800" layer=1]
+
 ;[mask_off effect="fadeOut" ]
 ;[chara_move name="mizuka" effect="easeInOutBack" left="-=100" top="-=50" width="1203" height="1701"]
 
@@ -32,5 +35,7 @@
 aa[p]
 
 ;[chara_hide_all time=0 wait="true"]
-;[chara_hide_all time=0 wait="true" layer=1]
-[scenejumpNormal sc="title.ks"]
+[chara_hide_all time=0 wait="true" layer=1]
+;[scenejumpNormal sc="title.ks"]
+[clearfix]
+@jump storage="title.ks"

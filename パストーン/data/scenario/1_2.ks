@@ -83,8 +83,10 @@
 [stop_bgmovie time="1000" wait="true"]
 
 ;☆BGM再生 美寿花のテーマ
-
+[playbgm storage="music.ogg"]
 ;☆立ち絵 美寿花を大きく表示（レイヤー2で）
+[chara_show name="mizuka_big" wait="false" time="800" layer=2 ]
+[big_layer1 top="-50" time="500" layer="2"]
 #美寿花
 「…雪翔君、だよね？　おはよう」[vp]
 
@@ -100,6 +102,7 @@
 [mizuka f="egao" time="10"]
 [kouki f="kyoton" time="10"]
 ;☆立ち絵 大きい美寿花の立ち絵を非表示 レイヤー2を指定
+[chara_hide name="mizuka_big" layer=2]
 [freecg]
 /* 拡大して美寿花を表示した状態から、シームレスに黄樹と美寿花が並んでいる画面に移行したかったので、
 上のレイヤーに背景と美寿花を表示して、下のレイヤーに二人を表示してからフェードアウトする手法をとっています。 
@@ -116,7 +119,7 @@
 「そうか。そういえばまだ説明してなかったな。彼女は…」[vp]
 
 ;☆効果音 電話の音
-
+[se s="ability.mp3"]
 [kouki f=komarimayu]
 #黄樹
 「…んん？」[vp]
@@ -132,7 +135,7 @@
 「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
 
 ;☆効果音 ドア開閉
-
+[se s="door_open.mp3"]
 #雪翔
 ≪え、ちょっと待っ…≫[vp]
 
