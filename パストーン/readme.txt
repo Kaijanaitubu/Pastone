@@ -1,12 +1,12 @@
-TyranoScript｜ティラノスクリプト　Ver5.20（C）ShikemokuMK
-https://tyrano.jp
+TyranoScript｜ティラノスクリプト　Ver5.00（C）ShikemokuMK
+http://tyrano.jp
 
 
 ■主な特徴■
 
 ①　HTMLとJavaScriptで動作します
 
-iPhone、iPad、アンドロイドなどの端末で動作させることが可能です。
+iphone、ipad、アンドロイドなどの端末で動作させることが可能です。
 また、PhoneGapなどのツールを使うことでアプリ化して
 AppStoreやアンドロイドマーケットで販売することができます。
 
@@ -32,18 +32,18 @@ AppStoreやアンドロイドマーケットで販売することができます
 公式ページにチュートリアルとタグリファレンスがありますので参考にしてください
 
 【タグリファレンス】
-https://tyrano.jp/tag
+http://tyrano.jp/home/tag
 
 【使い方＆チュートリアル】
-https://tyrano.jp/usage/tutorial
+http://tyrano.jp/usage/tutorial
 
 
 ■ティラノビルダー■
-https://b.tyrano.jp
+http://b.tyrano.jp
 ティラノスクリプトの公式開発ツールです。ゲーム制作が楽になります。
 
 ■ティラノライダー■
-https://tyrano.jp/usage/tech/rider
+http://tyrano.jp/adv/next/rider
 公式デバッグツールです。変数ウォッチなどの開発をサポートする機能があります。
 
 ■利用規約■
@@ -68,7 +68,7 @@ https://tyrano.jp/usage/tech/rider
 shikemokumk@gmail.com
 
 Twitter
-https://twitter.com/shikemokumk
+http://twitter.com/shikemokumk
 
 
 

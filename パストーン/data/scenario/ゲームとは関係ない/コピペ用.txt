@@ -1,0 +1,56 @@
+;キャラクター描画
+[chara_show name="キャラ名" top="20" storage="chara/キャラ名/表情" wait="true"]
+[chara_show name="mizuka" top="20" storage="chara/mizuka/" wait="true"]
+[chara_show name="kouki" top="20" storage="chara/kouki/" wait="true"]
+[chara_show name="ayana" top="20" storage="chara/ayana/" wait="true"]
+[chara_show name="roz" top="20" storage="chara/roz/" wait="true"]
+[chara_show name="laz" top="20" storage="chara/laz/" wait="true"]
+[chara_hide_all]
+
+;サウンド系
+[voice1 vf1="mizuka/mizuka2-2_1.ogg"]
+[voice1 vf1="se/"]
+[voice2 vf2="se/"]
+[voice1 vf1=""]
+[voice2 vf2=""]
+[voicestop]
+[stopse]
+
+;背景
+[bg storage="ファイル名" time=0]
+[bg storage="" time=0]
+
+;マスク
+[mask time="0"]
+[mask_off effect="fadeOutLeftBig"]
+[macro name = "scenejumpNormal"]
+[afterjumpmaskNormal]
+[bgchangemask]
+[bgchangemask_off]
+
+;シーンジャンプ
+*start
+[scenejumpNormal sc = "1-3.ks"]
+
+;満符
+https://plugin.tyrano.jp/item/5027
+[manpu layer=1 name=yamato type=hatena x=-50 y=50]
+
+;その他
+[startoption]
+[wait time="0"]
+
+;スキップ時の時短用
+
+[is_skip]
+[if exp="tf.is_skip != true"]
+
+[else]
+
+[endif]
+
+
+
+
+
+
