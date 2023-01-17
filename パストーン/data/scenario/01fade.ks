@@ -7,7 +7,7 @@
 クリックしたらマスクかかる[p]
 
 [chara_hide name="mizuka" wait="false" time="500"]
-[bg  storage="living_zoom.png" wait="false" time="1000"]
+[bg  storage="living.png" wait="false" time="1000"]
 
 ;[capimg ui=false filename="mizuka_fade.png" saveas="true"]
 ;[mask time=500 effec=fadeIn graphic="フェード演出/mizuka_fade.png"]
