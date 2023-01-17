@@ -7,8 +7,8 @@
 [macro name="black_band_init"]
 ;黒帯使うための初期化
     [chara_config pos_mode="false"]
-    [chara_show name="black_top" layer="0" top="-720" time="0"]
-    [chara_show name="black_bottom" layer="0" top="720" time="0"]
+    [chara_show name="black_top" layer="base" top="-720" time="0"]
+    [chara_show name="black_bottom" layer="base" top="720" time="0"]
     [chara_config pos_mode="true"]
 [endmacro]
 
@@ -41,6 +41,6 @@
 
 タイトルへ[p]
 
-[chara_hide_all time=0 wait="true"]
+[chara_hide_all time=0 wait="true" layer="base"]
 [chara_hide_all time=0 wait="true" layer=1]
 [scenejumpNormal sc="title.ks"]
