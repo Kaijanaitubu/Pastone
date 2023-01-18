@@ -165,4 +165,30 @@
 	[frame p="50%" y="-20"]
 [endkeyframe]
 
+;マクロ定義
+[macro name="black_band_init"]
+;黒帯使うための初期化
+    [chara_config pos_mode="false"]
+    [chara_show name="black_top" layer="base" top="-720" time="0"]
+    [chara_show name="black_bottom" layer="base" top="720" time="0"]
+    [chara_config pos_mode="true"]
+[endmacro]
+
+[macro name="black_band_show"]
+;黒帯を画面に出す
+    [chara_config pos_mode="false" ]
+    [chara_move name="black_top" top="+=120" wait="false" anim="true" ]
+    [chara_move name="black_bottom" top="-=120" wait="false" anim="true"]
+    [chara_config pos_mode="true" ]
+[endmacro]
+
+[macro name="black_band_hide"]
+;黒帯を隠す
+    [chara_config pos_mode="false" ]
+    [chara_move name="black_top" top="-=120" wait="false" anim="true" ]
+    [chara_move name="black_bottom" top="+=120" wait="false" anim="true"]
+    [chara_config pos_mode="true" ]
+[endmacro]
+;マクロ定義終わり
+
 [return]

@@ -15,6 +15,10 @@
 [chara_new name="RozLaz_big" storage="chara/RozLaz/normal.png" width="753.12" height="795.614" jname="ロズラズ"]
 [chara_new name="ayana_big" storage="chara/ayana/normal.png" width="1500" height="2121" jname="文永"]
 
+;黒帯マクロ用
+[chara_new name="black_top" storage="singlepic/演出/black.png" width="1280" height="720"]
+[chara_new name="black_bottom" storage="singlepic/演出/black.png" width="1280" height="720"]
+;黒帯マクロ用終わり
 ;------------------------------------------------------------------------------------------------------
 ; キャラ表情定義
 ;------------------------------------------------------------------------------------------------------
