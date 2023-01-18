@@ -126,6 +126,7 @@
 [macro name="ayana_big"]
     [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
     [chara_show name="ayana_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
+[endmacro]
 
 ;立ち絵アニメーション
 [macro name="mizuka_anim"]
