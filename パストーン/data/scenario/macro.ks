@@ -66,14 +66,14 @@
     [chara_show name="mizuka" top="20|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time" ] 
 [endmacro]
 
-[macro name="raz"]
-    [chara_mod name="raz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="raz" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
+[macro name="laz"]
+    [chara_mod name="laz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="laz" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
 [endmacro]
 
-[macro name="loz"]
-    [chara_mod name="loz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="loz" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
+[macro name="roz"]
+    [chara_mod name="roz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="roz" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
 [endmacro]
 
 [macro name="kouki"]
@@ -103,25 +103,29 @@
 [endmacro]
 
 ;ズーム用
-[macro name="big_layer1"]
-    [chara_show name="layer1" top="%top" time="%time" wait="false" layer="%layer|1"]
+[macro name="mizuka_big"]
+    [chara_mod name="mizuka_big" face="%f" cross="false" wait="%m_wait|true" time="%time" ]
+    [chara_show name="mizuka_big" top="20|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time" ] 
 [endmacro]
 
-[macro name="big_layer2" ]
-    [chara_show name="layer2" top="%top" time="%time" wait="false" layer="%layer|1"]
+[macro name="laz_big"]
+    [chara_mod name="laz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="laz_big" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
 [endmacro]
 
-[macro name="big_layer3"]
-    [chara_show name="layer3" top="%top" time="%time" wait="false" layer="%layer|1"]
+[macro name="roz_big"]
+    [chara_mod name="roz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="roz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
 [endmacro]
 
-[macro name="big_layer4"]
-    [chara_show name="layer4" top="%top" time="%time" wait="false" layer="%layer|1"]
+[macro name="kouki_big"]
+    [chara_mod name="kouki_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="kouki_big" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|1" time="%time"]
 [endmacro]
 
-[macro name="big_layer5"]
-    [chara_show name="layer5" top="%top" time="%time" wait="false" layer="%layer|1"]
-[endmacro]
+[macro name="ayana_big"]
+    [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="ayana_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
 
 ;立ち絵アニメーション
 [macro name="mizuka_anim"]
@@ -143,5 +147,22 @@
 [macro name="ayana_anim"]
     [chara_hide name="ayana" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
+
+;頷き風
+[keyframe name="un"]
+	[frame p="50%" y="20"]
+[endkeyframe]
+
+;ぴょんぴょん
+[keyframe name="pyonpyon"]
+	[frame p="25%" y="-20"]
+	[frame p="50%" y="20"]
+	[frame p="75%" y="-20"]
+[endkeyframe]
+
+;ぴょん
+[keyframe name="pyon"]
+	[frame p="50%" y="-20"]
+[endkeyframe]
 
 [return]
