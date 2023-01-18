@@ -8,18 +8,18 @@
 黒帯演出[np]
 [black_band_show]
 #
-黒帯演出終わり[np]
+黒帯演出終わり[p]
 [black_band_hide]
 
 
 #
-拡大演出[np]
+拡大演出[p]
 [layopt layer=1 visible="true"]
 [bg2 storage="living_blur.png" time="800" wait="false" left=-50 top=-28 width=1380 height=776]
 [chara_show name="mizuka_big" top="-50" wait="false" time="1200" layer=1]
 
 [wa]
-拡大演出終わり[np]
+拡大演出終わり[p]
 
 [bg2 storage="living.png" time="800" wait="false"]
 [chara_hide name="mizuka_big" time="400" wait="false" layer="1"]
