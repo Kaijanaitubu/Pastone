@@ -10,12 +10,12 @@
 [wa]
 
 #
-疑問
+疑問[p]
  [manpu layer=0 name=mizuka type=hatena x=430 y=0]
 
-タイトルへ[p]
+終了[p]
 
 [chara_hide_all time=0 wait="true" layer="base"]
 [chara_hide_all time=0 wait="true" layer=0]
 [chara_hide_all time=0 wait="true" layer=1]
-@jump storage="title.ks"
+;@jump storage="title.ks"

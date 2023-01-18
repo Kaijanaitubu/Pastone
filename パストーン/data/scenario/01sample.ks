@@ -25,9 +25,7 @@
 [chara_hide name="mizuka_big" time="400" wait="false" layer="1"]
 [reset_camera time="800" wait="true" layer="base"]
 
-タイトルへ[p]
-
 [chara_hide_all time=0 wait="true" layer="base"]
 [chara_hide_all time=0 wait="true" layer=0]
 [chara_hide_all time=0 wait="true" layer=1]
-@jump storage="title.ks"
+@jump storage="02sample.ks"
