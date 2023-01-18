@@ -17,5 +17,5 @@
 タイトルへ[p]
 
 [chara_hide_all time=0 wait="true" layer="base"]
-[chara_hide_all time=0 wait="true" layer=1]
-[scenejumpNormal sc="title.ks"]
+[chara_hide_all time=0 wait="true" layer=0]
+@jump storage="title.ks"

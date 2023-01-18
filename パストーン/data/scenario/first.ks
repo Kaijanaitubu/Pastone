@@ -48,7 +48,7 @@
 
 
 ;タイトル画面へ移動
-@jump storage="01fade.ks"
+@jump storage="title.ks"
 
 [s]
 
