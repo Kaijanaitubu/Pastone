@@ -19,6 +19,11 @@
 ; キャラ表情定義
 ;------------------------------------------------------------------------------------------------------
 
+
+
+[chara_new name="black_top" storage="singlepic/演出/black.png" width="1280" height="720"]
+[chara_new name="black_bottom" storage="singlepic/演出/black.png" width="1280" height="720"]
+
 ;美寿花
 [chara_face name="mizuka" face="akire" storage="chara/mizuka/akire.png"]
 [chara_face name="mizuka" face="aseganizindaegao" storage="chara/mizuka/aseganizindaegao.png"]
