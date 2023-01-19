@@ -2,18 +2,20 @@
 
 [bg storage="living.png" time="10"]
 
-[chara_show name="mizuka" top="20" wait="true" layer=0]
+;[chara_show name="mizuka" top="20" wait="true" layer=0]
+[mizuka f="egao" layer=0]
 ;[chara_show name="kouki" top="20" wait="true" layer=0]
 ;[chara_show name="ayana" top="20" wait="true" layer=0]
 ;[chara_show name="RozLaz" top="20" wait="true" layer=0 ]
 クリックしたらズームかかる[p]
 
 
-[chara_hide name="mizuka" time="500"]
+;[chara_hide name="mizuka" time="500"]
+[mizuka_anim]
 ;[chara_hide name="kouki" time="500"]
 ;[chara_hide name="ayana" time="500"]
 ;[chara_hide name="RozLaz" time="500"]
-[mizuka top="-50" f="bishou" layer=1]
+[mizuka_big f="shinpai" top="-50" layer=1]
 ;[chara_show name="mizuka" top="-50"  face="bishou" layer=1]
 ;[bg  storage="living.png" wait="false" time="1000"]
 
@@ -31,7 +33,7 @@
 ;[chara_move name="mizuka" effect="easeInOutBack" left="-=100" top="-=50" width="1203" height="1701"]
 
 
-クリックしたらタイトル[p]
+こっち見んな[p]
 
 [wa]
 aa[p]

@@ -47,13 +47,12 @@
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
 
 [bg storage="living.png" ]
-
-[kouki f="bishou" layer=0]
-;[chara_show name="kouki" face="shinpai"]
+[reset_camera]
+[kouki f="bishou"  z="1" layer=0]
 #黄樹
 「お、やっと起きた。」[vp]
 
-[kouki f=shinpai]
+[kouki f="egao" layer=0]
 #黄樹
 「中々降りてこなかったから体調でも悪いのかと思ったんだが…」[vp]
 
@@ -66,10 +65,12 @@
 俺の意識は、キッチンに立つ父さんではなく…[vp]
 
 ;UIを削除して動画再生
-[bgmovie storage="mizuka_first_2.mp4" loop="false"]
+
 @layopt layer="message0" visible="false"
 [layopt layer="fix" visible="false"]
+[bgmovie storage="mizuka_first_2.mp4" loop="false" skip="false"]
 [better_wait time="9000"]
+
 
 ;レイヤー1にぼかして拡大したリビング背景を表示
 [camera layer="1" zoom="1.3" x="140" y="-70" time="10" wait="true"]
@@ -83,9 +84,9 @@
 ;動画をフェードアウト
 [stop_bgmovie time="1000" wait="true"]
 
-[playbgm storage="music.ogg"]
+[bgm_mizuka]
 ;☆立ち絵 美寿花を大きく表示（レイヤー2で）
-[mizuka_big top="-50" time="500" z="1" layer="2"]
+[mizuka_big f="egao" layer="2"]
 #美寿花
 「…雪翔君、だよね？　おはよう」[vp]
 
