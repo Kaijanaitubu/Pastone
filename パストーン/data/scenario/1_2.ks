@@ -98,8 +98,8 @@
 
 いや、そうでなければただの不審者なのだが…と、自分の考えに自分で突っ込む。[vp]
 
-[mizuka f="egao" time="10"]
-[kouki f="kyoton" time="10"]
+[mizuka f="egao" time="10" layer=0]
+[kouki f="kyoton" time="10" layer=0]
 
 [mizuka_anim time="500" layer="2"]
 [freecg]
@@ -118,7 +118,7 @@
 「そうか。そういえばまだ説明してなかったな。彼女は…」[vp]
 
 [se s="ability.mp3"]
-[kouki f=komarimayu]
+[kouki f=komarimayu layer=0]
 #黄樹
 「…んん？」[vp]
 
@@ -142,7 +142,7 @@
 [manpu type="ase"]
 ;☆パストーンの開発超初期にすとらさんが作ってくれたアニメーションを使っているので、動作確認をお願いします。
 [pyon]
-[mizuka f="kushou"]
+[mizuka f="kushou" layer=0]
 #美寿花
 「あ～…」[vp]
 
@@ -157,13 +157,13 @@
 
 ;☆演出 ぴょんと跳ねるアニメーション
 [pyonpyon]
-[mizuka f="egao"]
+[mizuka f="egao" layer=0]
 #美寿花
 「…あ、まず自己紹介から、だよね！」[vp]
 
 このまま沈黙が続くとまずいと感じたのか、半ば無理やり自己紹介を始める女性。[vp]
 
-[mizuka f="egao"]
+[mizuka f="egao" layer=0]
 #美寿花
 「…えーと、名前は[ruby text = "とき"]常[ruby text = "わ"]葉[ruby text = "み"]美[ruby text = "ず"]寿[ruby text = "か"]花。[ruby text = "のぞ"]希み[ruby text = "の"]野大学の1年生。」[vp]
 
