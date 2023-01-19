@@ -1,6 +1,6 @@
 [startoption]
 
-[bg storage="living.png" time="10" ]
+[bg storage="living.png" time="10"]
 
 [chara_show name="mizuka" top="20" wait="true" layer=0]
 ;[chara_show name="kouki" top="20" wait="true" layer=0]
@@ -13,14 +13,16 @@
 ;[chara_hide name="kouki" time="500"]
 ;[chara_hide name="ayana" time="500"]
 ;[chara_hide name="RozLaz" time="500"]
-
+[mizuka top="-50" f="bishou" layer=1]
+;[chara_show name="mizuka" top="-50"  face="bishou" layer=1]
 ;[bg  storage="living.png" wait="false" time="1000"]
 
 ;[capimg ui=false filename="mizuka_fade.png" saveas="true"]
 ;[mask time=500 effec=fadeIn graphic="フェード演出/mizuka_fade.png"]
 ;[camera time=0 zoom=1.3 wait=true]
 
-[chara_show name="mizuka_big" top="-50" wait="false"  time="800" layer=1]
+;[mizuka_big top="-50" wait="false" time="500" layer=1]
+;[chara_show name="mizuka_big" top="-50" wait="false"  time="800" layer=1]
 ;[chara_show name="kouki_big" top="-50" wait="false" time="800" layer=1]
 ;[chara_show name="ayana_big" top="-50" wait="false" time="800" layer=1]
 ;[chara_show name="RozLaz_big" top="-50" wait="false" time="800" layer=1]

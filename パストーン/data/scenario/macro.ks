@@ -61,6 +61,7 @@
 ;------------------------------------------------------------------------------------------------------
 
 ;各キャラの表情表示マクロ
+;使用するときはlayerの数値を指定してください
 [macro name="mizuka"]
     [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|true" time="%time" ]
     [chara_show name="mizuka" top="20|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time" ] 
@@ -70,6 +71,7 @@
     [chara_mod name="laz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
     [chara_show name="laz" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
 [endmacro]
+
 
 [macro name="roz"]
     [chara_mod name="roz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
@@ -110,7 +112,7 @@
 
 [macro name="laz_big"]
     [chara_mod name="laz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="laz_big" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
+    [chara_show name="laz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
 [endmacro]
 
 [macro name="roz_big"]
@@ -126,6 +128,7 @@
 [macro name="ayana_big"]
     [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
     [chara_show name="ayana_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
+[endmacro]
 
 ;立ち絵アニメーション
 [macro name="mizuka_anim"]
