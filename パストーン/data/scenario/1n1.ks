@@ -43,7 +43,7 @@
 ;☆背景 雪翔の部屋（昼）
 [bg storage="myroom.png" time="0" wait="false"]
 ;☆背景 カメラ拡大
-[camera time="0" x="-100" y="0" zoom="3" time="0" wait="false" layer="base"]
+[camera time="0" x="-50" y="50" zoom="3" time="0" wait="false" layer="base"]
 
 [mask_off effect="fadeOut" time="1000"]
 
@@ -59,6 +59,7 @@
 ;☆背景 拡大解除
 [reset_camera time="1000" wait="true" layer="base"]
 ;☆効果音 衣擦れ
+[playse storage="se/cloth_1.ogg"]
 
 起き上がろうとして、背中に違和感を感じる。[np]
 …妙に冷たい。しかもなんだか湿っている。[np]
