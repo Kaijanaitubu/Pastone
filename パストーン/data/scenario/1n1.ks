@@ -5,6 +5,7 @@
 [voconfig sebuf=2 name="laz" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
 [vostart]
 ;☆背景 黒
+
 [bg storage="black.jpg"]
 
 #
@@ -36,11 +37,15 @@
 『誰か……助けてくれ』[np]
 
 …それが、俺の発した、最後の言葉だった。[np]
+
 ;☆画面 暗転
-
-
-;☆背景 カメラ拡大
+[mask effect="fadeIn" time="1000"]
 ;☆背景 雪翔の部屋（昼）
+[bg storage="myroom.png" time="0" wait="false"]
+;☆背景 カメラ拡大
+[camera time="0" x="-100" y="0" zoom="3" time="0" wait="false" layer="base"]
+
+[mask_off effect="fadeOut" time="1000"]
 
 #雪翔
 ≪‥‥‥≫[np]
@@ -49,8 +54,10 @@
 当たり前のことだが、こうも同じだと退屈してくると感じるのは、俺だけだろうか？[np]
 
 #雪翔
-≪…ん…≫
+≪…ん…≫[np]
+
 ;☆背景 拡大解除
+[reset_camera time="1000" wait="true" layer="base"]
 ;☆効果音 衣擦れ
 
 起き上がろうとして、背中に違和感を感じる。[np]
