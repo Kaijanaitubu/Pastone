@@ -8,6 +8,9 @@
 
 [bg storage="black.jpg"]
 
+;@jump target="*debug"
+
+
 #
 『やめてくれ』[np]
 目の前が、鮮血で染まっていく。[np]
@@ -59,7 +62,7 @@
 ;☆背景 拡大解除
 [reset_camera time="1000" wait="false" layer="base"]
 ;☆効果音 衣擦れ
-[se storage="se/cloth_1.ogg"]
+[se s="se/cloth_1.ogg"]
 
 [wa]
 起き上がろうとして、背中に違和感を感じる。[np]
@@ -78,6 +81,9 @@
 あれ、というのは夢の内容のことである。[np]
 
 ;☆背景 黒帯演出 少し拡大した部屋の背景を映す（出来れば少しづつ横に背景を移動していきたい）
+[black_band_init]
+[black_band_show]
+;[camera zoom="1.2"]
 5年前の2022年。[np]
 『悲劇の飲酒暴走事故』[np]
 後に、そんな名前がつけられるほど大きな事故があった。[np]
@@ -90,6 +96,8 @@
 …その事故で俺は、母親を失うことになった。[np]
 
 ;☆背景 黒帯解除
+[black_band_hide]
+
 #雪翔
 ≪…自殺なんかに、他人の命を巻き込むんじゃねぇよ。≫[np]
 

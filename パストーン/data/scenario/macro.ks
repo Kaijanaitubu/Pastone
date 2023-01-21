@@ -55,25 +55,61 @@
 	[endif]
 [endmacro]
 
+;シーンジャンプ用マクロ
+[macro name="scenejumpNormal"]
+    [mask time="1200" effect="slideInLeft"]
+
+	[stopse]
+	[resetdelay]
+	[reset_camera layer="0" time="10" ]
+	[reset_camera layer="base" time="10" ]
+	[chara_hide_all time="10"]
+	
+    @jump storage="&mp.sc"
+
+    [endlink]
+	[cm]
+
+[endmacro]
+
+;------------------------------------------------------------------------------------------------------
+; マスク類
+;------------------------------------------------------------------------------------------------------
+
+;シーンジャンプ後のマクロ
+[macro name="afterjumpmaskNormal"]
+    [mask_off effect="slideOutRight" time="1200"]
+[endmacro]
+
+;背景が変わるときに使うマスクのマクロ
+[macro name="bgchangemask"]
+	[mask effect="slideInRight"]
+[endmacro]
+
+;マスク効果を切るときのマクロ
+[macro name="bgchangemask_off"]
+	[mask_off effect="slideOutLeft"]
+[endmacro]
 
 ;------------------------------------------------------------------------------------------------------
 ; 演出関係
 ;------------------------------------------------------------------------------------------------------
 
 ;各キャラの表情表示マクロ
+;使用するときはlayerの数値を指定してください
 [macro name="mizuka"]
     [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|true" time="%time" ]
     [chara_show name="mizuka" top="20|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time" ] 
 [endmacro]
 
-[macro name="raz"]
-    [chara_mod name="raz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="raz" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
+[macro name="laz"]
+    [chara_mod name="laz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="laz" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
 [endmacro]
 
-[macro name="loz"]
-    [chara_mod name="loz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="loz" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
+[macro name="roz"]
+    [chara_mod name="roz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="roz" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
 [endmacro]
 
 [macro name="kouki"]
@@ -88,7 +124,7 @@
 
 ;効果音再生
 [macro name="se"]
-    [playse storage="%s" ]
+    [playse storage="%s" volume="30" loop="%loop|true"]
 [endmacro]
 
 ;画像表示用
@@ -103,44 +139,138 @@
 [endmacro]
 
 ;ズーム用
-[macro name="big_layer1"]
-    [chara_show name="layer1" top="%top" time="%time" wait="false" layer="%layer|1"]
+[macro name="mizuka_big"]
+    [chara_mod name="mizuka_big" face="%f" cross="false" wait="%m_wait|true" time="%time" ]
+    [chara_show name="mizuka_big" top="20|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time" ] 
 [endmacro]
 
-[macro name="big_layer2" ]
-    [chara_show name="layer2" top="%top" time="%time" wait="false" layer="%layer|1"]
+[macro name="laz_big"]
+    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
 [endmacro]
 
-[macro name="big_layer3"]
-    [chara_show name="layer3" top="%top" time="%time" wait="false" layer="%layer|1"]
+[macro name="roz_big"]
+    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
 [endmacro]
 
-[macro name="big_layer4"]
-    [chara_show name="layer4" top="%top" time="%time" wait="false" layer="%layer|1"]
+[macro name="kouki_big"]
+    [chara_mod name="kouki_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="kouki_big" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|1" time="%time"]
 [endmacro]
 
-[macro name="big_layer5"]
-    [chara_show name="layer5" top="%top" time="%time" wait="false" layer="%layer|1"]
+[macro name="ayana_big"]
+    [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="ayana_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
 [endmacro]
 
 ;立ち絵アニメーション
-[macro name="mizuka_anim"]
+[macro name="mizuka_hide"]
     [chara_hide name="mizuka" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="raz_anim"]
+[macro name="raz_hide"]
     [chara_hide name="raz" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="loz_anim"]
+[macro name="loz_hide"]
     [chara_hide name="loz" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="kouki_anim"]
+[macro name="kouki_hide"]
     [chara_hide name="kouki" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="ayana_anim"]
+[macro name="ayana_hide"]
     [chara_hide name="ayana" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
+;でかいキャラを隠すマクロ
+[macro name="mizuka_big_hide"]
+    [chara_hide name="mizuka_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="raz_big_hide"]
+    [chara_hide name="RozLaz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="loz_big_hide"]
+    [chara_hide name="RozLaz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="kouki_big_hide"]
+    [chara_hide name="kouki_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="ayana_big_hide"]
+    [chara_hide name="ayana_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+;頷き風
+[keyframe name="un"]
+	[frame p="50%" y="20"]
+[endkeyframe]
+
+;ぴょんぴょん
+[keyframe name="pyonpyon"]
+	[frame p="25%" y="-20"]
+	[frame p="50%" y="20"]
+	[frame p="75%" y="-20"]
+[endkeyframe]
+
+;ぴょん
+[keyframe name="pyon"]
+	[frame p="50%" y="-20"]
+[endkeyframe]
+
+;マクロ定義
+[macro name="black_band_init"]
+;黒帯使うための初期化
+    [chara_config pos_mode="false"]
+    [chara_show name="black_top" layer="base" top="-720" time="0"]
+    [chara_show name="black_bottom" layer="base" top="720" time="0"]
+    [chara_config pos_mode="true"]
+[endmacro]
+
+[macro name="black_band_show"]
+;黒帯を画面に出す
+    [chara_config pos_mode="false" ]
+    [chara_move name="black_top" top="+=120" wait="false" anim="true" ]
+    [chara_move name="black_bottom" top="-=120" wait="false" anim="true"]
+    [chara_config pos_mode="true" ]
+[endmacro]
+
+[macro name="black_band_hide"]
+;黒帯を隠す
+    [chara_config pos_mode="false" ]
+    [chara_move name="black_top" top="-=120" wait="false" anim="true" ]
+    [chara_move name="black_bottom" top="+=120" wait="false" anim="true"]
+    [chara_config pos_mode="true" ]
+[endmacro]
+;マクロ定義終わり
+
+;------------------------------------------------------------------------------------------------------
+; BGM設定
+;------------------------------------------------------------------------------------------------------
+
+;美寿花のテーマ
+[macro name="bgm_mizuka"]
+	[playbgm storage="mizuka.mp3" volume="40"]
+[endmacro]
+
+;------------------------------------------------------------------------------------------------------
+; SE設定
+;------------------------------------------------------------------------------------------------------
+
+[macro name="playse_ambulance"]	
+	[is_skip]
+	[if exp="tf.is_skip !== true"]
+		[fadeinse storage="se/ambulance.ogg" loop="true" sprite_time="2000-93000" time="5000" volume="20"]
+		[wait time="300"]
+	[else]
+		[fadeinse storage="se/ambulance.ogg" loop="true" sprite_time="2000-93000" time="5000" volume="20"]
+		[wait time="10" ]
+	[endif]
+[endmacro]
+
+[return]
