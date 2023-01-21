@@ -145,13 +145,13 @@
 [endmacro]
 
 [macro name="laz_big"]
-    [chara_mod name="laz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="laz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
+    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
 [endmacro]
 
 [macro name="roz_big"]
-    [chara_mod name="roz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="roz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
+    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
 [endmacro]
 
 [macro name="kouki_big"]
@@ -191,11 +191,11 @@
 [endmacro]
 
 [macro name="raz_big_hide"]
-    [chara_hide name="raz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+    [chara_hide name="RozLaz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
 [macro name="loz_big_hide"]
-    [chara_hide name="loz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+    [chara_hide name="RozLaz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
 [macro name="kouki_big_hide"]

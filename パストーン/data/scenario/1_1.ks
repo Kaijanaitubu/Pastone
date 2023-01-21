@@ -2,8 +2,8 @@
 ;rタグ整理、？と！の後のスペース追加、名前表示残留修正済み（つぶ）
 
 [startoption]
-[voconfig sebuf=2 name="roz" vostorage="roz/roz1-1_{number}.ogg" number=2 ]
-[voconfig sebuf=2 name="laz" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
+[voconfig sebuf=2 name="roz" vostorage="roz/roz1-1_{number}.ogg" number=1 ]
+[voconfig sebuf=2 name="laz" vostorage="laz/laz1-1_{number}.ogg" number=1 ]
 [vostart]
 
 ;☆演出指定を「;☆☆」でしています。実装済みの箇所は☆を消してください
@@ -23,7 +23,7 @@
 さっきの声で通報されたのであろう…[vp]
 猛スピードでやってきた救急車が、瞬く間に『母だったもの』を乗せていく。[vp]
 ;☆背景 可能であればここから wait="false" で3分とかかけて美寿花のCGをフェードイン
-[bg storage="1_1CG.png" time="2000" wait="false"]
+[bg name="1_1"storage="1-1CG.png" time="3000" method="fadeInUp"  wait="false"]
 他にも何人か運ばれていた気がするが…[vp]
 思い出したく、なかった。[vp]
 …なら、俺は？[vp]
@@ -34,7 +34,7 @@
 理解を拒み、[vp]
 …『言葉』だけを、ただ、紡いでいく。[vp]
 
-;☆背景 黒
+;背景 黒
 [bg storage="black.jpg" time="2000" ]
 『やめてくれ』[vp]
 『止めてくれ』[vp]
@@ -92,7 +92,9 @@
 …そして、
 …その事故で俺は、母親を失うことになった。[vp]
 
-;☆背景 黒帯解除
+[bg storage="myroom.png" time="400" wait="true"  ]
+
+;背景 黒帯解除
 [black_band_hide]
 #雪翔
 ≪…自殺なんかに、他人の命を巻き込むんじゃねぇよ。≫[vp]
@@ -110,36 +112,36 @@
 #雪翔
 ≪朝から騒がしいな…≫[vp]
 
-;☆立ち絵 ロズ拡大版 roz_taunt
-[loz_big f="roz_taunt" layer=0]
+;立ち絵 ロズ拡大版 roz_taunt
+[roz_big f="roz_taunt" layer=0]
 #ロズ
 「そうやってラズが甘やかすから、どんどんマスターの生活リズムが崩れていくんやで？」[vp]
 
-;☆立ち絵 ラズ拡大版 laz_kushou
-[raz_big f="laz_kushou" layer=0]
+;立ち絵 ラズ拡大版 laz_kushou
+[laz_big f="laz_kushou" layer=0]
 #ラズ
 「あらあら、それならあなただってどうして深夜まで頑張って作業しているご主人様を止めませんの？　元はといえばロズのせいだと言えますが」[vp]
 
 [chara_hide_all]
 俺の言葉を無視し、携帯からの声達はどんどん険悪な雰囲気になっていく。[vp]
 
-;☆立ち絵 ロズ拡大版 roz_okori_2
+;立ち絵 ロズ拡大版 roz_okori_2
 [roz_big f="roz_okori_2" layer=0]
 #ロズ
 「どうやら、今日こそ決着つけなあかんみたいやな。」[vp]
 
-;☆立ち絵 ラズ拡大版 laz_confident
+;立ち絵 ラズ拡大版 laz_confident
 [laz_big f="laz_confident" layer=0]
-;☆漫符 tameiki？
+;漫符 tameiki？
 [manpu type="tameiki？"]
 #ラズ
 「勝てるとお思いで？　私、貴方に負けたことないでしょう？」[vp]
 
 ;ボイス差し替え予定
-;☆立ち絵 ロズ拡大版 roz_okori_3
-[loz_big f="roz_okori_3" layer=0]
-;☆漫符 muka
-[manpu type="muka"]
+;立ち絵 ロズ拡大版 roz_okori_3
+[roz_big f="roz_okori_3" layer=0]
+;漫符 muka
+[manpu type="muka" volume="15"]
 #ロズ
 「当たりまえやろ毎回引き分けなんやから！！　とにかく、覚悟…」[vp]
 
@@ -153,8 +155,8 @@
 ≪おしゃべりAI達め…≫[vp]
 
 どうしようもない、と言った風に俺はドアを開け、階下へ降りる。[vp]
-;☆効果音 ドア開ける
-[se s="se/door_open"]
+;効果音 ドア開ける
+[se s="se/door_open.mp3" loop="false"]
 [vostop]
 
 @jump storage="title.ks" 
