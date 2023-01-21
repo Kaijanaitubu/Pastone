@@ -15,7 +15,7 @@
 #
 拡大演出[np]
 
-[mizuka_big face=aseri wait="false" time="500"]
+[mizuka_big f=aseri wait="false" time="500"]
 
 
 タイトルへ[p]

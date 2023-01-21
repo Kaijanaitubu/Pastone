@@ -165,44 +165,44 @@
 [endmacro]
 
 ;立ち絵アニメーション
-[macro name="mizuka_anim"]
+[macro name="mizuka_hide"]
     [chara_hide name="mizuka" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="raz_anim"]
+[macro name="raz_hide"]
     [chara_hide name="raz" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="loz_anim"]
+[macro name="loz_hide"]
     [chara_hide name="loz" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="kouki_anim"]
+[macro name="kouki_hide"]
     [chara_hide name="kouki" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="ayana_anim"]
+[macro name="ayana_hide"]
     [chara_hide name="ayana" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
 ;でかいキャラを隠すマクロ
-[macro name="hide_mizuka_big"]
+[macro name="mizuka_big_hide"]
     [chara_hide name="mizuka_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="hide_raz_big"]
+[macro name="raz_big_hide"]
     [chara_hide name="raz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="hide_loz_big"]
+[macro name="loz_big_hide"]
     [chara_hide name="loz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="hide_kouki_big"]
+[macro name="kouki_big_hide"]
     [chara_hide name="kouki_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
-[macro name="hide_ayana_big"]
+[macro name="ayana_big_hide"]
     [chara_hide name="ayana_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 

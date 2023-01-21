@@ -84,7 +84,7 @@
 [stop_bgmovie time="1000" wait="true"]
 
 [bgm_mizuka]
-;☆立ち絵 美寿花を大きく表示（レイヤー2で）
+
 [mizuka_big f="egao" layer=2]
 #美寿花
 「…雪翔君、だよね？　おはよう」[vp]
@@ -101,11 +101,13 @@
 [mizuka f="egao" time="10" layer=0]
 [kouki f="kyoton" time="10" layer=0]
 
-[hide_mizuka_big time="500" layer=2]
+[mizuka_big_hide time="1000" layer=2]
+
 [freecg]
-/* 拡大して美寿花を表示した状態から、シームレスに黄樹と美寿花が並んでいる画面に移行したかったので、
-上のレイヤーに背景と美寿花を表示して、下のレイヤーに二人を表示してからフェードアウトする手法をとっています。 
-まだ実際に再生をしていないので、もし違和感があるようであれば、この場面の美寿花の立ち絵を表示しないのも手だと思います。*/ 
+[reset_camera time="1000" wait="true" layer="base"]
+[filter layer="base" blur="0" wait="true" time="1000"]
+
+[kouki f="kyoton" time="1000"]
 #黄樹
 「ん？　何をそこでボーっとしてるんだ？」[vp]
 
@@ -113,7 +115,7 @@
 そりゃするだろ。なんだよこの状況。[vp]
 困惑の視線を父さんに送るが、ああ、と納得したように笑い受け流される。[vp]
 
-[kouki f="shinpai" layer=0]
+[kouki f="egao" layer=0]
 #黄樹
 「そうか。そういえばまだ説明してなかったな。彼女は…」[vp]
 
@@ -129,8 +131,7 @@
 「ああ、僕の携帯か。すまん。ちょっと出てくるから、二人でゆっくりしていてくれ」[vp]
 
 #黄樹
-;[chara_hide name="kouki" time="500" wait="false" ]
-[kouki_anim time="500" wait="false"]
+[kouki_hide time="500" wait="false"]
 「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
 
 [se s="se/door_open.mp3"]
@@ -170,8 +171,8 @@
 …1年ってことは…やっぱり同い年なのか。[vp]
 しかも同じ大学…[vp]
 でも…[vp]
+
 [black_band_init]
-;☆演出 黒帯演出？
 [black_band_show]
 #雪翔
 （…みずか…みず、か？）[vp]
@@ -179,7 +180,7 @@
 何故か、彼女の名前で引っかかる。[vp]
 どこかで会ったのかとも思ったが…俺の記憶に、こんな美人はいない。[vp]
 俺の思い違いか…と、思っていると…[vp]
-;☆演出 黒帯解除
+
 [black_band_hide]
 [mizuka f="kyoton_3" layer=0]
 #美寿花
@@ -193,5 +194,7 @@
 ≪…は？≫[vp]
 
 …その発言が、爆弾の如く俺の思考を吹っ飛ばしていった。[vp]
+[mizuka_hide]
 ;☆演出 暗転 シーンチェンジ
-[scenejumpNormal sc="title.ks"]
+@jump storage="title.ks"
+;[scenejumpNormal sc="title.ks"]
