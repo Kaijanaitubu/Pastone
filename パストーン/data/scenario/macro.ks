@@ -124,7 +124,7 @@
 
 ;効果音再生
 [macro name="se"]
-    [playse storage="%s" volume="30" ]
+    [playse storage="%s" volume="30" loop="%loop|true"]
 [endmacro]
 
 ;画像表示用
@@ -256,6 +256,21 @@
 ;美寿花のテーマ
 [macro name="bgm_mizuka"]
 	[playbgm storage="mizuka.mp3" volume="40"]
+[endmacro]
+
+;------------------------------------------------------------------------------------------------------
+; SE設定
+;------------------------------------------------------------------------------------------------------
+
+[macro name="playse_ambulance"]	
+	[is_skip]
+	[if exp="tf.is_skip !== true"]
+		[fadeinse storage="se/ambulance.ogg" loop="true" sprite_time="2000-93000" time="5000" volume="20"]
+		[wait time="300"]
+	[else]
+		[fadeinse storage="se/ambulance.ogg" loop="true" sprite_time="2000-93000" time="5000" volume="20"]
+		[wait time="10" ]
+	[endif]
 [endmacro]
 
 [return]
