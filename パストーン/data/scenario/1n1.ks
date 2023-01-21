@@ -46,7 +46,7 @@
 ;☆背景 雪翔の部屋（昼）
 [bg storage="myroom.png" time="0" wait="false"]
 ;☆背景 カメラ拡大
-[camera time="0" x="-50" y="50" zoom="3" time="0" wait="false" layer="base"]
+[camera time="0" x="-50" y="-50" zoom="3" time="0" wait="false" layer="base"]
 
 [mask_off effect="fadeOut" time="1000"]
 
@@ -62,7 +62,7 @@
 ;☆背景 拡大解除
 [reset_camera time="1000" wait="false" layer="base"]
 ;☆効果音 衣擦れ
-[se s="se/cloth_1.ogg"]
+[se s="se/cloth_1.ogg" loop="false"]
 
 [wa]
 起き上がろうとして、背中に違和感を感じる。[np]
@@ -81,9 +81,10 @@
 あれ、というのは夢の内容のことである。[np]
 
 ;☆背景 黒帯演出 少し拡大した部屋の背景を映す（出来れば少しづつ横に背景を移動していきたい）
-[black_band_init]
+[black_band_init layer="0"]
 [black_band_show]
-;[camera zoom="1.2"]
+;[camera zoom="1.5" x="-200"  time="1000" wait="true" layer="base"]
+[camera zoom="1.5" from_zoom="1.5" from_x="-200" from_y="0" x="200" y="0" layer="base" ease_type="linear" wait="fasle" time="60000"]
 5年前の2022年。[np]
 『悲劇の飲酒暴走事故』[np]
 後に、そんな名前がつけられるほど大きな事故があった。[np]
@@ -97,6 +98,7 @@
 
 ;☆背景 黒帯解除
 [black_band_hide]
+[reset_camera wait="true" layer="base" ]
 
 #雪翔
 ≪…自殺なんかに、他人の命を巻き込むんじゃねぇよ。≫[np]
