@@ -7,15 +7,15 @@
 ;[chara_show name="kouki" top="20" wait="true" layer=0]
 ;[chara_show name="ayana" top="20" wait="true" layer=0]
 ;[chara_show name="RozLaz" top="20" wait="true" layer=0 ]
-クリックしたらズームかかる[p]
-
+クリックしたらアニメーションかかる[p]
 
 ;[chara_hide name="mizuka" time="500"]
 [mizuka_anim]
 ;[chara_hide name="kouki" time="500"]
 ;[chara_hide name="ayana" time="500"]
 ;[chara_hide name="RozLaz" time="500"]
-[mizuka_big f="shinpai" top="-50" layer=1]
+[mizuka_big f="egao" top="-50" layer=1]
+[kanim layer=1 keyframe="un" time="1000"]
 ;[chara_show name="mizuka" top="-50"  face="bishou" layer=1]
 ;[bg  storage="living.png" wait="false" time="1000"]
 

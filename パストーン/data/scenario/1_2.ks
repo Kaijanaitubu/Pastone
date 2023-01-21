@@ -46,9 +46,9 @@
 …いや、考えていても仕方ない。[vp]
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
 
-[bg storage="living.png" ]
+[bg storage="living.png"]
 [reset_camera]
-[kouki f="bishou"  z="1" layer=0]
+[kouki f="bishou" layer=0]
 #黄樹
 「お、やっと起きた。」[vp]
 
@@ -65,17 +65,16 @@
 俺の意識は、キッチンに立つ父さんではなく…[vp]
 
 ;UIを削除して動画再生
-
+[bgmovie storage="mizuka_first_2.mp4" loop="false" skip="false"]
 @layopt layer="message0" visible="false"
 [layopt layer="fix" visible="false"]
-[bgmovie storage="mizuka_first_2.mp4" loop="false" skip="false"]
 [better_wait time="9000"]
 
 
 ;レイヤー1にぼかして拡大したリビング背景を表示
-[camera layer="1" zoom="1.3" x="140" y="-70" time="10" wait="true"]
-[filter layer="1" blur="5"]
-[cg s="living.png" layer="1" time="1000"]
+[camera layer="base" zoom="1.3" x="140" y="-70" time="10" wait="true"]
+[filter layer="base" blur="5"]
+[cg s="living.png"]
 
 ;UI表示
 @layopt layer="message0" visible="true"
@@ -86,7 +85,7 @@
 
 [bgm_mizuka]
 ;☆立ち絵 美寿花を大きく表示（レイヤー2で）
-[mizuka_big f="egao" layer="2"]
+[mizuka_big f="egao" layer=2]
 #美寿花
 「…雪翔君、だよね？　おはよう」[vp]
 
@@ -102,7 +101,7 @@
 [mizuka f="egao" time="10" layer=0]
 [kouki f="kyoton" time="10" layer=0]
 
-[mizuka_anim time="500" layer="2"]
+[hide_mizuka_big time="500" layer=2]
 [freecg]
 /* 拡大して美寿花を表示した状態から、シームレスに黄樹と美寿花が並んでいる画面に移行したかったので、
 上のレイヤーに背景と美寿花を表示して、下のレイヤーに二人を表示してからフェードアウトする手法をとっています。 
@@ -114,18 +113,18 @@
 そりゃするだろ。なんだよこの状況。[vp]
 困惑の視線を父さんに送るが、ああ、と納得したように笑い受け流される。[vp]
 
-[kouki f=shinpai layer=0]
+[kouki f="shinpai" layer=0]
 #黄樹
 「そうか。そういえばまだ説明してなかったな。彼女は…」[vp]
 
-[se s="ability.mp3"]
-[kouki f=komarimayu layer=0]
+[se s="se/ability.mp3"]
+[kouki f="komarimayu" layer=0]
 #黄樹
 「…んん？」[vp]
 
 タイミング悪く、どこからか聞こえてくる着信音。[vp]
 
-[kouki f=kushou]
+[kouki f="kushou" layer=0]
 #黄樹
 「ああ、僕の携帯か。すまん。ちょっと出てくるから、二人でゆっくりしていてくれ」[vp]
 
@@ -134,7 +133,7 @@
 [kouki_anim time="500" wait="false"]
 「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
 
-[se s="door_open.mp3"]
+[se s="se/door_open.mp3"]
 #雪翔
 ≪え、ちょっと待っ…≫[vp]
 
@@ -142,8 +141,8 @@
 
 [manpu type="ase"]
 ;☆パストーンの開発超初期にすとらさんが作ってくれたアニメーションを使っているので、動作確認をお願いします。
-[pyon]
-[mizuka f="kushou" layer=0]
+[kanim layer=1 keyframe="pyon" time="5000"]
+[mizuka f="kushou" layer=1]
 #美寿花
 「あ～…」[vp]
 
@@ -157,7 +156,7 @@
 ≪……≫[vp]
 
 ;☆演出 ぴょんと跳ねるアニメーション
-[pyonpyon]
+[kanim layer="0" keyframe="pyon" time="1000"]
 [mizuka f="egao" layer=0]
 #美寿花
 「…あ、まず自己紹介から、だよね！」[vp]
@@ -171,6 +170,7 @@
 …1年ってことは…やっぱり同い年なのか。[vp]
 しかも同じ大学…[vp]
 でも…[vp]
+[black_band_init]
 ;☆演出 黒帯演出？
 [black_band_show]
 #雪翔
@@ -192,4 +192,6 @@
 #雪翔
 ≪…は？≫[vp]
 
+…その発言が、爆弾の如く俺の思考を吹っ飛ばしていった。[vp]
 ;☆演出 暗転 シーンチェンジ
+[scenejumpNormal sc="title.ks"]

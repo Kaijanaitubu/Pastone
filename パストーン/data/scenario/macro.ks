@@ -55,6 +55,41 @@
 	[endif]
 [endmacro]
 
+;シーンジャンプ用マクロ
+[macro name="scenejumpNormal"]
+    [mask time="1200" effect="slideInLeft"]
+
+	[stopse]
+	[resetdelay]
+	[reset_camera layer="0" time="10" ]
+	[reset_camera layer="base" time="10" ]
+	[chara_hide_all time="10"]
+	
+    @jump storage="&mp.sc"
+
+    [endlink]
+	[cm]
+
+[endmacro]
+
+;------------------------------------------------------------------------------------------------------
+; マスク類
+;------------------------------------------------------------------------------------------------------
+
+;シーンジャンプ後のマクロ
+[macro name="afterjumpmaskNormal"]
+    [mask_off effect="slideOutRight" time="1200"]
+[endmacro]
+
+;背景が変わるときに使うマスクのマクロ
+[macro name="bgchangemask"]
+	[mask effect="slideInRight"]
+[endmacro]
+
+;マスク効果を切るときのマクロ
+[macro name="bgchangemask_off"]
+	[mask_off effect="slideOutLeft"]
+[endmacro]
 
 ;------------------------------------------------------------------------------------------------------
 ; 演出関係
@@ -71,7 +106,6 @@
     [chara_mod name="laz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
     [chara_show name="laz" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
 [endmacro]
-
 
 [macro name="roz"]
     [chara_mod name="roz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
@@ -90,7 +124,7 @@
 
 ;効果音再生
 [macro name="se"]
-    [playse storage="%s" ]
+    [playse storage="%s" volume="30" ]
 [endmacro]
 
 ;画像表示用
@@ -149,6 +183,27 @@
 
 [macro name="ayana_anim"]
     [chara_hide name="ayana" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+;でかいキャラを隠すマクロ
+[macro name="hide_mizuka_big"]
+    [chara_hide name="mizuka_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="hide_raz_big"]
+    [chara_hide name="raz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="hide_loz_big"]
+    [chara_hide name="loz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="hide_kouki_big"]
+    [chara_hide name="kouki_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="hide_ayana_big"]
+    [chara_hide name="ayana_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
 [endmacro]
 
 ;頷き風
