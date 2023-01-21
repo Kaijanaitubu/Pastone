@@ -59,7 +59,7 @@
 ;☆背景 拡大解除
 [reset_camera time="1000" wait="false" layer="base"]
 ;☆効果音 衣擦れ
-[playse storage="se/cloth_1.ogg" volume="100" wait="false"]
+[se storage="se/cloth_1.ogg"]
 
 [wa]
 起き上がろうとして、背中に違和感を感じる。[np]
