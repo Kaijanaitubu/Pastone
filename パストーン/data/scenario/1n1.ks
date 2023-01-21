@@ -83,8 +83,10 @@
 ;☆背景 黒帯演出 少し拡大した部屋の背景を映す（出来れば少しづつ横に背景を移動していきたい）
 [black_band_init layer="0"]
 [black_band_show]
-;[camera zoom="1.5" x="-200"  time="1000" wait="true" layer="base"]
-[camera zoom="1.5" from_zoom="1.5" from_x="-200" from_y="0" x="200" y="0" layer="base" ease_type="linear" wait="fasle" time="60000"]
+[camera zoom="1.5" x="-200"  time="1000" wait="true" layer="base"]
+[camera zoom="1.5" from_zoom="1.5" from_x="-200" from_y="0" x="200" y="0" layer="base" ease_type="linear" time="1000" wait="fasle" ]
+
+#
 5年前の2022年。[np]
 『悲劇の飲酒暴走事故』[np]
 後に、そんな名前がつけられるほど大きな事故があった。[np]
