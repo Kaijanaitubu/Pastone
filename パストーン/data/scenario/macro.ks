@@ -186,8 +186,8 @@
 [macro name="black_band_init"]
 ;黒帯使うための初期化
     [chara_config pos_mode="false"]
-    [chara_show name="black_top" layer="base" top="-720" time="0"]
-    [chara_show name="black_bottom" layer="base" top="720" time="0"]
+    [chara_show name="black_top" layer="%layer|base" top="-720" time="0"]
+    [chara_show name="black_bottom" layer="%layer|base" top="720" time="0"]
     [chara_config pos_mode="true"]
 [endmacro]
 
