@@ -44,7 +44,7 @@
 ;☆画面 暗転
 [mask effect="fadeIn" time="1000"]
 ;☆背景 雪翔の部屋（昼）
-[bg storage="myroom.png" time="0" wait="false"]
+[bg2 storage="myroom.png" name="bg" time="0" wait="false"]
 ;☆背景 カメラ拡大
 [camera time="0" x="-50" y="-50" zoom="3" time="0" wait="false" layer="base"]
 
@@ -81,10 +81,20 @@
 あれ、というのは夢の内容のことである。[np]
 
 ;☆背景 黒帯演出 少し拡大した部屋の背景を映す（出来れば少しづつ横に背景を移動していきたい）
+[keyframe name="1n1leftToRight"]
+    [frame p="100%" x="-200"]
+[endkeyframe]
+
+[keyframe name="1n1resetKeyFrame"]
+    [frame p="100%" x="*0" y="*0"]
+[endkeyframe]
+
+
 [black_band_init layer="0"]
 [black_band_show]
-[camera zoom="1.5" x="-200"  time="1000" wait="true" layer="base"]
-[camera zoom="1.5" from_zoom="1.5" from_x="-200" from_y="0" x="200" y="0" layer="base" ease_type="linear" time="1000" wait="fasle" ]
+[camera zoom="1.5" x="-200"  time="1000" layer="base" wait="true"]
+[kanim name="bg" keyframe="1n1leftToRight" time="30000" easing="linear" ]
+
 
 #
 5年前の2022年。[np]
@@ -99,8 +109,13 @@
 …その事故で俺は、母親を失うことになった。[np]
 
 ;☆背景 黒帯解除
+
+[stop_kanim name="bg"]
 [black_band_hide]
-[reset_camera wait="true" layer="base" ]
+[reset_camera wait="false" layer="base"]
+[kanim name="bg" keyframe="1n1resetKeyFrame" easing="linear" time="1000"]
+
+[wa]
 
 #雪翔
 ≪…自殺なんかに、他人の命を巻き込むんじゃねぇよ。≫[np]
