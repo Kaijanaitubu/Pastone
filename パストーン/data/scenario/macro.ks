@@ -99,12 +99,12 @@
 ;使用するときはlayerの数値を指定してください
 [macro name="mizuka"]
     [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|true" time="%time" ]
-    [chara_show name="mizuka" top="20|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time" ] 
+    [chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time" ] 
 [endmacro]
 
 [macro name="laz"]
     [chara_mod name="laz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="laz" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
+    [chara_show name="laz" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer" time="%time"]
 [endmacro]
 
 [macro name="roz"]
