@@ -47,12 +47,12 @@
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
 
 [bg storage="living.png"]
-[reset_camera]
-[kouki f="bishou" layer=0]
+
+[kouki f="bishou"]
 #黄樹
 「お、やっと起きた。」[vp]
 
-[kouki f="egao" layer=0]
+[kouki f="egao"]
 #黄樹
 「中々降りてこなかったから体調でも悪いのかと思ったんだが…」[vp]
 
@@ -98,10 +98,10 @@
 
 いや、そうでなければただの不審者なのだが…と、自分の考えに自分で突っ込む。[vp]
 
-[mizuka f="egao" time="10" layer=0]
-[kouki f="kyoton" time="10" layer=0]
+[mizuka f="egao" time="10" ]
+[kouki f="kyoton" time="10" ]
 
-[mizuka_big_hide time="1000" layer=2]
+[chara_hide_all time="1000" layer=2]
 
 [freecg]
 [reset_camera time="1000" wait="true" layer="base"]
@@ -115,23 +115,23 @@
 そりゃするだろ。なんだよこの状況。[vp]
 困惑の視線を父さんに送るが、ああ、と納得したように笑い受け流される。[vp]
 
-[kouki f="egao" layer=0]
+[kouki f="egao" ]
 #黄樹
 「そうか。そういえばまだ説明してなかったな。彼女は…」[vp]
 
 [se s="se/ability.mp3"]
-[kouki f="komarimayu" layer=0]
+[kouki f="komarimayu" ]
 #黄樹
 「…んん？」[vp]
 
 タイミング悪く、どこからか聞こえてくる着信音。[vp]
 
-[kouki f="kushou" layer=0]
+[kouki f="kushou" ]
 #黄樹
 「ああ、僕の携帯か。すまん。ちょっと出てくるから、二人でゆっくりしていてくれ」[vp]
 
 #黄樹
-[kouki_hide time="500" wait="false"]
+[chara_hide_all time="500" wait="false"]
 「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
 
 [se s="se/door_open.mp3"]
@@ -142,7 +142,7 @@
 
 [manpu type="ase"]
 ;☆パストーンの開発超初期にすとらさんが作ってくれたアニメーションを使っているので、動作確認をお願いします。
-[kanim layer=1 keyframe="pyon" time="5000"]
+[kanim layer=1 keyframe="un" time="5000"]
 [mizuka f="kushou" layer=1]
 #美寿花
 「あ～…」[vp]
@@ -158,13 +158,13 @@
 
 ;☆演出 ぴょんと跳ねるアニメーション
 [kanim layer="0" keyframe="pyon" time="1000"]
-[mizuka f="egao" layer=0]
+[mizuka f="egao" ]
 #美寿花
 「…あ、まず自己紹介から、だよね！」[vp]
 
 このまま沈黙が続くとまずいと感じたのか、半ば無理やり自己紹介を始める女性。[vp]
 
-[mizuka f="egao" layer=0]
+[mizuka f="egao" ]
 #美寿花
 「…えーと、名前は[ruby text = "とき"]常[ruby text = "わ"]葉[ruby text = "み"]美[ruby text = "ず"]寿[ruby text = "か"]花。[ruby text = "のぞ"]希み[ruby text = "の"]野大学の1年生。」[vp]
 
@@ -182,7 +182,7 @@
 俺の思い違いか…と、思っていると…[vp]
 
 [black_band_hide]
-[mizuka f="kyoton_3" layer=0]
+[mizuka f="kyoton_3" ]
 #美寿花
 「それと、訳あって今日からここで暮らすことになって…」[vp]
 
@@ -194,7 +194,7 @@
 ≪…は？≫[vp]
 
 …その発言が、爆弾の如く俺の思考を吹っ飛ばしていった。[vp]
-[mizuka_hide]
+[chara_hide_all]
 ;☆演出 暗転 シーンチェンジ
 @jump storage="title.ks"
 ;[scenejumpNormal sc="title.ks"]
