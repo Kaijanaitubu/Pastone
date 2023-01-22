@@ -6,7 +6,7 @@
 [vostart]
 ;☆背景 黒
 
-[bg storage="black.jpg"]
+[bg2 storage="black.jpg"]
 
 ;@jump target="*debug"
 
@@ -92,7 +92,8 @@
 
 [black_band_init layer="0"]
 [black_band_show]
-[camera zoom="1.5" x="-200"  time="1000" layer="base" wait="true"]
+;[camera zoom="1.5" x="-200"  time="1000" layer="base" wait="true"]
+[bg2 storage=""]
 [kanim name="bg" keyframe="1n1leftToRight" time="30000" easing="linear" ]
 
 
