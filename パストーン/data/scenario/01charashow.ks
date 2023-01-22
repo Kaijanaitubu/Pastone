@@ -13,3 +13,7 @@
 aa[p]
 
 [mizuka f="akire"]
+
+a
+
+@jump storage="title.ks"
