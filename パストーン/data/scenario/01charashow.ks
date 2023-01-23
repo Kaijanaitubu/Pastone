@@ -6,6 +6,8 @@
 [vostart]
 ;☆背景 黒
 
+
+
 [bg storage="living.png"]
 
 [mizuka f="egao"]
