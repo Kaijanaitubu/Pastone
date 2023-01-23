@@ -1,12 +1,14 @@
 *start
 [startoption]
-[voconfig sebuf="2" name="mizuka" vostorage="mizuka/mizuka1-2_{number}.ogg" number="2"]
-[voconfig sebuf="5" name="kouki" vostorage="kouki/kouki1-2_{number}.ogg" number="4"]
-[voconfig sebuf="6" name="???" vostorage="other/1-2_{number}.ogg" number="1"]
+[voconfig sebuf=2 name="mizuka" vostorage="mizuka/mizuka1-2_{number}.ogg" number=2]
+[voconfig sebuf=5 name="kouki" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
+[voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.ogg" number=1]
 [vostart]
 
 ;[camera zoom="2" x="-300" y="0" time="10" wait="true"]
 [bg storage="living_big.png"]
+
+[afterjumpmaskNormal]
 
 #???
 「───あと、食材はここにあるから、後で…」[vp]
@@ -98,16 +100,15 @@
 
 いや、そうでなければただの不審者なのだが…と、自分の考えに自分で突っ込む。[vp]
 
-[mizuka f="egao" time="10" ]
-[kouki f="kyoton" time="10" ]
+[chara_hide_all time="500" layer=2]
 
-[chara_hide_all time="1000" layer=2]
+[mizuka f="egao" m_wait="false"]
+[kouki f="kyoton"]
 
 [freecg]
 [reset_camera time="1000" wait="true" layer="base"]
 [filter layer="base" blur="0" wait="true" time="1000"]
 
-[kouki f="kyoton" time="1000"]
 #黄樹
 「ん？　何をそこでボーっとしてるんだ？」[vp]
 
@@ -119,7 +120,7 @@
 #黄樹
 「そうか。そういえばまだ説明してなかったな。彼女は…」[vp]
 
-[se s="se/ability.mp3"]
+[se s="se/phone.ogg"]
 [kouki f="komarimayu" ]
 #黄樹
 「…んん？」[vp]
@@ -134,7 +135,7 @@
 [chara_hide_all time="500" wait="false"]
 「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
 
-[se s="se/door_open.mp3"]
+[se s="se/door_open.mp3" loop="false"]
 #雪翔
 ≪え、ちょっと待っ…≫[vp]
 
@@ -156,15 +157,15 @@
 #雪翔
 ≪……≫[vp]
 
-;☆演出 ぴょんと跳ねるアニメーション
+;演出 ぴょんと跳ねるアニメーション
 [kanim layer="0" keyframe="pyon" time="1000"]
-[mizuka f="egao" ]
+[mizuka f="egao"]
 #美寿花
 「…あ、まず自己紹介から、だよね！」[vp]
 
 このまま沈黙が続くとまずいと感じたのか、半ば無理やり自己紹介を始める女性。[vp]
 
-[mizuka f="egao" ]
+[mizuka f="egao"]
 #美寿花
 「…えーと、名前は[ruby text = "とき"]常[ruby text = "わ"]葉[ruby text = "み"]美[ruby text = "ず"]寿[ruby text = "か"]花。[ruby text = "のぞ"]希み[ruby text = "の"]野大学の1年生。」[vp]
 
@@ -182,10 +183,9 @@
 俺の思い違いか…と、思っていると…[vp]
 
 [black_band_hide]
-[mizuka f="kyoton_3" ]
+[mizuka f="kyoton_3"]
 #美寿花
 「それと、訳あって今日からここで暮らすことになって…」[vp]
-
 
 …[vp]
 ……[vp]
@@ -194,6 +194,7 @@
 ≪…は？≫[vp]
 
 …その発言が、爆弾の如く俺の思考を吹っ飛ばしていった。[vp]
+
 [chara_hide_all]
 ;☆演出 暗転 シーンチェンジ
 @jump storage="title.ks"

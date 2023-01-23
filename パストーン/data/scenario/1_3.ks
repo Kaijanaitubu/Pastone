@@ -1,25 +1,23 @@
 *start
-;rタグ整理、？と！の後のスペース追加、名前表示残留修正済み（つぶ）
 
 [startoption]
+[voconfig sebuf=2 name="kouki" vostorage="kouki/kouki1-3_{number}.ogg" number=1 ]
+[voconfig sebuf=2 name="mizuka" vostorage="mizuka/mizuka1-3_{number}.ogg" number=1 ]
+[vostart]
 
 [bg storage="living.png" time="0"]
-[kouki f="straight" time="10"]
-[mizuka f="bishou" time="10"]
+[kouki f="straight" time="0"]
+[mizuka f="bishou" time="0"]
 
 ;演出 マスク解除
-[camera layer="base" zoom="1.2" x="0" y="0" time="10" wait="true"]
-
-[afterjumpmaskNormal]
-
-[better_wait time="500"]
+;[camera layer="base" zoom="1.2" x="0" y="0" time="10" wait="true"]
 
 #黄樹
 「…と、いうわけで…」[vp]
+[kouki f="straight"]
 
 
 [playbgm storage="Ready_to_jump.mp3" volume="15" ]
-[kouki f="bishou"]
 
 #黄樹
 「今日からしばらく僕たちと暮らすことになった、常葉美寿花ちゃんだ」[vp]
@@ -47,9 +45,10 @@
 
 ;漫符 ase
 [manpu type="ase"]
-[kouki f="mesorashi"]
+
 #黄樹
 「いや、その…僕が帰ってくる頃には大体雪翔は寝てるからね、説明する余裕がなかったというか…」[vp]
+[kouki f="mesorashi"]
 
 ……[vp]
 …絶対嘘だろ…明らかに説明するの避けてただろ…[vp]
@@ -100,7 +99,6 @@
 [kouki_big f="bishou"]
 #黄樹
 「美寿花ちゃんの母親は僕の友達でね。流石に一人だと色々と危険だし、落ち着くまで面倒を見てくれないか頼まれたわけだ」[vp]
-[kouki_big f="egao"]
 
 #雪翔
 ≪…よく頼んだな。その母親…≫[vp]
@@ -125,7 +123,6 @@
 [kouki_big f="bishou"]
 #黄樹
 「普段料理することもないみたいだし、ちょっと色々と心配でな…僕からしたら、美寿花ちゃんがいてくれる方が安心できる」[vp]
-[kouki_big f="egao"]
 
 #黄樹
 「まぁ、その分迷惑をかけてしまうことにもなるんだが…」[vp]
@@ -133,9 +130,10 @@
 
 [chara_hide_all layer="1"]
 
+[mizuka f="yaruki"]
 #美寿花
 「いえ、迷惑なんてそんな！家事は得意ですので任せてください！」[vp]
-[mizuka f="yaruki" time="20"]
+
 
 当の本人は嫌がる様子もなく、むしろやる気に満ち溢れているように見える。[vp]
 

@@ -4,6 +4,7 @@
 @clearstack
 @bg storage ="title.jpg" time=100
 @wait time = 200
+[afterjumpmaskNormal]
 
 *start 
 
@@ -18,7 +19,7 @@
 *gamestart
 ;一番最初のシナリオファイルへジャンプする
 [clearfix]
-@jump storage="1_2.ks"
+@jump storage="1_3.ks"
 
 
 
