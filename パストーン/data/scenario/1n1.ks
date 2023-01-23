@@ -112,7 +112,8 @@
 [stop_kanim name="bg"]
 [black_band_hide]
 ;[reset_camera wait="false" layer="base"]
-[kanim name="bg" keyframe="1n1resetKeyFrame" easing="linear" time="1000"]
+[bg2 storage="myroom.png" name="bg" time="1000" top="0" left="0" height="720" width="1280" wait="false"]
+;[kanim name="bg" keyframe="1n1resetKeyFrame" easing="linear" time="1000"]
 
 [wa]
 
@@ -133,7 +134,7 @@
 ≪朝から騒がしいな…≫[vp]
 
 ;☆立ち絵 ロズ拡大版 roz_taunt
-[roz_big f="roz_taunt"]
+[roz_big f="roz_taunt" top="-50"]
 #ロズ
 「そうやってラズが甘やかすから、どんどんマスターの生活リズムが崩れていくんやで？」[vp]
 
