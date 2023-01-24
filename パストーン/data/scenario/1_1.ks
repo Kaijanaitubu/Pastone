@@ -149,16 +149,36 @@
 俺の言葉を無視し、携帯からの声達はどんどん険悪な雰囲気になっていく。[vp]
 
 ;☆立ち絵 ロズ拡大版 roz_okori_2
+[roz_big f="roz_okori_2" top="-50"]
 #ロズ
 「どうやら、今日こそ決着つけなあかんみたいやな。」[vp]
 
 ;☆立ち絵 ラズ拡大版 laz_confident
 ;☆漫符 tameiki？
+[laz_big f="laz_confident" top="-50"]
 #ラズ
 「勝てるとお思いで？　私、貴方に負けたことないでしょう？」[vp]
 
 ;ボイス差し替え予定
 ;☆立ち絵 ロズ拡大版 roz_okori_3
 ;☆漫符 muka
+[roz_big f="roz_confident" top="-50"]
 #ロズ
 「当たりまえやろ毎回引き分けなんやから！！　とにかく、覚悟…」[vp]
+
+
+[chara_hide_all]
+;画面が静か、BGMがない影響もある？
+
+何やら決闘が始まりそうなので、[vp]
+これ以上うるさくならないうちに音量をゼロに。[vp]
+
+#雪翔
+≪おしゃべりAI達め…≫[vp]
+
+どうしようもない、と言った風に俺はドアを開け、階下へ降りる。[vp]
+;効果音 ドア開ける
+[se s="se/door_open.mp3" loop="false"]
+[vostop]
+
+@jump storage="title.ks" 
