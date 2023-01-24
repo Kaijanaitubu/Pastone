@@ -3,8 +3,8 @@
 [startoption]
 ;ロズラズのボイスはファイル名変えてない環境だと動かない
 [voconfig sebuf=2 name="ロズ" vostorage="roz/roz1-1_{number}.ogg" number=2 ]
-[voconfig sebuf=3 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=3 ]
-[voconfig sebuf=4 name="???" vostorage="other1-1_{number}.ogg" number=4 ]
+[voconfig sebuf=3 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
+[voconfig sebuf=4 name="???" vostorage="other/1-1_{number}.ogg" number=1 ]
 [vostart]
 ;☆背景 黒
 
@@ -162,7 +162,7 @@
 ;ボイス差し替え予定
 ;☆立ち絵 ロズ拡大版 roz_okori_3
 ;☆漫符 muka
-[roz_big f="roz_confident" top="-50"]
+[roz_big f="roz_okori_3" top="-50"]
 #ロズ
 「当たりまえやろ毎回引き分けなんやから！！　とにかく、覚悟…」[vp]
 
