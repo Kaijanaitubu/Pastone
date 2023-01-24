@@ -1,8 +1,8 @@
 ;☆演出指定を「;☆☆」でしています。実装済みの箇所は☆を消してください
 *start
 [startoption]
-[voconfig sebuf=2 name="roz" vostorage="roz/roz1-1_{number}.ogg" number=2 ]
-[voconfig sebuf=2 name="laz" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
+[voconfig sebuf=2 name="ロズ" vostorage="roz/roz1-1_{number}.ogg" number=2 ]
+[voconfig sebuf=2 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
 [vostart]
 ;☆背景 黒
 
@@ -115,7 +115,7 @@
 [bg2 storage="myroom.png" name="bg" time="1000" top="0" left="0" height="720" width="1280" wait="false"]
 ;[kanim name="bg" keyframe="1n1resetKeyFrame" easing="linear" time="1000"]
 
-[wa]
+;[wa]
 
 #雪翔
 ≪…自殺なんかに、他人の命を巻き込むんじゃねぇよ。≫[vp]
