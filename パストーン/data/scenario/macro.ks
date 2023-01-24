@@ -114,22 +114,22 @@
 ;各キャラの表情表示マクロ
 ;使用するときはlayerの数値を指定してください
 [macro name="mizuka"]
-    [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|true" time="%time" ]
+    [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|false" time="%time" ]
     [chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
 [endmacro]
 
 [macro name="RozLaz"]
-    [chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|true" time="%time"]
+    [chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|false" time="%time"]
     [chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
 [macro name="kouki"]
-    [chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%time"]
     [chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
 [macro name="ayana"]
-    [chara_mod name="ayana" face="%f" cross="false" wait="%m_wait|true" time="%time|1000"]
+    [chara_mod name="ayana" face="%f" cross="false" wait="%m_wait|false" time="%time|1000"]
     [chara_show name="ayana" top="%top|40" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
@@ -151,27 +151,27 @@
 
 ;ズーム用
 [macro name="mizuka_big"]
-    [chara_mod name="mizuka_big" face="%f" cross="false" wait="%m_wait|true" time="%time" ]
+    [chara_mod name="mizuka_big" face="%f" cross="false" wait="%m_wait|false" time="%time" ]
     [chara_show name="mizuka_big" top="20|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000" ] 
 [endmacro]
 
 [macro name="laz_big"]
-    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|false" time="%time"]
     [chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
 [endmacro]
 
 [macro name="roz_big"]
-    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|false" time="%time"]
     [chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
 [endmacro]
 
 [macro name="kouki_big"]
-    [chara_mod name="kouki_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_mod name="kouki_big" face="%f" cross="false" wait="%m_wait|false" time="%time"]
     [chara_show name="kouki_big" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|1" time="%time|1000"]
 [endmacro]
 
 [macro name="ayana_big"]
-    [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|false" time="%time"]
     [chara_show name="ayana_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
 [endmacro]
 
