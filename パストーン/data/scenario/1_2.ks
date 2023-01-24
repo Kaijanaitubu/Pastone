@@ -1,12 +1,14 @@
 *start
 [startoption]
-[voconfig sebuf="2" name="mizuka" vostorage="mizuka/mizuka1-2_{number}.ogg" number="2"]
-[voconfig sebuf="5" name="kouki" vostorage="kouki/kouki1-2_{number}.ogg" number="4"]
-[voconfig sebuf="6" name="???" vostorage="other/1-2_{number}.ogg" number="1"]
+[voconfig sebuf=2 name="mizuka" vostorage="mizuka/mizuka1-2_{number}.ogg" number=2]
+[voconfig sebuf=5 name="kouki" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
+[voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.ogg" number=1]
 [vostart]
 
 ;[camera zoom="2" x="-300" y="0" time="10" wait="true"]
 [bg storage="living_big.png"]
+
+[afterjumpmaskNormal]
 
 #???
 「───あと、食材はここにあるから、後で…」[vp]
@@ -46,13 +48,13 @@
 …いや、考えていても仕方ない。[vp]
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
 
-[bg storage="living.png" ]
+[bg storage="living.png"]
 
-[kouki f=bishou]
+[kouki f="bishou"]
 #黄樹
 「お、やっと起きた。」[vp]
 
-[kouki f=shinpai]
+[kouki f="egao"]
 #黄樹
 「中々降りてこなかったから体調でも悪いのかと思ったんだが…」[vp]
 
@@ -65,15 +67,16 @@
 俺の意識は、キッチンに立つ父さんではなく…[vp]
 
 ;UIを削除して動画再生
-[bgmovie storage="mizuka_first_2.mp4" loop="false"]
+[bgmovie storage="mizuka_first_2.mp4" loop="false" skip="false"]
 @layopt layer="message0" visible="false"
 [layopt layer="fix" visible="false"]
 [better_wait time="9000"]
 
+
 ;レイヤー1にぼかして拡大したリビング背景を表示
-[camera layer="1" zoom="1.3" x="140" y="-70" time="10" wait="true"]
-[filter layer="1" blur="5"]
-[cg s="living.png" layer="1" time="1000"]
+[camera layer="base" zoom="1.3" x="140" y="-70" time="10" wait="true"]
+[filter layer="base" blur="5"]
+[cg s="living.png"]
 
 ;UI表示
 @layopt layer="message0" visible="true"
@@ -82,9 +85,9 @@
 ;動画をフェードアウト
 [stop_bgmovie time="1000" wait="true"]
 
-;☆BGM再生 美寿花のテーマ
+[bgm_mizuka]
 
-;☆立ち絵 美寿花を大きく表示（レイヤー2で）
+[mizuka_big f="egao" layer=2]
 #美寿花
 「…雪翔君、だよね？　おはよう」[vp]
 
@@ -97,13 +100,15 @@
 
 いや、そうでなければただの不審者なのだが…と、自分の考えに自分で突っ込む。[vp]
 
-[mizuka f="egao" time="10"]
-[kouki f="kyoton" time="10"]
-;☆立ち絵 大きい美寿花の立ち絵を非表示 レイヤー2を指定
+[chara_hide_all time="500" layer=2]
+
+[mizuka f="egao" m_wait="false"]
+[kouki f="kyoton"]
+
 [freecg]
-/* 拡大して美寿花を表示した状態から、シームレスに黄樹と美寿花が並んでいる画面に移行したかったので、
-上のレイヤーに背景と美寿花を表示して、下のレイヤーに二人を表示してからフェードアウトする手法をとっています。 
-まだ実際に再生をしていないので、もし違和感があるようであれば、この場面の美寿花の立ち絵を表示しないのも手だと思います。*/ 
+[reset_camera time="1000" wait="true" layer="base"]
+[filter layer="base" blur="0" wait="true" time="1000"]
+
 #黄樹
 「ん？　何をそこでボーっとしてるんだ？」[vp]
 
@@ -111,37 +116,35 @@
 そりゃするだろ。なんだよこの状況。[vp]
 困惑の視線を父さんに送るが、ああ、と納得したように笑い受け流される。[vp]
 
-[kouki f=shinpai]
+[kouki f="egao" ]
 #黄樹
 「そうか。そういえばまだ説明してなかったな。彼女は…」[vp]
 
-;☆効果音 電話の音
-
-[kouki f=komarimayu]
+[se s="se/phone.ogg"]
+[kouki f="komarimayu" ]
 #黄樹
 「…んん？」[vp]
 
 タイミング悪く、どこからか聞こえてくる着信音。[vp]
 
-[kouki f=kushou]
+[kouki f="kushou" ]
 #黄樹
 「ああ、僕の携帯か。すまん。ちょっと出てくるから、二人でゆっくりしていてくれ」[vp]
 
 #黄樹
-[chara_hide name="kouki" time="500" wait="false" ]
+[chara_hide_all time="500" wait="false"]
 「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
 
-;☆効果音 ドア開閉
-
+[se s="se/door_open.mp3" loop="false"]
 #雪翔
 ≪え、ちょっと待っ…≫[vp]
 
 それだけ言い残して、父さんの姿は書斎の奥へと消えていく。[vp]
 
-;☆漫符 ase
+[manpu type="ase"]
 ;☆パストーンの開発超初期にすとらさんが作ってくれたアニメーションを使っているので、動作確認をお願いします。
-[pyon]
-[mizuka f="kushou"]
+[kanim layer=1 keyframe="un" time="5000"]
+[mizuka f="kushou" layer=1]
 #美寿花
 「あ～…」[vp]
 
@@ -154,7 +157,8 @@
 #雪翔
 ≪……≫[vp]
 
-;☆演出 ぴょんと跳ねるアニメーション
+;演出 ぴょんと跳ねるアニメーション
+[kanim layer="0" keyframe="pyon" time="1000"]
 [mizuka f="egao"]
 #美寿花
 「…あ、まず自己紹介から、だよね！」[vp]
@@ -168,20 +172,20 @@
 …1年ってことは…やっぱり同い年なのか。[vp]
 しかも同じ大学…[vp]
 でも…[vp]
-;☆演出 黒帯演出？
 
+[black_band_init]
+[black_band_show]
 #雪翔
 （…みずか…みず、か？）[vp]
 
 何故か、彼女の名前で引っかかる。[vp]
 どこかで会ったのかとも思ったが…俺の記憶に、こんな美人はいない。[vp]
 俺の思い違いか…と、思っていると…[vp]
-;☆演出 黒帯解除
 
+[black_band_hide]
 [mizuka f="kyoton_3"]
 #美寿花
 「それと、訳あって今日からここで暮らすことになって…」[vp]
-
 
 …[vp]
 ……[vp]
@@ -189,4 +193,9 @@
 #雪翔
 ≪…は？≫[vp]
 
+…その発言が、爆弾の如く俺の思考を吹っ飛ばしていった。[vp]
+
+[chara_hide_all]
 ;☆演出 暗転 シーンチェンジ
+@jump storage="title.ks"
+;[scenejumpNormal sc="title.ks"]

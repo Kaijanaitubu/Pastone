@@ -1,8 +1,8 @@
 ;☆演出指定を「;☆☆」でしています。実装済みの箇所は☆を消してください
 *start
 [startoption]
-[voconfig sebuf="2" name="roz" vostorage="roz/roz1-1_{number}.ogg" number="2" ]
-[voconfig sebuf="1" name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number="1" ]
+[voconfig sebuf=2 name="ロズ" vostorage="roz/roz1-1_{number}.ogg" number=2 ]
+[voconfig sebuf=2 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
 [vostart]
 ;☆背景 黒
 
@@ -135,7 +135,7 @@
 
 ;☆立ち絵 ロズ拡大版 roz_taunt
 [roz_big f="roz_taunt" top="-50"]
-#roz
+#ロズ
 「そうやってラズが甘やかすから、どんどんマスターの生活リズムが崩れていくんやで？」[vp]
 
 ;☆立ち絵 ラズ拡大版 laz_kushou
@@ -159,15 +159,3 @@
 ;☆漫符 muka
 #ロズ
 「当たりまえやろ毎回引き分けなんやから！！　とにかく、覚悟…」[vp]
-
-[chara_hide_all]
-;画面が静か、BGMがない影響もある？
-
-何やら決闘が始まりそうなので、[vp]
-これ以上うるさくならないうちに音量をゼロに。[vp]
-
-#雪翔
-≪おしゃべりAI達め…≫[vp]
-
-どうしようもない、と言った風に俺はドアを開け、階下へ降りる。[vp]
-;☆効果音 ドア開ける
