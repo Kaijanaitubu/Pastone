@@ -115,17 +115,12 @@
 ;使用するときはlayerの数値を指定してください
 [macro name="mizuka"]
     [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|true" time="%time" ]
-    [chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time" ] 
+    [chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
 [endmacro]
 
-[macro name="laz"]
-    [chara_mod name="laz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="laz" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000"]
-[endmacro]
-
-[macro name="roz"]
-    [chara_mod name="roz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
-    [chara_show name="roz" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000"]
+[macro name="RozLaz"]
+    [chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|true" time="%time"]
+    [chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
 [macro name="kouki"]

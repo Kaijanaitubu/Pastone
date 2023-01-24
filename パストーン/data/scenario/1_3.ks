@@ -1,27 +1,28 @@
 *start
 
 [startoption]
-[voconfig sebuf=2 name="kouki" vostorage="kouki/kouki1-3_{number}.ogg" number=1 ]
-[voconfig sebuf=2 name="mizuka" vostorage="mizuka/mizuka1-3_{number}.ogg" number=1 ]
+[voconfig sebuf="2" name="美寿花" vostorage="mizuka/mizuka1-3_{number}.ogg" number="1"]
+[voconfig sebuf="5" name="黄樹" vostorage="kouki/kouki1-3_{number}.ogg" number="1"]
 [vostart]
 
 [bg storage="living.png" time="0"]
-[kouki f="straight" time="0"]
 [mizuka f="bishou" time="0"]
+[kouki f="straight" time="0"]
 
 ;演出 マスク解除
 ;[camera layer="base" zoom="1.2" x="0" y="0" time="10" wait="true"]
+[better_wait time="500"]
 
+[kouki f="straight"]
 #黄樹
 「…と、いうわけで…」[vp]
-[kouki f="straight"]
-
 
 [playbgm storage="Ready_to_jump.mp3" volume="15" ]
 
+[kouki f="egao"]
 #黄樹
 「今日からしばらく僕たちと暮らすことになった、常葉美寿花ちゃんだ」[vp]
-[kouki f="egao"]
+
 
 …聞き間違いじゃなかった。[vp]
 電話から帰ってきた父さんの紹介で、微かにあった可能性が潰される。[vp]
@@ -46,9 +47,10 @@
 ;漫符 ase
 [manpu type="ase"]
 
+[kouki f="mesorashi"]
 #黄樹
 「いや、その…僕が帰ってくる頃には大体雪翔は寝てるからね、説明する余裕がなかったというか…」[vp]
-[kouki f="mesorashi"]
+
 
 ……[vp]
 …絶対嘘だろ…明らかに説明するの避けてただろ…[vp]
@@ -112,9 +114,10 @@
 #雪翔
 ≪…何がだよ≫[vp]
 
+[kouki_big f="komarimayu"]
 #黄樹
 「お前、生活リズムめちゃくちゃだろう？」[vp]
-[kouki_big f="komarimayu"]
+
 
 ‥‥‥
 …それは…否定できない。[vp]
@@ -124,9 +127,10 @@
 #黄樹
 「普段料理することもないみたいだし、ちょっと色々と心配でな…僕からしたら、美寿花ちゃんがいてくれる方が安心できる」[vp]
 
+[kouki_big f="komarimayu"]
 #黄樹
 「まぁ、その分迷惑をかけてしまうことにもなるんだが…」[vp]
-[kouki_big f="komarimayu"]
+
 
 [chara_hide_all layer="1"]
 
@@ -137,32 +141,36 @@
 
 当の本人は嫌がる様子もなく、むしろやる気に満ち溢れているように見える。[vp]
 
+[kouki f="egao_2"]
 #黄樹
 「というわけだ。しばらくの間、仲良くやってくれ…[vp]
 じゃ、私は大学に行ってくる」[vp]
-[kouki f="egao_2"]
+
 
 ;ボイス更新予定
+[mizuka f="kangae"]
 #美寿花
 「あれ？　確か昼からだと聞いていましたけど…」[vp]
-[mizuka f="kangae"]
 
+[kouki f="kushou"]
 #黄樹
 「さっきの電話で早めに来てほしい、って言われてね。何をしでかしたんだか…」[vp]
-[kouki f="kushou"]
 
+
+[kouki f="egao"]
 #黄樹
 「早速で悪いんだが今日の夕飯の用意、頼めるかい？」[vp]
-[kouki f="egao"]
 
-#美寿花
+
 [mizuka f="yaruki"]
+#美寿花
 「もちろんです！　お昼ご飯も一緒にお作りしましょうか？」[vp]
 [mizuka f="bishou"]
 
+[kouki f="bishou"]
 #黄樹
 「僕が作ったものが冷蔵庫にあるから。」[vp]
-[kouki f="bishou"]
+
 
 …ん？[vp]
 二人の会話の中で、父さんの言葉が引っかかる。[vp]
@@ -171,21 +179,23 @@
 #雪翔
 （父さん…料理できたっけ？）[vp]
 
+[kouki f="egao"]
 #黄樹
 「おっと、もうこんな時間か！　じゃ、頼んだよ！」[vp]
-[kouki f="egao"]
+
 ;画面退場演出凝りたい
 
 [mizuka f="kyoton_3"]
-[chara_hide_all]
+[chara_hide name="kouki" wait="true"]
 [reset_camera time="1000" layer="base" ]
+
 その直後、よほど余裕がないのか、父さんはドタバタと家を出て行ってしまった。[vp]
 
 #雪翔
 ≪……≫[vp]
 
-#美寿花
 [mizuka f="kushou"]
+#美寿花
 「…忙しい人だね」[vp]
 [mizuka f="odoroki"]
 

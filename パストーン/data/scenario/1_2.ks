@@ -1,14 +1,13 @@
 *start
 [startoption]
-[voconfig sebuf=2 name="mizuka" vostorage="mizuka/mizuka1-2_{number}.ogg" number=2]
-[voconfig sebuf=5 name="kouki" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
+[voconfig sebuf=2 name="美寿花" vostorage="mizuka/mizuka1-2_{number}.ogg" number=2]
+[voconfig sebuf=5 name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
 [voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.ogg" number=1]
 [vostart]
 
 ;[camera zoom="2" x="-300" y="0" time="10" wait="true"]
 [bg storage="living_big.png"]
 
-[afterjumpmaskNormal]
 
 #???
 「───あと、食材はここにあるから、後で…」[vp]
@@ -116,7 +115,7 @@
 そりゃするだろ。なんだよこの状況。[vp]
 困惑の視線を父さんに送るが、ああ、と納得したように笑い受け流される。[vp]
 
-[kouki f="egao" ]
+[kouki f="egao"]
 #黄樹
 「そうか。そういえばまだ説明してなかったな。彼女は…」[vp]
 
@@ -158,14 +157,14 @@
 ≪……≫[vp]
 
 ;演出 ぴょんと跳ねるアニメーション
-[kanim layer="0" keyframe="pyon" time="1000"]
-[mizuka f="egao"]
+[kanim layer="1" keyframe="pyon" time="1000"]
+[mizuka f="egao" layer=1]
 #美寿花
 「…あ、まず自己紹介から、だよね！」[vp]
 
 このまま沈黙が続くとまずいと感じたのか、半ば無理やり自己紹介を始める女性。[vp]
 
-[mizuka f="egao"]
+[mizuka f="egao" layer=1]
 #美寿花
 「…えーと、名前は[ruby text = "とき"]常[ruby text = "わ"]葉[ruby text = "み"]美[ruby text = "ず"]寿[ruby text = "か"]花。[ruby text = "のぞ"]希み[ruby text = "の"]野大学の1年生。」[vp]
 
@@ -183,7 +182,7 @@
 俺の思い違いか…と、思っていると…[vp]
 
 [black_band_hide]
-[mizuka f="kyoton_3"]
+[mizuka f="kyoton_3" layer=1]
 #美寿花
 「それと、訳あって今日からここで暮らすことになって…」[vp]
 
@@ -195,7 +194,7 @@
 
 …その発言が、爆弾の如く俺の思考を吹っ飛ばしていった。[vp]
 
-[chara_hide_all]
+[chara_hide_all time="10" layer=1]
 ;☆演出 暗転 シーンチェンジ
 @jump storage="title.ks"
 ;[scenejumpNormal sc="title.ks"]
