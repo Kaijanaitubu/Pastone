@@ -1,8 +1,10 @@
 ;☆演出指定を「;☆☆」でしています。実装済みの箇所は☆を消してください
 *start
 [startoption]
+;ロズラズのボイスはファイル名変えてない環境だと動かない
 [voconfig sebuf=2 name="ロズ" vostorage="roz/roz1-1_{number}.ogg" number=2 ]
-[voconfig sebuf=2 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
+[voconfig sebuf=3 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=3 ]
+[voconfig sebuf=4 name="???" vostorage="other1-1_{number}.ogg" number=4 ]
 [vostart]
 ;☆背景 黒
 
@@ -139,10 +141,11 @@
 「そうやってラズが甘やかすから、どんどんマスターの生活リズムが崩れていくんやで？」[vp]
 
 ;☆立ち絵 ラズ拡大版 laz_kushou
+[laz_big f="laz_kushou" top="-50"]
 #ラズ
 「あらあら、それならあなただってどうして深夜まで頑張って作業しているご主人様を止めませんの？　元はといえばロズのせいだと言えますが」[vp]
 
-[chara_hide_all]
+;[chara_hide_all]
 俺の言葉を無視し、携帯からの声達はどんどん険悪な雰囲気になっていく。[vp]
 
 ;☆立ち絵 ロズ拡大版 roz_okori_2

@@ -1,7 +1,7 @@
 *start
 [startoption]
 [voconfig sebuf=2 name="mizuka" vostorage="mizuka/mizuka1-2_{number}.ogg" number=2]
-[voconfig sebuf=5 name="kouki" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
+[voconfig sebuf=5 name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
 [voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.ogg" number=1]
 [vostart]
 
