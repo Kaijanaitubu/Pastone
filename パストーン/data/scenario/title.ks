@@ -4,6 +4,7 @@
 @clearstack
 @bg storage ="title.jpg" time=100
 @wait time = 200
+[afterjumpmaskNormal]
 
 *start 
 
