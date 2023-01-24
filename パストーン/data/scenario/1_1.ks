@@ -1,8 +1,8 @@
 ;☆演出指定を「;☆☆」でしています。実装済みの箇所は☆を消してください
 *start
 [startoption]
-[voconfig sebuf=2 name="ロズ" vostorage="roz/roz1-1_{number}.ogg" number=2 ]
-[voconfig sebuf=2 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
+[voconfig sebuf="2" name="roz" vostorage="roz/roz1-1_{number}.ogg" number="2" ]
+[voconfig sebuf="1" name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number="1" ]
 [vostart]
 ;☆背景 黒
 
@@ -135,7 +135,7 @@
 
 ;☆立ち絵 ロズ拡大版 roz_taunt
 [roz_big f="roz_taunt" top="-50"]
-#ロズ
+#roz
 「そうやってラズが甘やかすから、どんどんマスターの生活リズムが崩れていくんやで？」[vp]
 
 ;☆立ち絵 ラズ拡大版 laz_kushou
