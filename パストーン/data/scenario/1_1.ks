@@ -42,11 +42,11 @@
 
 …それが、俺の発した、最後の言葉だった。[vp]
 
-;☆画面 暗転
+;画面 暗転
 [mask effect="fadeIn" time="1000"]
-;☆背景 雪翔の部屋（昼）
+;背景 雪翔の部屋（昼）
 [bg2 storage="myroom.png" name="bg" time="0" wait="false"]
-;☆背景 カメラ拡大
+;背景 カメラ拡大
 [camera time="0" x="-50" y="-50" zoom="3" time="0" wait="false" layer="base"]
 
 [mask_off effect="fadeOut" time="1000"]
@@ -60,7 +60,7 @@
 #雪翔
 ≪…ん…≫[vp]
 
-;☆背景 拡大解除
+;背景 拡大解除
 [reset_camera time="1000" wait="false" layer="base"]
 ;☆効果音 衣擦れ
 [se s="se/cloth_1.ogg" loop="false"]
@@ -81,7 +81,7 @@
 
 あれ、というのは夢の内容のことである。[vp]
 
-;☆背景 黒帯演出 少し拡大した部屋の背景を映す（出来れば少しづつ横に背景を移動していきたい）
+;背景 黒帯演出 少し拡大した部屋の背景を映す（出来れば少しづつ横に背景を移動していきたい）
 [keyframe name="1n1leftToRight"]
     [frame p="100%" x="-200"]
 [endkeyframe]
@@ -109,8 +109,7 @@
 …そして、
 …その事故で俺は、母親を失うことになった。[vp]
 
-;☆背景 黒帯解除
-
+;背景 黒帯解除
 [stop_kanim name="bg"]
 [black_band_hide]
 ;[reset_camera wait="false" layer="base"]
@@ -135,12 +134,12 @@
 #雪翔
 ≪朝から騒がしいな…≫[vp]
 
-;☆立ち絵 ロズ拡大版 roz_taunt
+;立ち絵 ロズ拡大版 roz_taunt
 [roz_big f="roz_taunt" top="-50"]
 #ロズ
 「そうやってラズが甘やかすから、どんどんマスターの生活リズムが崩れていくんやで？」[vp]
 
-;☆立ち絵 ラズ拡大版 laz_kushou
+;立ち絵 ラズ拡大版 laz_kushou
 [laz_big f="laz_kushou" top="-50"]
 #ラズ
 「あらあら、それならあなただってどうして深夜まで頑張って作業しているご主人様を止めませんの？　元はといえばロズのせいだと言えますが」[vp]
@@ -148,19 +147,19 @@
 ;[chara_hide_all]
 俺の言葉を無視し、携帯からの声達はどんどん険悪な雰囲気になっていく。[vp]
 
-;☆立ち絵 ロズ拡大版 roz_okori_2
+;立ち絵 ロズ拡大版 roz_okori_2
 [roz_big f="roz_okori_2" top="-50"]
 #ロズ
 「どうやら、今日こそ決着つけなあかんみたいやな。」[vp]
 
-;☆立ち絵 ラズ拡大版 laz_confident
+;立ち絵 ラズ拡大版 laz_confident
 ;☆漫符 tameiki？
 [laz_big f="laz_confident" top="-50"]
 #ラズ
 「勝てるとお思いで？　私、貴方に負けたことないでしょう？」[vp]
 
 ;ボイス差し替え予定
-;☆立ち絵 ロズ拡大版 roz_okori_3
+;立ち絵 ロズ拡大版 roz_okori_3
 ;☆漫符 muka
 [roz_big f="roz_okori_3" top="-50"]
 #ロズ
