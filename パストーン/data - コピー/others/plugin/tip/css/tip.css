@@ -1,0 +1,157 @@
+/*******************************************
+	【TIPプラグイン】　TIP詳細
+********************************************/
+
+@charset "utf-8";
+
+
+/** 閉じるボタン *****************************/
+.tip_close_area {
+	top: 50px;
+	right: 12.5%;
+	position:absolute;
+}
+.tip_close_button {
+	position:absolute;
+	width:45px;
+	height:45px;
+	right:-25px;
+	top:-25px;
+	cursor:pointer;
+	/*font-family:"ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;*/
+	font-size:36px;
+	color:#fff;
+	line-height:40px;
+	text-align:center;
+	text-decoration: none;
+	background:#333;
+	border-radius:50%;
+	border:3px solid #fff;
+	box-shadow: 0 0 8px #000;
+	z-index: 1;
+}
+
+
+/** 全体 ********************************/
+#tip_wrap {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	text-align:left;
+	background: rgba(0,0,0,0.7);
+	z-index: 10000;
+}
+/* 表示部分 */
+#tip_container {
+	width:100%;
+	height:100%;
+	padding: 50px 12.5%;
+}
+/* 窓部分 */
+.tip_area {
+	height: 100%;
+	width:100%;
+	padding: 15px;
+	background: #fff;
+	border:1px solid #fff;
+	border-radius: 6px;
+}
+/* 詳細表示部分 */
+.tip_item {
+	position: relative;
+	width:100%;
+	height:100%;
+}
+
+/** タイトル部分 *******************************/
+.tip_head {
+	position:relative;
+	padding: 4px 15px;
+	display:block;
+	width:100%;
+	color:#fff;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.7);
+	background: linear-gradient(to bottom, #02afea, #0077c1);
+	border-radius: 6px;
+	font-size: 24px;
+	font-weight: bold;
+}
+/* idを小文字に */
+.tip_id{
+	font-size:75%;
+	margin-right:0.75em;
+}
+/* newマーク */
+.tip_head .new {
+	color: red;
+	margin-left: 0.5em;
+}
+
+
+/** TIP本文 **********************************/
+.tip_body {
+	position:relative;
+	display:block;
+	font-size: 24px;
+	margin:2% 0;
+	padding:0 10px;
+	overflow:auto;
+	height: 80%;
+	font-weight: normal;
+}
+
+
+
+/** ページナビ *****************************/
+.tip_nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size:18px;
+}
+/* ページナビボタン */
+.tip_nav li {
+	display: inline-block;
+	margin-right: 5px;
+}
+/* ページナビクリック部分 */
+.tip_nav a {
+	color:#0077c1;
+	display: inline-block;
+	width:48px;
+	height:36px;
+	text-align:center;
+	text-decoration: none;
+	line-height:36px;
+	background:rgba(255,255,255,0.8);
+	border-radius:6px;
+	border:2px solid #0077c1;
+	cursor: pointer;
+}
+.tip_nav a:hover {
+	color:rgba(0,0,80,1);
+	background:#fff001;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+}
+.tip_nav a.now {
+	color:#fff;
+	background:#0077c1;
+	cursor:default;
+}
+.tip_nav a.now:hover {
+	text-shadow: none;
+}
+/* ページナビ next・prevボタン */
+.tip_nav a.prev,
+.tip_nav a.next {
+	/*display: none;*/
+}
+.tip_nav a.prev.now,
+.tip_nav a.next.now {
+	/*visibility: hidden;*/
+	color:#bbb;
+	background:#fff;
+	border-color:#bbb;
+}
