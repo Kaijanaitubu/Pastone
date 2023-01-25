@@ -10,7 +10,7 @@
 
 [bg2 storage="black.jpg"]
 
-@jump target="*debug"
+;@jump target="*debug"
 
 #
 『やめてくれ』[vp]
@@ -152,12 +152,11 @@
 #ロズ
 「どうやら、今日こそ決着つけなあかんみたいやな。」[vp]
 
-*debug
 
 ;立ち絵 ラズ拡大版 laz_confident
 ;☆漫符 tameiki？
 [laz_big f="laz_confident" top="-50"]
-[manpu layer="1" name="RozLaz" type="tameiki"]
+[manpu layer="1" type="tameiki" x="550" y="80"]
 #ラズ
 「勝てるとお思いで？　私、貴方に負けたことないでしょう？」[vp]
 
@@ -165,11 +164,12 @@
 ;立ち絵 ロズ拡大版 roz_okori_3
 ;☆漫符 muka
 [roz_big f="roz_okori_3" top="-50"]
+[manpu layer="1" type="muka" x="700" y="50"]
 #ロズ
 「当たりまえやろ毎回引き分けなんやから！！　とにかく、覚悟…」[vp]
 
 
-[chara_hide_all]
+[chara_hide_all layer="1"]
 ;画面が静か、BGMがない影響もある？
 
 何やら決闘が始まりそうなので、[vp]
