@@ -68,7 +68,7 @@
 女性…美寿花の言葉にぼやきながらも、謝る父さん。[vp]
 
 ;☆ ここ二人の表情同時に変えようとしてるけど挙動怪しいかもしれないので確認お願いします
-[kouki f="bishou" m_wait="false"]
+[kouki f="bishou"]
 [mizuka f="kushou"]
 #美寿花
 「あはは…通りで何か反応がおかしいと思った…。じゃあ、ちゃんと説明しないとだね」[vp]
@@ -119,7 +119,7 @@
 「お前、生活リズムめちゃくちゃだろう？」[vp]
 
 
-‥‥‥
+‥‥‥[vp]
 …それは…否定できない。[vp]
 ロズやラズが呼びかけてくれるおかげで昼夜逆転、とまではいかないが、健康的かと言われれば首を傾げるばかりである。[vp]
 
@@ -132,7 +132,7 @@
 「まぁ、その分迷惑をかけてしまうことにもなるんだが…」[vp]
 
 
-[chara_hide_all layer="1"]
+[chara_hide_all layer="1" time="500"]
 
 [mizuka f="yaruki"]
 #美寿花
@@ -187,7 +187,7 @@
 
 [mizuka f="kyoton_3"]
 [chara_hide name="kouki" wait="true"]
-[reset_camera time="1000" layer="base" ]
+;[reset_camera time="1000" layer="base" ]
 
 その直後、よほど余裕がないのか、父さんはドタバタと家を出て行ってしまった。[vp]
 
