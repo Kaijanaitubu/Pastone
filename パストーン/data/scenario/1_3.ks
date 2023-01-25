@@ -10,8 +10,6 @@
 [kouki f="straight" time="0"]
 
 ;演出 マスク解除
-;[camera layer="base" zoom="1.2" x="0" y="0" time="10" wait="true"]
-[better_wait time="500"]
 
 [kouki f="straight"]
 #黄樹
@@ -67,7 +65,7 @@
 
 女性…美寿花の言葉にぼやきながらも、謝る父さん。[vp]
 
-;☆ ここ二人の表情同時に変えようとしてるけど挙動怪しいかもしれないので確認お願いします
+; ここ二人の表情同時に変えようとしてるけど挙動怪しいかもしれないので確認お願いします
 [kouki f="bishou"]
 [mizuka f="kushou"]
 #美寿花
@@ -75,7 +73,10 @@
 ;ボイス更新予定
 
 [chara_hide_all]
+
 ;ここから美寿花拡大演出
+[camera layer="base" zoom="1.2" x="0" y="0" time="50" wait="true"]
+[better_wait time="500"]
 [mizuka_big f="kimazui"]
 #美寿花
 「私がここにお邪魔させてもらった理由なんだけど…」[vp]
@@ -98,6 +99,7 @@
 当たってるのかよ。行動力どうなってんだこの人…[vp]
 
 ;ここから黄樹拡大演出
+[chara_hide_all layer="1"]
 [kouki_big f="bishou"]
 #黄樹
 「美寿花ちゃんの母親は僕の友達でね。流石に一人だと色々と危険だし、落ち着くまで面倒を見てくれないか頼まれたわけだ」[vp]
@@ -131,13 +133,13 @@
 #黄樹
 「まぁ、その分迷惑をかけてしまうことにもなるんだが…」[vp]
 
-
-[chara_hide_all layer="1" time="500"]
+[chara_hide_all layer="1"]
+[reset_camera time="1000" layer="base" ]
 
 [mizuka f="yaruki"]
+
 #美寿花
 「いえ、迷惑なんてそんな！家事は得意ですので任せてください！」[vp]
-
 
 当の本人は嫌がる様子もなく、むしろやる気に満ち溢れているように見える。[vp]
 
@@ -185,9 +187,9 @@
 
 ;画面退場演出凝りたい
 
+
+[chara_hide_all]
 [mizuka f="kyoton_3"]
-[chara_hide name="kouki" wait="true"]
-;[reset_camera time="1000" layer="base" ]
 
 その直後、よほど余裕がないのか、父さんはドタバタと家を出て行ってしまった。[vp]
 
@@ -213,7 +215,7 @@
 俺はそんなことを考え、一人悶々とするのであった…。[vp]
 
 [fadeoutbgm time="2000"]
-[chara_hide_all time="1000" wait="true"]
+[chara_hide_all]
 [bg storage="daysky.png" time="1000" ]
 
 
