@@ -15,19 +15,19 @@
 
 aa[p]
 
-;[image storage="chara/mizuka/akire.png" layer="0" top="20" left="206" depth="front" width="868" height="1227"]
+[image storage="chara/mizuka/akire.png" layer="0" top="20" left="206" depth="front" width="868" height="1227"]
 [chara_hide_all time="800" wait="true"]
 
 [chara_show name="mizuka" top="1020" zindex="2" wait="true" layer="1" time="1" page="fore"] 
 [chara_show name="kouki" top="950" zindex="1" wait="true" layer="1" time="1" page="fore"]
 
-[anim layer="1" time="1" opacity="0" ]
+[anim layer="1" time="0" opacity="1" ]
 [wa]
 
 [kanim keyframe="charafade" layer="1" time="1" easing="stop-end"]
 [wa]
 
-;[freeimage layer="0" time="1000" wait="false"]
+[freeimage layer="0" time="1000" wait="false"]
 [anim layer="1" opacity="255" time="1000" ]
 [wa]
 
