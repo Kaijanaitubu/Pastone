@@ -10,7 +10,7 @@
 
 [bg2 storage="black.jpg"]
 
-;@jump target="*debug"
+@jump target="*debug"
 
 #
 『やめてくれ』[vp]
@@ -152,9 +152,12 @@
 #ロズ
 「どうやら、今日こそ決着つけなあかんみたいやな。」[vp]
 
+*debug
+
 ;立ち絵 ラズ拡大版 laz_confident
 ;☆漫符 tameiki？
 [laz_big f="laz_confident" top="-50"]
+[manpu layer="1" name="RozLaz" type="tameiki"]
 #ラズ
 「勝てるとお思いで？　私、貴方に負けたことないでしょう？」[vp]
 
