@@ -14,8 +14,20 @@
 
 aa[p]
 
-[mizuka f="akire"]
+[layopt layer="0" visible="true"]
+[image storage="chara/mizuka/akire.png" layer="0" top="20" left="206" depth="front" width="868" height="1227"]
+[chara_hide_all]
 
-a
+[layermode layer="1" opacity="255" time="0"]
+[chara_show name="mizuka_big" top="20" zindex="2" wait="true" layer="1" time="10" ] 
+[chara_show name="kouki_big" zindex="1" wait="true" top="-50" layer="1" time="10" ]
+
+bb[p]
+
+[freeimage layer="0" time="10" wait="true"]
+
+cc[p]
+
+
 
 @jump storage="title.ks"

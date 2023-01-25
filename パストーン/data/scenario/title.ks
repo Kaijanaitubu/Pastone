@@ -19,7 +19,7 @@
 *gamestart
 ;一番最初のシナリオファイルへジャンプする
 [clearfix]
-@jump storage="1_1.ks"
+@jump storage="01charashow.ks"
 
 
 
