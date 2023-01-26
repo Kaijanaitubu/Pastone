@@ -6,7 +6,7 @@
 [voconfig sebuf=3 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
 [voconfig sebuf=4 name="???" vostorage="other/1-1_{number}.ogg" number=1 ]
 [vostart]
-;☆背景 黒
+;背景 黒
 
 [bg2 storage="black.jpg"]
 
@@ -62,7 +62,7 @@
 
 ;背景 拡大解除
 [reset_camera time="1000" wait="false" layer="base"]
-;☆効果音 衣擦れ
+;効果音 衣擦れ
 [se s="se/cloth_1.ogg" loop="false"]
 
 [wa]
@@ -154,7 +154,7 @@
 
 
 ;立ち絵 ラズ拡大版 laz_confident
-;☆漫符 tameiki？
+;漫符 tameiki？
 [laz_big f="laz_confident" top="-50"]
 [manpu layer="1" type="tameiki" x="550" y="80"]
 #ラズ
@@ -162,7 +162,7 @@
 
 ;ボイス差し替え予定
 ;立ち絵 ロズ拡大版 roz_okori_3
-;☆漫符 muka
+;漫符 muka
 [roz_big f="roz_okori_3" top="-50"]
 [manpu layer="1" type="muka" x="700" y="50"]
 #ロズ
