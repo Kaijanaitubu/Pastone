@@ -112,7 +112,6 @@
 ;------------------------------------------------------------------------------------------------------
 
 ;各キャラの表情表示マクロ
-;使用するときはlayerの数値を指定してください
 [macro name="mizuka"]
     [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|false" time="%time" ]
     [chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 

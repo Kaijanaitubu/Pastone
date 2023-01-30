@@ -1,7 +1,10 @@
 [startoption]
 
 [bg storage="living.png" time="10"]
+; [image storage="living.png" layer="base" visible="true" ]
+; [camera x="-180" layer="base" wait="false" time="2000" ease_type="linear" ]
 
+; [reset_camera time="1000"layer="base"]
 ;[chara_show name="mizuka" top="20" wait="true" layer=0]
 [mizuka f="egao" layer=0]
 ;[chara_show name="kouki" top="20" wait="true" layer=0]
@@ -10,7 +13,7 @@
 クリックしたらアニメーションかかる[p]
 
 ;[chara_hide name="mizuka" time="500"]
-[mizuka_anim]
+[chara_hide_all]
 ;[chara_hide name="kouki" time="500"]
 ;[chara_hide name="ayana" time="500"]
 ;[chara_hide name="RozLaz" time="500"]
