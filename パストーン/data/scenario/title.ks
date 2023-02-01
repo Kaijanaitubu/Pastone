@@ -19,7 +19,7 @@
 *gamestart
 ;一番最初のシナリオファイルへジャンプする
 [clearfix]
-@jump storage="01fade.ks"
+@jump storage="1_3.ks"
 
 
 

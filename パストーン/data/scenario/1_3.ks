@@ -31,7 +31,7 @@
 あまりにも荒唐無稽な話に、まだ夢の続きではないのか。とかそんな事を考える。[vp]
 
 ;漫符 oya
-[manpu type="oya"]
+[manpu type="oya" x="600" y="80"]
 [mizuka f="kyoton"]
 #美寿花
 「…もしかして、聞かされてなかったの…？　私てっきり…」[vp]
@@ -43,7 +43,7 @@
 僕は首を横に振る。[vp]
 
 ;漫符 ase
-[manpu type="ase"]
+[manpu type="ase" y="30"]
 
 [kouki f="mesorashi"]
 #黄樹
@@ -72,11 +72,9 @@
 「あはは…通りで何か反応がおかしいと思った…。じゃあ、ちゃんと説明しないとだね」[vp]
 ;ボイス更新予定
 
-[chara_hide_all]
+[chara_hide_all time="1000" wait="true"]
 
 ;ここから美寿花拡大演出
-[camera layer="base" zoom="1.2" x="0" y="0" time="50" wait="true"]
-[better_wait time="500"]
 [mizuka_big f="kimazui"]
 #美寿花
 「私がここにお邪魔させてもらった理由なんだけど…」[vp]
@@ -99,7 +97,7 @@
 当たってるのかよ。行動力どうなってんだこの人…[vp]
 
 ;ここから黄樹拡大演出
-[chara_hide_all layer="1"]
+[chara_hide_all layer="1" time="1000" wait="true" ]
 [kouki_big f="bishou"]
 #黄樹
 「美寿花ちゃんの母親は僕の友達でね。流石に一人だと色々と危険だし、落ち着くまで面倒を見てくれないか頼まれたわけだ」[vp]
@@ -132,10 +130,9 @@
 #黄樹
 「まぁ、その分迷惑をかけてしまうことにもなるんだが…」[vp]
 
-[chara_hide_all layer="1"]
-[reset_camera time="1000" layer="base" ]
+[chara_hide_all layer="1" time="1000" wait="true" ]
 
-[mizuka f="yaruki"]
+[mizuka f="yaruki" time=700]
 
 #美寿花
 「いえ、迷惑なんてそんな！家事は得意ですので任せてください！」[vp]
@@ -181,15 +178,13 @@
 （父さん…料理できたっけ？）[vp]
 
 [kouki f="egao"]
+[manpu type="ase2" x="140" y="90"]
 #黄樹
 「おっと、もうこんな時間か！　じゃ、頼んだよ！」[vp]
 
 ;画面退場演出凝りたい
-
-
-[chara_hide_all]
 [mizuka f="kyoton_3"]
-
+[chara_hide_all time="1000" wait="true"]
 その直後、よほど余裕がないのか、父さんはドタバタと家を出て行ってしまった。[vp]
 
 #雪翔
@@ -214,12 +209,11 @@
 俺はそんなことを考え、一人悶々とするのであった…。[vp]
 
 [fadeoutbgm time="2000"]
-[chara_hide_all]
-[bg storage="daysky.png" time="1000" ]
-
+[chara_hide_all time="1000" wait="true"]
+[bg storage="daysky.png" time="1000"]
 
 …その後、父さんが作った…肉じゃが？もどき。[vp]
 控え目に言って子供がギャン泣きする出来に仕上がっており、[r]
 それを二人で頑張って完食するのは、また別の話である。[vp]
 
-@jump storage="title.ks" 
+@jump storage="title.ks"
