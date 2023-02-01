@@ -113,6 +113,7 @@
 
 ;各キャラの表情表示マクロ
 [macro name="mizuka"]
+<<<<<<< Updated upstream
     [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|false" time="%time" ]
     [chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
 [endmacro]
@@ -124,10 +125,29 @@
 
 [macro name="kouki"]
     [chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%time"]
+=======
+    [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|true" time="%time" ]
+    [chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
+[endmacro]
+
+[macro name="laz"]
+    [chara_mod name="laz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="laz" top="|%top" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time"]
+[endmacro]
+
+[macro name="roz"]
+    [chara_mod name="roz" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="roz" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time"]
+[endmacro]
+
+[macro name="kouki"]
+    [chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+>>>>>>> Stashed changes
     [chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
 [macro name="ayana"]
+<<<<<<< Updated upstream
     [chara_mod name="ayana" face="%f" cross="false" wait="%m_wait|false" time="%time|1000"]
     [chara_show name="ayana" top="%top|40" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000"]
 [endmacro]
@@ -146,6 +166,10 @@
 [macro name="freecg" ]
     [free layer="%layer|1" name="cg" time="10" ]
     [freeimage layer="%layer|1" time="%time|1000" wait="%wait|true" ]
+=======
+    [chara_mod name="ayana" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="ayana" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time"]
+>>>>>>> Stashed changes
 [endmacro]
 
 ;ズーム用
@@ -170,8 +194,71 @@
 [endmacro]
 
 [macro name="ayana_big"]
+<<<<<<< Updated upstream
     [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|false" time="%time"]
     [chara_show name="ayana_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
+=======
+    [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|true" time="%time"]
+    [chara_show name="ayana_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time"]
+[endmacro]
+
+;効果音再生
+[macro name="se"]
+    [playse storage="%s" volume="30" loop="%loop|false"]
+[endmacro]
+
+;画像表示用
+[macro name="cg" ]
+    [image storage="%s" width="%w|1280" height="%h|720" layer="%layer|1" visible="%visible|true" time="%time|1000" name="%name|cg" ]
+[endmacro]
+
+;画像削除用
+[macro name="freecg" ]
+    [free layer="%layer|1" name="cg" time="10" ]
+    [freeimage layer="%layer|1" time="%time|1000" wait="%wait|true" ]
+[endmacro]
+
+;立ち絵アニメーション
+[macro name="mizuka_hide"]
+    [chara_hide name="mizuka" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="raz_hide"]
+    [chara_hide name="raz" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="loz_hide"]
+    [chara_hide name="loz" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="kouki_hide"]
+    [chara_hide name="kouki" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="ayana_hide"]
+    [chara_hide name="ayana" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+;でかいキャラを隠すマクロ
+[macro name="mizuka_big_hide"]
+    [chara_hide name="mizuka_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="raz_big_hide"]
+    [chara_hide name="RozLaz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="loz_big_hide"]
+    [chara_hide name="RozLaz_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="kouki_big_hide"]
+    [chara_hide name="kouki_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+[endmacro]
+
+[macro name="ayana_big_hide"]
+    [chara_hide name="ayana_big" time="%time|1000" wait="%wait|true" layer="%layer|0" pos_mode="true"]
+>>>>>>> Stashed changes
 [endmacro]
 
 ;頷き風

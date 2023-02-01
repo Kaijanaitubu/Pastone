@@ -1,8 +1,14 @@
 *start
 [startoption]
+<<<<<<< Updated upstream
 [voconfig sebuf=2 name="美寿花" vostorage="mizuka/mizuka1-2_{number}.ogg" number=2]
 [voconfig sebuf=5 name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
 [voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.ogg" number=1]
+=======
+[voconfig sebuf="2" name="美寿花" vostorage="mizuka/mizuka1-2_{number}.ogg" number="2"]
+[voconfig sebuf="5" name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number="4"]
+[voconfig sebuf="6" name="???" vostorage="other/1-2_{number}.ogg" number="1"]
+>>>>>>> Stashed changes
 [vostart]
 
 ;[camera zoom="2" x="-300" y="0" time="10" wait="true"]
@@ -48,7 +54,10 @@
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
 
 [bg storage="living.png"]
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 [kouki f="bishou"]
 #黄樹
 「お、やっと起きた」[vp]
