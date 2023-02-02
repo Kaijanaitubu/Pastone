@@ -1,17 +1,18 @@
 [startoption]
-[bg storage="living.png"]
+[bg storage="daysky.png"]
 背景ループ[np]
+;[camera layer="0" y="-550" time="5000" ease_type="linear" wait="false"]
 
-[eval exp="f.cnt=1"]
+; [eval exp="f.cnt=1"]
 
-*loopstart
+; *loopstart
 
-[emb exp="f.cnt"]
-[image storage="living.png"layer="0" x="-100"]
-[image storage="living.png"layer="0" x="100"]
-[camera layer="0" wait="false" x="-100" time="500" ease_type="linear" ]
+; [emb exp="f.cnt"]
+; [image storage="living.png"layer="0" x="-100"]
+; [image storage="living.png"layer="0" x="100"]
+; [camera layer="0" wait="false" x="-100" time="500" ease_type="linear" ]
 
-[eval exp="f.cnt=f.cnt+1" ]
+; [eval exp="f.cnt=f.cnt+1" ]
 
 @jump target="loopstart"
 [mizuka f="egao" layer=0]

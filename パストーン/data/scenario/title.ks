@@ -19,11 +19,7 @@
 *gamestart
 ;一番最初のシナリオファイルへジャンプする
 [clearfix]
-<<<<<<< Updated upstream
 @jump storage="1_3.ks"
-=======
-@jump storage="1_2.ks"
->>>>>>> Stashed changes
 
 
 
