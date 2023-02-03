@@ -54,10 +54,7 @@
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
 
 [bg storage="living.png"]
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 [kouki f="bishou"]
 #黄樹
 「お、やっと起きた」[vp]
