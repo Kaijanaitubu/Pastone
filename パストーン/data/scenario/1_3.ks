@@ -78,6 +78,7 @@
 [chara_hide_all time="1000" wait="true"]
 
 ;ここから美寿花拡大演出
+[camera layer="base" zoom="1.2" x="0" y="0" time="500" wait=false]
 [mizuka_big f="kimazui"]
 #美寿花
 「私がここにお邪魔させてもらった理由なんだけど…」[vp]
@@ -137,8 +138,8 @@
 「まぁ、その分迷惑をかけてしまうことにもなるんだが…」[vp]
 
 [chara_hide_all layer="1" time="1000" wait="true" ]
-
-[mizuka f="yaruki" time=700]
+[reset_camera time="50" layer="base" ]
+[mizuka f="yaruki"]
 
 #美寿花
 「いえ、迷惑なんてそんな！家事は得意ですので任せてください！」[vp]
