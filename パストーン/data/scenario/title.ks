@@ -35,4 +35,5 @@
 *gamestart
 [clearfix name="title" ]
 ;一番最初のシナリオファイルへジャンプする
+[mask time="3000" effect="fadeIn" color="0xffffff" ]
 @jump storage="1_1new.ks"

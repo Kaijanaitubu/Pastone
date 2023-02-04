@@ -6,9 +6,11 @@
 [voconfig sebuf=3 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
 [voconfig sebuf=4 name="???" vostorage="other/1-1_{number}.ogg" number=1 ]
 [vostart]
+
 ;背景 黒
 
 [bgmovie storage="first_1.mp4"]
+[mask_off time="3000" effect="fadeOut" color="0xffffff" ]
 
 ;@jump target="*debug"
 

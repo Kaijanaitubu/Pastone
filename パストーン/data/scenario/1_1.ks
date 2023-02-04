@@ -5,6 +5,7 @@
 [voconfig sebuf=2 name="roz" vostorage="roz/roz1-1_{number}.ogg" number=1 ]
 [voconfig sebuf=2 name="laz" vostorage="laz/laz1-1_{number}.ogg" number=1 ]
 [vostart]
+[mask_off time="3000" effect="fadeOut" color="0xffffff" ]
 
 ;☆演出指定を「;☆」でしています。実装済みの箇所は☆を消してください
 
