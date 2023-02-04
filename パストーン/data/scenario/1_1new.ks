@@ -177,4 +177,4 @@
 
 [scenejumpNormal]
 
-@jump storage="title.ks" 
+@jump storage="1-2.ks" 
