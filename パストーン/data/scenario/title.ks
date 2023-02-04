@@ -3,7 +3,8 @@
 *start 
 
 @clearstack
-@bg storage="title.png" time="100"
+@freeimage layer="base" time="1"
+@bg2 storage="title.png" time="100"
 @wait time="200"
 @layopt layer="message0" visible="false"
 [hidemenubutton]

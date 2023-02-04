@@ -24,7 +24,8 @@
 どこにでもあるような、そしてどこか懐かしい光景。[vp]
 
 ;☆背景first2
-[stop_bgmovie time="4000" wait="false"]
+[bg2 storage="first.png" ]
+[stop_bgmovie time="1000" wait="true"]
 [bgmovie storage="first_2.mp4" loop="false"]
 
 瞬間、目の前が一変する。[vp]
@@ -105,7 +106,7 @@
 
 あれ、というのは夢の内容のことである。[vp]
 
-[bg2 storage="myroom_blur.png" time="400" wait="false"]
+[bg2 storage="myroom_blur.png" time="1000" wait="false"]
 
 5年前の2022年…俺は母親を失った。[vp]
 一緒に帰っている道中で、信号を無視して突っ込んできた車にはねられて…　[vp]
@@ -117,7 +118,8 @@
 
 頭を振り、脳裏によぎった記憶をさっさと追い出す。[vp]
 今の時代、人は何百人に一人が交通事故に遭うんだ。[vp]
-それが母親だったというだけのこと。薄情かもしれないが割り切るしかない。[vp]
+それが母親だったというだけのこと。[r]
+薄情かもしれないが割り切るしかない。[vp]
 
 
 #???

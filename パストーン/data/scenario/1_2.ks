@@ -70,7 +70,6 @@
 [bgmovie storage="mizuka_first_2.mp4" loop="false" skip="false"]
 @layopt layer="message0" visible="false"
 [layopt layer="fix" visible="false"]
-@hidemenubutton
 [better_wait time="9000"]
 
 
@@ -82,7 +81,6 @@
 ;UI表示
 @layopt layer="message0" visible="true"
 [layopt layer="fix" visible="true"]
-@showmenubutton
 
 ;動画をフェードアウト
 [stop_bgmovie time="1000" wait="true"]
@@ -112,10 +110,13 @@
 [kouki f="kyoton"]
 ;[manpu type="hatena" x="720" y="80"]
 #黄樹
-「ん？　何をそこでボーっとしてるんだ？」[vp]
+「ん？　何をそこでボーっと突っ立ってるんだ？」[vp]
 
 俺の間抜けな姿に、父さんは不思議そうに席に着くよう促す。[vp]
-そりゃするだろ。なんだよこの状況。[vp]
+
+#雪翔
+≪どうしたもこうしたも…≫[vp]
+
 困惑の視線を父さんに送るが、ああ、と納得したように笑い受け流される。[vp]
 
 [kouki f="egao"]
