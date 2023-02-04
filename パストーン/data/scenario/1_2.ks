@@ -147,7 +147,7 @@
 
 それだけ言い残して、父さんの姿は書斎の奥へと消えていく。[vp]
 
-[manpu type="ase" x="460" y="60"]
+[manpu type="ase" x="460" y="60" sound="null.mp3"]
 ;パストーンの開発超初期にすとらさんが作ってくれたアニメーションを使っているので、動作確認をお願いします。
 [kanim layer=1 keyframe="un" time="5000"]
 [mizuka f="kushou" layer=1]
