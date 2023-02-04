@@ -117,7 +117,7 @@
 
 ;効果音再生
 [macro name="se"]
-    [playse storage="%s" volume="30" loop="%loop|true"]
+    [playse storage="%s" volume="30" loop="%loop|true" buf="1" ]
 [endmacro]
 
 ;画像表示用

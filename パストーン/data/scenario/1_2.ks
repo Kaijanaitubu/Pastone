@@ -1,8 +1,8 @@
 *start
 [startoption]
 [voconfig sebuf=2 name="美寿花" vostorage="mizuka/mizuka1_2_{number}.mp3" number=2]
-[voconfig sebuf=5 name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
-[voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.ogg" number=1]
+[voconfig sebuf=5 name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number=2]
+[voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.mp3" number=1]
 [vostart]
 [ambient_light_off]
 
@@ -27,7 +27,7 @@
 
 盗み聞きする気はなかったが、つい耳を傾けてしまう。[vp]
 
-#???
+#黄樹
 「まぁ、他は特に変わったものはないし、多分家と同じだと思うよ」[vp]
 
 話してる内容はよくわからないが、何かを説明してるのか？[vp]
@@ -37,7 +37,7 @@
 「なるほど、では昼や夜は私が作るってことでいいんですよね？」[vp]
 
 ;ボイス更新予定
-#???
+#黄樹
 「うん、そうしてもらえると助かるかな。材料費とかはまた後で払うから、心配しなくていいよ」[vp]
 
 ……[vp]
@@ -70,17 +70,19 @@
 [bgmovie storage="mizuka_first_2.mp4" loop="false" skip="false"]
 @layopt layer="message0" visible="false"
 [layopt layer="fix" visible="false"]
+@hidemenubutton
 [better_wait time="9000"]
 
 
 ;レイヤー1にぼかして拡大したリビング背景を表示
-[camera layer="base" zoom="1.3" x="140" y="-70" time="10" wait="true"]
-[filter layer="base" blur="5"]
-[cg s="living.png" layer=0]
+[camera layer="0" zoom="1.3" x="140" y="-70" time="10" wait="true"]
+[filter layer="0" blur="5"]
+[cg s="living.png" layer=0 name="a"]
 
 ;UI表示
 @layopt layer="message0" visible="true"
 [layopt layer="fix" visible="true"]
+@showmenubutton
 
 ;動画をフェードアウト
 [stop_bgmovie time="1000" wait="true"]
@@ -103,9 +105,9 @@
 
 [chara_hide_all time="500" layer=2]
 
-[freecg layer=0]
-[reset_camera time="1000" wait="true" layer="base"]
-[filter layer="base" blur="0" wait="true" time="1000"]
+[freecg layer=0 time="800"]
+[reset_camera time="1000" wait="true" layer="0"]
+[filter layer="0" blur="0" wait="true" time="1000"]
 
 [kouki f="kyoton"]
 [manpu type="hatena" x="720" y="80"]
@@ -120,25 +122,28 @@
 #黄樹
 「そうか。そういえばまだ説明してなかったな。彼女は──」[vp]
 
-[se s="se/phone.ogg"]
+[se s="se/phone.ogg" buf="0"]
+タイミング悪く、どこからか聞こえてくる着信音。[vp]
+
 [kouki f="komarimayu" ]
 #黄樹
 「んん？」[vp]
-
-タイミング悪く、どこからか聞こえてくる着信音。[vp]
 
 [kouki f="kushou" ]
 #黄樹
 「ああ、僕の携帯か。すまん。ちょっと出てくるから、二人でゆっくりしていてくれ」[vp]
 
+[stopse]
 #黄樹
 [chara_hide_all time="500" wait="false"]
 「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
 
 [se s="se/door_open.mp3" loop="false"]
-[se s="se/doorclose_1.ogg" loop="false"]
+
 #雪翔
 ≪え、ちょっと待っ…≫[vp]
+
+[se s="se/doorclose_1.ogg" loop="false"]
 
 それだけ言い残して、父さんの姿は書斎の奥へと消えていく。[vp]
 

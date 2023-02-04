@@ -21,6 +21,7 @@
 *gamestart
 ;一番最初のシナリオファイルへジャンプする
 [clearfix]
+@showmenubutton
 @jump storage="1_2.ks"
 
 
