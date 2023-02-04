@@ -7,7 +7,7 @@
 [ambient_light_off]
 
 [camera zoom="2" x="-300" y="0" time="10" wait="true"]
-[bg storage="living.png" time=10]
+[bg2 storage="living.png" time=10]
 
 [afterjumpmaskNormal]
 #???
