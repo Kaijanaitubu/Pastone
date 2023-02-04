@@ -25,7 +25,8 @@
 [macro name="startoption"]
 	[cm]
 	[start_keyconfig]
-
+    [fadeoutbgm time="300"]
+	[freeimage layer="0"]
 	;メッセージウィンドウの表示
 	@layopt layer="message0" visible="true"
 

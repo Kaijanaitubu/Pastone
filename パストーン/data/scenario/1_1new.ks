@@ -68,7 +68,7 @@
 ;画面 暗転
 [mask effect="fadeIn" time="1000"]
 ;背景 雪翔の部屋（昼）
-[bg2 storage="myroom.png" name="bg" time="0" wait="false"]
+[bg2 storage="myroom.png" name="bg" time="500" wait="false"]
 ;背景 カメラ拡大
 [camera time="0" x="-50" y="-50" zoom="3" time="0" wait="false" layer="base"]
 
