@@ -4,6 +4,7 @@
 [voconfig sebuf=5 name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
 [voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.ogg" number=1]
 [vostart]
+[ambient_light_off]
 
 [camera zoom="2" x="-300" y="0" time="10" wait="true"]
 [bg storage="living.png" time=10]
@@ -87,6 +88,7 @@
 [bgm_mizuka]
 
 [mizuka_big f="egao" layer=2 time=700]
+[manpu type="onpu" x="700" y="60"]
 #美寿花
 「雪翔君、だよね？　おはよう」[vp]
 
