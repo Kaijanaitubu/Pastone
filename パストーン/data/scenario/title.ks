@@ -35,4 +35,4 @@
 *gamestart
 [clearfix name="title" ]
 ;一番最初のシナリオファイルへジャンプする
-@jump storage="01sample.ks"
+@jump storage="1_1new.ks"
