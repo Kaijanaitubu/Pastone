@@ -106,6 +106,7 @@
 [filter layer="base" blur="0" wait="true" time="1000"]
 
 [kouki f="kyoton"]
+[manpu type="hatena" x="720" y="80"]
 #黄樹
 「ん？　何をそこでボーっとしてるんだ？」[vp]
 
@@ -139,7 +140,7 @@
 
 それだけ言い残して、父さんの姿は書斎の奥へと消えていく。[vp]
 
-[manpu type="ase" x="500" y="80"]
+[manpu type="ase" x="460" y="60"]
 ;パストーンの開発超初期にすとらさんが作ってくれたアニメーションを使っているので、動作確認をお願いします。
 [kanim layer=1 keyframe="un" time="5000"]
 [mizuka f="kushou" layer=1]
