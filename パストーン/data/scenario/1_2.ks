@@ -1,20 +1,14 @@
 *start
 [startoption]
-<<<<<<< Updated upstream
-[voconfig sebuf=2 name="美寿花" vostorage="mizuka/mizuka1-2_{number}.ogg" number=2]
+[voconfig sebuf=2 name="美寿花" vostorage="mizuka/mizuka1_2_{number}.mp3" number=2]
 [voconfig sebuf=5 name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number=4]
 [voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.ogg" number=1]
-=======
-[voconfig sebuf="2" name="美寿花" vostorage="mizuka/mizuka1-2_{number}.ogg" number="2"]
-[voconfig sebuf="5" name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number="4"]
-[voconfig sebuf="6" name="???" vostorage="other/1-2_{number}.ogg" number="1"]
->>>>>>> Stashed changes
 [vostart]
 
-;[camera zoom="2" x="-300" y="0" time="10" wait="true"]
-[bg storage="living_big.png"]
+[camera zoom="2" x="-300" y="0" time="10" wait="true"]
+[bg storage="living.png" time=10]
 
-
+[afterjumpmaskNormal]
 #???
 「───あと、食材はここにあるから、後で…」[vp]
 
@@ -52,8 +46,8 @@
 だって、うちにいるのは俺と父さんの二人で…[vp]
 いや、考えていても仕方ない。[vp]
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
-
-[bg storage="living.png"]
+[reset_camera]
+;[bg storage="living.png" time="700"]
 
 [kouki f="bishou"]
 #黄樹
@@ -81,7 +75,7 @@
 ;レイヤー1にぼかして拡大したリビング背景を表示
 [camera layer="base" zoom="1.3" x="140" y="-70" time="10" wait="true"]
 [filter layer="base" blur="5"]
-[cg s="living.png"]
+[cg s="living.png" layer=0]
 
 ;UI表示
 @layopt layer="message0" visible="true"
@@ -92,7 +86,7 @@
 
 [bgm_mizuka]
 
-[mizuka_big f="egao" layer=2]
+[mizuka_big f="egao" layer=2 time=700]
 #美寿花
 「雪翔君、だよね？　おはよう」[vp]
 
@@ -107,13 +101,11 @@
 
 [chara_hide_all time="500" layer=2]
 
-[mizuka f="egao" m_wait="false"]
-[kouki f="kyoton"]
-
-[freecg]
+[freecg layer=0]
 [reset_camera time="1000" wait="true" layer="base"]
 [filter layer="base" blur="0" wait="true" time="1000"]
 
+[kouki f="kyoton"]
 #黄樹
 「ん？　何をそこでボーっとしてるんだ？」[vp]
 
@@ -141,13 +133,14 @@
 「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
 
 [se s="se/door_open.mp3" loop="false"]
+[se s="se/doorclose_1.ogg" loop="false"]
 #雪翔
 ≪え、ちょっと待っ…≫[vp]
 
 それだけ言い残して、父さんの姿は書斎の奥へと消えていく。[vp]
 
-[manpu type="ase"]
-;☆パストーンの開発超初期にすとらさんが作ってくれたアニメーションを使っているので、動作確認をお願いします。
+[manpu type="ase" x="500" y="80"]
+;パストーンの開発超初期にすとらさんが作ってくれたアニメーションを使っているので、動作確認をお願いします。
 [kanim layer=1 keyframe="un" time="5000"]
 [mizuka f="kushou" layer=1]
 #美寿花
@@ -161,7 +154,7 @@
 
 ;演出 ぴょんと跳ねるアニメーション
 [kanim layer="1" keyframe="pyon" time="1000"]
-[mizuka f="egao" layer=1]
+[mizuka f="odoroki" layer=1]
 #美寿花
 「……あ、まず自己紹介から、だよね！」[vp]
 
@@ -174,8 +167,8 @@
 1年ってことは、やっぱり同い年なのか。[vp]
 しかも同じ大学、でも…[vp]
 
-[black_band_init]
-[black_band_show]
+;[black_band_init]
+;[black_band_show]
 #雪翔
 （…みずか……みず、か？）[vp]
 
@@ -183,7 +176,7 @@
 どこかで会ったのかとも思ったが、俺の記憶にこんな美人はいない。[vp]
 俺の思い違いか、と思っていると…[vp]
 
-[black_band_hide]
+;[black_band_hide]
 [mizuka f="kyoton_3" layer=1]
 #美寿花
 「それと、訳あって今日からここで暮らすことになって──」[vp]
@@ -192,11 +185,12 @@
 ‥‥‥‥‥‥[vp]
 
 #雪翔
+[se s="se/suprised.mp3" loop=false volume="40"]
 ≪……は？≫[vp]
 
 その発言が、爆弾の如く俺の思考を吹っ飛ばしていった。[vp]
 
 [chara_hide_all time="10" layer=1]
 ;☆演出 暗転 シーンチェンジ
-@jump storage="title.ks"
-;[scenejumpNormal sc="title.ks"]
+;@jump storage="title.ks"
+[scenejumpNormal sc="title.ks"]
