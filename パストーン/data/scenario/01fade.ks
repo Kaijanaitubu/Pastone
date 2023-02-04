@@ -1,6 +1,5 @@
 [startoption]
-[bg storage="daysky.png"]
-背景ループ[np]
+[bg storage="living.png"]
 ;[camera layer="0" y="-550" time="5000" ease_type="linear" wait="false"]
 
 ; [eval exp="f.cnt=1"]
@@ -14,11 +13,11 @@
 
 ; [eval exp="f.cnt=f.cnt+1" ]
 
-@jump target="loopstart"
+;@jump target="loopstart"
 [mizuka f="egao" layer=0]
 
-クリックしたらアニメーションかかる[p]
-
+[quake count="2" wait="false" time="1000" hmax="100" vmax="0"]
+≪……は？≫[vp]
 [chara_hide_all]
 
 [mizuka_big f="egao" top="-50" layer=1]

@@ -112,7 +112,7 @@
 [kouki f="kyoton"]
 ;[manpu type="hatena" x="720" y="80"]
 #黄樹
-「ん？　何をそこでボーっとしてるんだ？」[vp]
+「ん？　何をそこでボーっと突っ立ってるんだ？」[vp]
 
 俺の間抜けな姿に、父さんは不思議そうに席に着くよう促す。[vp]
 そりゃするだろ。なんだよこの状況。[vp]
@@ -193,7 +193,9 @@
 ‥‥‥‥‥‥[vp]
 
 #雪翔
+;[manpu type="hatena" x="1050" y="320"]
 [se s="se/suprised.mp3" loop=false volume="40"]
+;[quake count="5" wait="false" time="100" hmax="100" vmax="0"]
 ≪……は？≫[vp]
 
 その発言が、爆弾の如く俺の思考を吹っ飛ばしていった。[vp]
