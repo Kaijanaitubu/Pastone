@@ -14,7 +14,7 @@
 
 ;☆背景first1
 ;mizuka1_1再生
-
+[playse storage="mizuka/mizuka1_1.mp3" loop="false" buf="2"]
 「じゃ、約束ね！」[vp]
 そう言う彼女の表情は、笑顔に溢れていた。[vp]
 向けられたこちらが、照れくさくて目を逸らしてしまうぐらい眩しい笑顔。[vp]
@@ -22,7 +22,7 @@
 どこにでもあるような、そしてどこか懐かしい光景。[vp]
 
 ;☆背景first2
-[stop_bgmovie time="5000" wait="false"]
+[stop_bgmovie time="4000" wait="false"]
 [bgmovie storage="first_2.mp4" loop="false"]
 
 瞬間、目の前が一変する。[vp]
@@ -35,7 +35,9 @@
 猛スピードでやってきた救急車が、瞬く間に『母だったもの』を乗せていく。[vp]
 
 ;☆背景first3、同じく長い時間フェード出来そうならお願いします。
+[bg2 storage="blood.png" time="1"]
 [bgmovie storage="first_3.mp4" time="1000"]
+
 ;[bg name="1_1" storage="1-1CG.png" time="3000" method="fadeInUp"  wait="false"]
 他にも何人か運ばれていた気がするが…[vp]
 思い出したく、なかった。[vp]
@@ -47,8 +49,11 @@
 理解を拒み、[vp]
 『言葉』だけを、ただ、紡いでいく。[vp]
 
+
 ;背景 黒
-[bg storage="black.jpg" time="2000" ]
+[bg2 storage="black.jpg" time="1" wait="false"]
+
+[stop_bgmovie time="3000" wait="false"]
 『やめてくれ』[vp]
 『止めてくれ』[vp]
 『誰か……助けてくれ』[vp]
@@ -144,7 +149,7 @@
 ;立ち絵 ラズ拡大版 laz_confident
 ;漫符 tameiki？
 [laz_big f="laz_confident" top="-50"]
-[manpu layer="1" type="tameiki" x="550" y="80"]
+[manpu layer="1" type="tameiki" x="550" y="80" sound="null.mp3"]
 #ラズ
 「勝てるとお思いで？　私、貴方に負けたことないでしょう？」[vp]
 
@@ -152,7 +157,7 @@
 ;立ち絵 ロズ拡大版 roz_okori_3
 ;漫符 muka
 [roz_big f="roz_okori_3" top="-50"]
-[manpu layer="1" type="muka" x="700" y="50"]
+[manpu layer="1" type="muka" x="700" y="50" sound="null.mp3"]
 #ロズ
 「当たりまえやろ毎回引き分けなんやから！！　とにかく、覚悟──」[vp]
 ;画面が静か、BGMがない影響もある？
