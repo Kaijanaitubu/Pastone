@@ -175,6 +175,4 @@
 [se s="se/door_open.mp3" loop="false"]
 [vostop]
 
-[scenejumpNormal]
-
-@jump storage="1_2.ks" 
+[scenejumpNormal sc="1_2.ks"]
