@@ -155,4 +155,6 @@
 [se s="se/door_open.mp3" loop="false"]
 [vostop]
 
+[scenejumpNormal]
+
 @jump storage="title.ks" 
