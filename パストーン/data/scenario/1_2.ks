@@ -90,7 +90,7 @@
 [bgm_mizuka]
 
 [mizuka_big f="egao" layer=2 time=700]
-[manpu type="onpu" x="700" y="60"]
+;[manpu type="onpu" x="700" y="60"]
 #美寿花
 「雪翔君、だよね？　おはよう」[vp]
 
@@ -110,7 +110,7 @@
 [filter layer="0" blur="0" wait="true" time="1000"]
 
 [kouki f="kyoton"]
-[manpu type="hatena" x="720" y="80"]
+;[manpu type="hatena" x="720" y="80"]
 #黄樹
 「ん？　何をそこでボーっとしてるんだ？」[vp]
 
