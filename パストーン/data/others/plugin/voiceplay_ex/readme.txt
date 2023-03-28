@@ -76,7 +76,7 @@ logrepeat_config：バックログのボイスリピートボタン設定
 属性：
 img：ボイスを再生するボタンの画像パスを指定します。画像はimageフォルダ下に配置します。
 element（必須）：ボイスを再生するボタンを配置する要素を指定します。cssのセレクタ記法が使用できます。
-insert：repeat_button_elementで指定した要素のどこにボタンを追加するかを指定します。before（要素の前）, after（要素の後）, intobefore（要素の中の先頭）, intoafter（要素の中の最後尾）, self（要素自体）のいずれかを指定
+insert：elementで指定した要素のどこにボタンを追加するかを指定します。before（要素の前）, after（要素の後）, intobefore（要素の中の先頭）, intoafter（要素の中の最後尾）, self（要素自体）のいずれかを指定
 
 voiceplay_ex_restore：make.ks記述用
 属性：
@@ -130,23 +130,23 @@ voiceplay_ex_restore：make.ks記述用
 <span class="backlog_text キャラ名">セリフ</span>
 
 ①このように記述すると↓
-[logrepeat_config]element=".backlog_chara_name" insert="after"]
+[logrepeat_config img="button/voice.png" element=".backlog_chara_name" insert="after"]
 
 ①こうなります↓
 <b class="backlog_chara_name キャラ名">キャラ名</b>
-<img src="./data/image/button/auto.png" class="backlog_chara_name backlog_repeat">：
+<img src="./data/image/button/voice.png" class="backlog_chara_name backlog_repeat">：
 <span class="backlog_text キャラ名">セリフ</span>
 
 ②このように記述すると↓
-[logrepeat_config]element=".backlog_chara_name" insert="intoafter"]
+[logrepeat_config img="button/voice.png" element=".backlog_chara_name" insert="intoafter"]
 
 ②こうなります↓
 <b class="backlog_chara_name キャラ名">キャラ名
-<img src="./data/image/button/auto.png" class="backlog_chara_name backlog_repeat"></b>：
+<img src="./data/image/button/voice.png" class="backlog_chara_name backlog_repeat"></b>：
 <span class="backlog_text キャラ名">セリフ</span>
 
 ③このように記述すると↓
-[logrepeat_config]element=".backlog_chara_name" insert="self"]
+[logrepeat_config img="button/voice.png" element=".backlog_chara_name" insert="self"]
 
 ③こうなります↓
 <b class="backlog_chara_name キャラ名">キャラ名</b>：
@@ -166,6 +166,9 @@ https://skt-pnt.netlify.app
 
 
 ■更新履歴
+2022/12/08  ver.0.3.1α公開
+・ボイスなし部分のテキストを表示できないエラーを修正
+
 2022/10/30  ver.0.3.0α公開
 ・v520対応、v514以前との互換性なし
 ・logrepeatタグ廃止

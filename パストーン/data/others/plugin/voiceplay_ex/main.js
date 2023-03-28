@@ -4,7 +4,9 @@
      */
     if (TYRANO.kag.stat.__vpex === undefined) {
         TYRANO.kag.stat.__vpex = {
-            animconfig: {},
+            animconfig: {
+                is_anim: false,
+            },
             speed: 50,
             current_anim: {
                 name: "",
@@ -141,6 +143,7 @@
             vpex.tmp.id = pm.id
             if (!vpex.animconfig[pm.name]) {
                 vpex.animconfig[pm.name] = {}
+                vpex.animconfig.is_anim = true
             }
             if (!vpex.animconfig[pm.name][pm.part]) {
                 vpex.animconfig[pm.name][pm.part] = {}
@@ -389,10 +392,15 @@
     TYRANO.kag.tag.text = $.extend(true, {}, _text, {
         pushTextToBackLog: function (chara_name, message_str) {
             _text.pushTextToBackLog.apply(this, arguments)
+
+            const cname = $(".chara_name_area").attr("data-name")
+            if (this.kag.stat.map_vo["vochara"][cname] === undefined) {
+                return false
+            }
+
+            const cnum = this.kag.stat.map_vo["vochara"][cname].number - 1
             const vlr = TYRANO.kag.stat.__vpex.vlogrepeat
             const backlog = $(TYRANO.kag.variable.tf.system.backlog.pop())
-            const cname = $(".chara_name_area").attr("data-name")
-            const cnum = this.kag.stat.map_vo["vochara"][cname].number - 1
             let text = ""
             backlog.each(function (idx) {
                 let this_elm = $(this)
@@ -485,8 +493,13 @@
             //本来のplaybgm
             _playbgm.play.apply(TYRANO, [pm])
 
-            //リピートのときはアニメーションしない
+            //アニメーション登録されていなければアニメーションしない
+            if (!TYRANO.kag.stat.__vpex.animconfig.is_anim) {
+                return false
+            }
+
             if (TYRANO.kag.variable.tf._repeat == true) {
+                //リピートのときはアニメーションしない
                 TYRANO.kag.variable.tf._repeat = false
                 return false
             }
