@@ -1,18 +1,16 @@
-;☆演出指定を「;☆☆」でしています。実装済みの箇所は☆を消してください
+;☆演出指定を「;☆」でしています。実装済みの箇所は☆を消してください
 *start
 [startoption]
 ;ロズラズのボイスはファイル名変えてない環境だと動かない
-[voconfig sebuf=2 name="ロズ" vostorage="roz/roz1-1_{number}.ogg" number=2 ]
-[voconfig sebuf=3 name="ラズ" vostorage="laz/laz1-1_{number}.ogg" number=2 ]
-[voconfig sebuf=4 name="???" vostorage="other/1-1_{number}.ogg" number=1 ]
+[voconfig sebuf=2 name="ロズ" vostorage="voice/a_1/roz_{number}.mp3" number=2 ]
+[voconfig sebuf=3 name="ラズ" vostorage="voice/a_1/laz_{number}.mp3" number=2 ]
+[voconfig sebuf=4 name="???" vostorage="voice/a_1/rozlaz_{number}.mp3" number=1 ]
 [vostart]
 
 ;背景 黒
 
 [bgmovie storage="first_1.mp4"]
 [mask_off time="3000" effect="fadeOut" color="0xffffff" ]
-
-;@jump target="*debug"
 
 ;☆背景first1
 ;mizuka1_1再生
@@ -29,12 +27,11 @@
 [bgmovie storage="first_2.mp4" loop="false"]
 
 瞬間、目の前が一変する。[vp]
-地面が見慣れないどす黒い赤に染まっていき…[vp]
+地面が見慣れないどす黒い赤に染まっていき‥‥[vp]
 その次に聞こえたのは、耳を[ruby text = "つんざ"]劈くようなサイレン。[vp]
 
 ;☆効果音 要検討 サイレンの音が徐々に低くなっていくように加工？
 [se s="se/ambulance.ogg" buf="1"]
-さっきの声で通報されたのであろう。[vp]
 猛スピードでやってきた救急車が、瞬く間に『母だったもの』を乗せていく。[vp]
 
 ;☆背景first3、同じく長い時間フェード出来そうならお願いします。
@@ -42,7 +39,7 @@
 [bgmovie storage="first_3.mp4" time="1000"]
 
 ;[bg name="1_1" storage="1-1CG.png" time="3000" method="fadeInUp"  wait="false"]
-他にも何人か運ばれていた気がするが…[vp]
+他にも誰か運ばれていた気がするが‥‥[vp]
 思い出したく、なかった。[vp]
 ──なら、俺は？[vp]
 
@@ -59,14 +56,11 @@
 [stop_bgmovie time="3000" wait="false"]
 『やめてくれ』[vp]
 『止めてくれ』[vp]
-『誰か……助けてくれ』[vp]
+『誰か‥‥助けてくれ』[vp]
 
 [stopse buf="1"]
 
-
 ;ここから辻つくった
-
-*debug
 
 ;画面 暗転
 [mask effect="fadeIn" time="1000"]
@@ -82,13 +76,13 @@
 [mask_off effect="fadeOut" time="1000"]
 
 #雪翔
-≪‥‥‥≫[vp]
+≪‥‥‥‥≫[vp]
 
 今日も、いつもと同じ朝が来る。[vp]
 当たり前のことだが、こうも同じだと退屈してくると感じるのは、俺だけだろうか？[vp]
 
 #雪翔
-≪ん……≫[vp]
+≪ん‥‥≫[vp]
 
 ;背景 拡大解除
 [reset_camera time="1000" wait="false" layer="base"]
@@ -101,22 +95,23 @@
 妙に冷たい。しかもなんだか湿っている。[vp]
 
 #雪翔
-≪……これに関しては久しぶりだな。≫[vp]
+≪‥‥‥‥これに関しては久しぶりだな。≫[vp]
 
 シーツに目を向けると、汗でぐっしょりと濡れていた。[vp]
 
 #雪翔
-≪脳に刻み込まれているとはいえ、あれを何回も見せられるのは辛いな…≫[vp]
+≪脳に刻み込まれているとはいえ、[r]
+あれを何回も見せられるのは辛いな‥‥≫[vp]
 
 あれ、というのは夢の内容のことである。[vp]
 
 [bg2 storage="myroom_blur.png" time="1000" wait="false"]
 
-5年前の2022年…俺は母親を失った。[vp]
-一緒に帰っている道中で、信号を無視して突っ込んできた車にはねられて…　[vp]
+5年前の2022年‥‥俺は母親を失った。[vp]
+一緒に帰っている道中で、信号を無視して突っ込んできた車にはねられて‥‥　[vp]
 
 #雪翔
-≪…朝から考えることじゃないな≫[vp]
+≪‥‥朝から考えることじゃないな≫[vp]
 
 [bg2 storage="myroom.png" time="400"]
 
@@ -130,10 +125,10 @@
 「なぁなぁ、もう８時やで？　はよ起きた方がええんやないの？」[vp]
 
 #???
-「いいじゃありませんかロズ。今雪翔様の学校は夏休み、むしろ早起きのほうかと…」[vp]
+「いいではありませんか。今雪翔様の学校は夏休み、むしろ早起きなほうではなくて？」[vp]
 
 #雪翔
-≪朝から騒がしいな…≫[vp]
+≪朝から騒がしいな‥‥≫[vp]
 
 朝に似つかわしくない騒音が、スマホから聞こえてくる。[vp]
 
@@ -145,7 +140,10 @@
 ;立ち絵 ラズ拡大版 laz_kushou
 [laz_big f="laz_kushou" top="-50"]
 #ラズ
-「あらあら、それならあなただってどうして深夜まで頑張って作業しているご主人様を止めませんの？　元はといえばロズのせいだと言えますが」[vp]
+「止めなかったのは貴方も同じでしょうロズ？　それに、雪翔様の眠りを妨げるのはいかがなものかと思いますが」[vp]
+
+#雪翔
+≪今の時点で十分妨げられてるけどな‥‥≫[vp]
 
 俺の言葉を無視し、携帯からの声達はどんどん険悪な雰囲気になっていく。[vp]
 
@@ -176,7 +174,7 @@
 これ以上うるさくならないうちに音量をゼロに。[vp]
 
 #雪翔
-≪おしゃべりAI達め…≫[vp]
+≪おしゃべりAI達め‥‥≫[vp]
 
 どうしようもない、と言った風に俺はドアを開け、階下へ降りる。[vp]
 
