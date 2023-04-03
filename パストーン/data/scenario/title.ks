@@ -23,7 +23,7 @@
 [button name="title" x="130" y="460" graphic="title/LOAD.png" enterimg="title/LOAD_c.png" role="load" ]
 ;[button name="title" x="130" y="480" graphic="title/GALLERY.png" enterimg="title/GALLERY_u.png" storage="cg.ks"]
 ;[button name="title" x=135 y=500 graphic="title/button_replay.png" enterimg="title/button_replay2.png" storage="replay.ks"]
-;[button name="title" x="130" y="590" graphic="title/CONFIG.png" enterimg="title/CONFIG_c.png" role="sleepgame" storage="config.ks"]
+[button name="title" x="130" y="570" graphic="title/CONFIG.png" enterimg="title/CONFIG_c.png" role="sleepgame" storage="config.ks"]
 
 [image x="10" y="30" width="692" height="232" storage="logo_title.png" layer="0" visible="true"]
 
@@ -37,8 +37,4 @@
 [clearfix name="title" ]
 ;一番最初のシナリオファイルへジャンプする
 [mask time="3000" effect="fadeIn" color="0xffffff" ]
-[button fix="true" name="role_button" role="auto" graphic="button/auto_1.png" enterimg="button/auto_2.png" autoimg="button/auto_2.png" x=1187 y=510]
-[button fix="true" name="role_button" role="skip" graphic="button/skip_1.png" enterimg="button/skip_2.png" skipimg="button/skip_2.png" x=1187 y=580]
-[button fix="true" name="role_button" role="menu" graphic="button/menu_1.png" enterimg="button/menu_2.png" x=1190 y=658]
-[]
 @jump storage="a_1.ks"

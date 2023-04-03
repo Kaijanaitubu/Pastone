@@ -1,8 +1,8 @@
 *start
 [startoption]
-[voconfig sebuf=2 name="美寿花" vostorage="mizuka/mizuka1_2_{number}.mp3" number=2]
-[voconfig sebuf=5 name="黄樹" vostorage="kouki/kouki1-2_{number}.ogg" number=2]
-[voconfig sebuf=6 name="???" vostorage="other/1-2_{number}.mp3" number=1]
+[voconfig sebuf=2 name="美寿花" vostorage="voice/a_2/mizuka_{number}.mp3" number=2]
+[voconfig sebuf=5 name="黄樹" vostorage="voice/a_2/kouki_{number}.mp3" number=2]
+[voconfig sebuf=6 name="???" vostorage="voice/a_2/a_2_{number}.mp3" number=1]
 [vostart]
 [ambient_light_off]
 
@@ -11,19 +11,19 @@
 
 [afterjumpmaskNormal]
 #???
-「───あと、食材はここにあるから、後で…」[vp]
+「───あと、食材はここにあるから、後で‥‥」[vp]
 
-…ん？[vp]
+‥‥ん？[vp]
 階下へ降りる途中、誰かの話す声が聞こえて足が止まる。[vp]
 
 #雪翔
-（…父さん、だよな。さっきの）[vp]
+（‥‥父さん、だよな。さっきの）[vp]
 
-そもそも、朝のこの時間にいること自体珍しいが…[vp]
+そもそも、朝のこの時間にいること自体珍しいが‥‥[vp]
 それよりも。[vp]
 
 #雪翔
-（誰かと話してる…電話か？）[vp]
+（誰かと話してる‥‥電話か？）[vp]
 
 盗み聞きする気はなかったが、つい耳を傾けてしまう。[vp]
 
@@ -38,17 +38,16 @@
 
 ;ボイス更新予定
 #黄樹
-「うん、そうしてもらえると助かるかな。材料費とかはまた後で払うから、心配しなくていいよ」[vp]
+「うん、悪いけどお願いできるかな。材料費とかはまた後で払うから、心配しなくていいよ」[vp]
 
-……[vp]
-…待て、何かおかしい。[vp]
+‥‥‥‥[vp]
+‥‥待て、何かおかしい。[vp]
 父さんの言葉に答えたのは、女性の声。[vp]
 でも、それはあり得ないはずなのだ。[vp]
-だって、うちにいるのは俺と父さんの二人で…[vp]
+だって、うちにいるのは俺と父さんの二人で‥‥[vp]
 いや、考えていても仕方ない。[vp]
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
 [reset_camera]
-;[bg storage="living.png" time="700"]
 
 [kouki f="bishou"]
 #黄樹
@@ -56,15 +55,15 @@
 
 [kouki f="egao"]
 #黄樹
-「中々降りてこなかったから体調でも悪いのかと思ったんだが…」[vp]
+「中々降りてこなかったから体調でも悪いのかと思ったんだが‥‥」[vp]
 
 #雪翔
-≪‥‥‥≫[vp]
+≪‥‥‥‥≫[vp]
 
 申し訳ないが、今は父さんの言葉に反応する余裕はなかった。[vp]
 [chara_hide_all]
 
-俺の意識は、キッチンに立つ父さんではなく……[vp]
+俺の意識は、キッチンに立つ父さんではなく‥‥‥‥[vp]
 
 ;UIを削除して動画再生
 [bgmovie storage="mizuka_first_2.mp4" loop="false" skip="false"]
@@ -93,11 +92,11 @@
 「雪翔君、だよね？　おはよう」[vp]
 
 この異様な光景を作り出している女性に向いていた。[vp]
-年は……同じくらいだろうか？[vp]
+年は‥‥同じくらいだろうか？[vp]
 でも、どことなく大人のような雰囲気がある。[vp]
 
 #雪翔
-（父さんの知り合いか…？）[vp]
+（父さんの知り合いか‥‥？）[vp]
 
 いや、そうでなければただの不審者なのだが、と自分の考えに自分で突っ込む。[vp]
 
@@ -110,14 +109,14 @@
 [kouki f="kyoton"]
 ;[manpu type="hatena" x="720" y="80"]
 #黄樹
-「ん？　何をそこでボーっと突っ立ってるんだ？」[vp]
+「ん？　どうした？　そんなぼーっと突っ立って」[vp]
 
 俺の間抜けな姿に、父さんは不思議そうに席に着くよう促す。[vp]
 
 #雪翔
-≪どうしたもこうしたも…≫[vp]
+≪どうしたもこうしたも‥‥≫[vp]
 
-困惑の視線を父さんに送るが、ああ、と納得したように笑い受け流される。[vp]
+何だよこの状況、困惑の視線を父さんに送るが、ああ、と納得したように笑い受け流される。[vp]
 
 [kouki f="egao"]
 #黄樹
@@ -137,69 +136,69 @@
 [stopse]
 #黄樹
 [chara_hide_all time="500" wait="false"]
-「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが…」[vp]
+「なんだなんだ？　ちゃんとやることは事前に伝えていたはずだが‥‥」[vp]
 
 [se s="se/door_open.mp3" loop="false"]
 
 #雪翔
-≪え、ちょっと待っ…≫[vp]
+≪え、ちょっと待っ‥‥≫[vp]
 
 [se s="se/doorclose_1.ogg" loop="false"]
 
 それだけ言い残して、父さんの姿は書斎の奥へと消えていく。[vp]
 
-[manpu type="ase" x="460" y="60" sound="null.mp3"]
 ;パストーンの開発超初期にすとらさんが作ってくれたアニメーションを使っているので、動作確認をお願いします。
-[kanim layer=1 keyframe="un" time="5000"]
-[mizuka f="kushou" layer=1]
+[mizuka f="kushou"]
+[manpu type="ase" x="460" y="60" sound="null.mp3"]
+[kanim keyframe="un" time="2000"]
 #美寿花
-「あ～…」[vp]
+「あ～‥‥」[vp]
 
 #雪翔
-≪‥‥‥≫[vp]
+≪‥‥‥‥≫[vp]
 
 女性は気まずそうに苦笑。俺もなんだか居心地悪くてその場でフリーズ。[vp]
 だが、いつまでもそうしているわけにもいかず、諦めて席につく。[vp]
 
 ;演出 ぴょんと跳ねるアニメーション
 [kanim layer="1" keyframe="pyon" time="1000"]
-[mizuka f="odoroki" layer=1]
+[mizuka f="odoroki"]
 #美寿花
-「……あ、まず自己紹介から、だよね！」[vp]
+「‥‥あ、まず自己紹介から、だよね！」[vp]
 
 このまま沈黙が続くとまずいと感じたのか、半ば無理やり自己紹介を始める女性。[vp]
 
-[mizuka f="egao" layer=1]
+[mizuka f="egao"]
 #美寿花
 「えーと、名前は[ruby text = "とき"]常[ruby text = "わ"]葉[ruby text = "み"]美[ruby text = "ず"]寿[ruby text = "か"]花。[ruby text = "のぞ"]希み[ruby text = "の"]野大学の1年生」[vp]
 
 1年ってことは、やっぱり同い年なのか。[vp]
-しかも同じ大学、でも…[vp]
+しかも同じ大学、でも‥‥[vp]
 
 ;[black_band_init]
 ;[black_band_show]
 #雪翔
-（…みずか……みず、か？）[vp]
+（‥‥みずか‥‥‥‥みず、か？）[vp]
 
 何故か、彼女の名前で引っかかる。[vp]
 どこかで会ったのかとも思ったが、俺の記憶にこんな美人はいない。[vp]
-俺の思い違いか、と思っていると…[vp]
+俺の思い違いか、と思っていると‥‥[vp]
 
 ;[black_band_hide]
-[mizuka f="kyoton_3" layer=1]
+[mizuka f="kyoton_3"]
 #美寿花
 「それと、訳あって今日からここで暮らすことになって──」[vp]
 
+[fadeoutbgm time=1000]
 ‥‥‥[vp]
 ‥‥‥‥‥‥[vp]
 
 #雪翔
-[se s="se/suprised.mp3" loop=false volume="40"]
-≪……は？≫[vp]
+;[se s="se/suprised.mp3" loop=false volume="40"]
+≪‥‥‥‥は？≫[vp]
 
 その発言が、爆弾の如く俺の思考を吹っ飛ばしていった。[vp]
 
-[chara_hide_all time="10" layer=1]
 ;☆演出 暗転 シーンチェンジ
 ;@jump storage="title.ks"
 [scenejumpNormal sc="title.ks"]

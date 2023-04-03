@@ -10,7 +10,7 @@
 [chara_new  name="RozLaz" storage="chara/RozLaz/normal.png" width="523" height="552.51"]
 ; [chara_new  name="eijyurou" storage="chara/eijyurou.png" width="320" height="720" jname="永寿郎"  ]
 [chara_new  name="CG" storage="singlepic/1_4/bishou.png" width="1280" height="720"]
-[chara_new name="mizuka_big" storage="chara/mizuka/kushou.png" width="1300" height="1838.2"]
+[chara_new name="mizuka_big" storage="chara/mizuka/kushou.png" width="1560" height="2206"]
 [chara_new name="kouki_big" storage="chara/kouki/bishou.png" width="1600" height="2262.4"]
 [chara_new name="RozLaz_big" storage="chara/RozLaz/normal.png" width="753.12" height="795.614"]
 [chara_new name="ayana_big" storage="chara/ayana/normal.png" width="1500" height="2121"]

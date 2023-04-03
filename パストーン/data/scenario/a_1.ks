@@ -9,21 +9,32 @@
 
 ;背景 黒
 
-[bgmovie storage="first_1.mp4"]
-[mask_off time="3000" effect="fadeOut" color="0xffffff" ]
+[bg2 storage="white.png" ]
+[anim layer="message0" time="1" opacity="0"]
+[layopt layer="fix" visible="false" ]
+[layopt layer="1" visible="true" ]
+[mask_off time="100" effect="fadeOut" color="0xffffff" ]
 
 ;☆背景first1
 ;mizuka1_1再生
-[playse storage="mizuka/mizuka1_1.mp3" loop="false" buf="2"]
-「じゃ、約束ね！」[vp]
+[playse storage="voice/a_1/mizuka.mp3" loop="false" buf="2"]
+[filter layer="0"  blur="9" ]
+[mtext layer="0" text="じゃ、約束ね！" x=358 y=305 size="86" bold="bold" face="azuki" color="0x30ff00" wait="false" time="4000" in_effect="fadeInRight" out_sync="true"]
+[mtext layer="1" text="じゃ、約束ね！" x=360 y=307 size="85" bold="bold" face="azuki" color="0xffffff" wait="true" time="4000" in_effect="fadeInRight" out_sync="true"]
+[free_filter]
+
+[bgmovie storage="first_1.mp4" time="2000"]
+[anim layer="message0" time="1000" opacity="255"]
+[wa]
+[layopt layer="fix" visible="true" ]
+[wait time="500"]
 そう言う彼女の表情は、笑顔に溢れていた。[vp]
 向けられたこちらが、照れくさくて目を逸らしてしまうぐらい眩しい笑顔。[vp]
 黄昏時の帰り道。[vp]
 どこにでもあるような、そしてどこか懐かしい光景。[vp]
 
-;☆背景first2
-[bg2 storage="first.png" ]
-[stop_bgmovie time="1000" wait="true"]
+[bg2 storage="first.png" time="1"]
+[stop_bgmovie time="200" wait="true"]
 [bgmovie storage="first_2.mp4" loop="false"]
 
 瞬間、目の前が一変する。[vp]
@@ -53,7 +64,7 @@
 ;背景 黒
 [bg2 storage="black.jpg" time="1" wait="false"]
 
-[stop_bgmovie time="3000" wait="false"]
+[stop_bgmovie time="1000" wait="true"]
 『やめてくれ』[vp]
 『止めてくれ』[vp]
 『誰か‥‥助けてくれ』[vp]
@@ -105,7 +116,7 @@
 
 あれ、というのは夢の内容のことである。[vp]
 
-[bg2 storage="myroom_blur.png" time="1000" wait="false"]
+[bg2 storage="myroom_blur.png" time="2000" wait="false"]
 
 5年前の2022年‥‥俺は母親を失った。[vp]
 一緒に帰っている道中で、信号を無視して突っ込んできた車にはねられて‥‥　[vp]
@@ -122,7 +133,7 @@
 
 
 #???
-「なぁなぁ、もう８時やで？　はよ起きた方がええんやないの？」[vp]
+「なぁなぁ、もう８時やで？　早う起きた方がええんやないの？」[vp]
 
 #???
 「いいではありませんか。今雪翔様の学校は夏休み、むしろ早起きなほうではなくて？」[vp]
@@ -170,8 +181,7 @@
 
 [chara_hide_all layer="1"]
 
-何やら決闘が始まりそうなので、[vp]
-これ以上うるさくならないうちに音量をゼロに。[vp]
+何やら決闘が始まりそうなので、これ以上うるさくならないうちに音量をゼロに。[vp]
 
 #雪翔
 ≪おしゃべりAI達め‥‥≫[vp]
@@ -181,4 +191,4 @@
 [se s="se/door_open.mp3" loop="false"]
 [vostop]
 
-[scenejumpNormal sc="1_2.ks"]
+[scenejumpNormal sc="a_2.ks"]

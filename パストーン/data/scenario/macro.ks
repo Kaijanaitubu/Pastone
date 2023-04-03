@@ -97,17 +97,17 @@
 
 ;各キャラの表情表示マクロ
 [macro name="mizuka"]
-    [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|false" time="%time" ]
+    [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600" ]
     [chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
 [endmacro]
 
 [macro name="RozLaz"]
-    [chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|false" time="%time"]
+    [chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|false" time="%m_time|600"]
     [chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
 [macro name="kouki"]
-    [chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%time"]
+    [chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600"]
     [chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
@@ -135,7 +135,7 @@
 ;ズーム用
 [macro name="mizuka_big"]
     [chara_mod name="mizuka_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200" ]
-    [chara_show name="mizuka_big" top="20|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000" ] 
+    [chara_show name="mizuka_big" top="-50|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000" ] 
 [endmacro]
 
 [macro name="laz_big"]

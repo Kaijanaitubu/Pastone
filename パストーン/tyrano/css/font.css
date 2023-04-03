@@ -6,4 +6,10 @@
     url("../../data/others/NotoSansJP-Regular-sub.woff") format("woff"),
     url("../../data/others/NotoSansJP-Regular-sub.otf") format("opentype");
     font-weight:normal;font-style:normal;
+
+    font-family:"azuki";
+    src:url("../../data/others/azuki.woff2") format("woff2"),
+    url("../../data/others/azuki.woff") format("woff"),
+    url("../../data/others/azuki.otf") format("opentype");
+    font-weight:normal;font-style:normal;
  }
