@@ -121,6 +121,7 @@
 [chara_face name="mizuka" face="namidame" storage="chara/mizuka/namidame.png"] 
 [chara_face name="mizuka" face="shinpai_n" storage="chara/mizuka/shinpai_n.png"]
 [chara_face name="mizuka" face="teremoji" storage="chara/mizuka/teremoji.png"]
+[chara_face name="mizuka" face="niconico" storage="chara/mizuka/niconico.png"]
 
 ;黄樹
 [chara_face name="kouki" face="bishou" storage="chara/kouki/bishou.png"]
