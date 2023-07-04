@@ -1,7 +1,7 @@
 *start
 
 [startoption]
-[bg storage="myroom_night.png" ]
+[bg2 storage="myroom_night.png" ]
 [voconfig sebuf="2" name="美寿花" vostorage="mizuka/mizuka1-4_{number}.ogg" number="1"]
 [voconfig sebuf="2" name="ロズ" vostorage="roz/roz1-4_{number}.ogg" number="1"]
 [voconfig sebuf="2" name="ラズ" vostorage="laz/laz1-4_{number}.ogg" number="1"]
@@ -29,7 +29,7 @@
 #雪翔
 ≪さて、と≫[vp]
 
-[bg storage="myroom_night_zoom.png" position="right" time="800" ]
+[bg2 storage="myroom_night_zoom.png" position="right" time="800" ]
 
 くつろぐのも程ほどに、俺はパソコンの電源を入れる。[vp]
 
@@ -53,7 +53,7 @@
 
 背後から声を掛けられ、反射的に振り向く。[vp]
 
-[bg storage="myroom_night.png" time="600" ]
+[bg2 storage="myroom_night.png" time="600" ]
 [ambient_light_off]
 
 [mizuka f="r_egao"]
@@ -150,7 +150,6 @@
 #美寿花
 「意味ないことなんてないよ。この歌詞が、少年君の『声』なんでしょ？」[vp]
 
-
 ‥‥‥[vp]
 ‥‥？[vp]
 彼女の、独り言だと思った。[vp]
@@ -168,7 +167,7 @@
 #美寿花
 「‥‥ごめんね、雪翔君。私、薄谷教授から聞いてたんだ」[vp]
 
-[bg storage="black.jpg" time="10" ]
+[bg2 storage="black.jpg" time="10" ]
 [freecg]
 #美寿花
 「‥‥君が、声を出せないこと」[vp]
@@ -265,13 +264,13 @@
 #雪翔
 ≪‥‥よろしく≫[vp]
 
-[bg storage="nightsky.png" time="10" ]
+[bg2 storage="nightsky.png" time="10" ]
 ;CGを削除するための[freecg]マクロを作りました。裏画面に残っている画像を全て削除してから、表の画像を削除する処理になっています。
 [freecg]
 まだ自分の言葉に相手が反応するということにはどうにも慣れないが‥‥[vp]
 ‥‥それでも、悪い気はしなかった。[vp]
 
-[bg storage="black.jpg" ]
+[bg2 storage="black.jpg" ]
 #ロズ
 「なぁ、ラズ」[vp]
 
