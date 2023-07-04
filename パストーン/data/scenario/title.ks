@@ -24,6 +24,8 @@
 ;[button name="title" x="130" y="480" graphic="title/GALLERY.png" enterimg="title/GALLERY_u.png" storage="cg.ks"]
 ;[button name="title" x=135 y=500 graphic="title/button_replay.png" enterimg="title/button_replay2.png" storage="replay.ks"]
 [button name="title" x="130" y="570" graphic="title/CONFIG.png" enterimg="title/CONFIG_c.png" role="sleepgame" storage="config.ks"]
+[button name="title" x="870" y="253" graphic="title/debug.png" target="select"]
+
 
 [image x="10" y="30" width="692" height="232" storage="logo_title.png" layer="0" visible="true"]
 
@@ -38,3 +40,7 @@
 ;一番最初のシナリオファイルへジャンプする
 [mask time="3000" effect="fadeIn" color="0xffffff" ]
 @jump storage="a_1.ks"
+
+*select
+[clearfix name="title" ]
+@jump storage="_debug.ks"

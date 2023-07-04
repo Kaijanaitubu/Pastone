@@ -7,16 +7,12 @@
 [voconfig sebuf=4 name="???" vostorage="voice/a_1/rozlaz_{number}.mp3" number=1 ]
 [vostart]
 
-;背景 黒
-
 [bg2 storage="white.png" ]
 [anim layer="message0" time="1" opacity="0"]
 [layopt layer="fix" visible="false" ]
 [layopt layer="1" visible="true" ]
 [mask_off time="100" effect="fadeOut" color="0xffffff" ]
 
-;☆背景first1
-;mizuka1_1再生
 [playse storage="voice/a_1/mizuka.mp3" loop="false" buf="2"]
 [filter layer="0"  blur="9" ]
 [mtext layer="0" text="じゃ、約束ね！" x=358 y=305 size="86" bold="bold" face="azuki" color="0x30ff00" wait="false" time="4000" in_effect="fadeInRight" out_sync="true"]
@@ -45,11 +41,9 @@
 [se s="se/ambulance.ogg" buf="1"]
 猛スピードでやってきた救急車が、瞬く間に『母だったもの』を乗せていく。[vp]
 
-;☆背景first3、同じく長い時間フェード出来そうならお願いします。
 [bg2 storage="blood.png" time="1"]
 [bgmovie storage="first_3.mp4" time="1000"]
 
-;[bg name="1_1" storage="1-1CG.png" time="3000" method="fadeInUp"  wait="false"]
 他にも誰か運ばれていた気がするが‥‥[vp]
 思い出したく、なかった。[vp]
 ──なら、俺は？[vp]
@@ -60,8 +54,6 @@
 理解を拒み、[vp]
 『言葉』だけを、ただ、紡いでいく。[vp]
 
-
-;背景 黒
 [bg2 storage="black.jpg" time="1" wait="false"]
 
 [stop_bgmovie time="1000" wait="true"]
@@ -111,8 +103,7 @@
 シーツに目を向けると、汗でぐっしょりと濡れていた。[vp]
 
 #雪翔
-≪脳に刻み込まれているとはいえ、[r]
-あれを何回も見せられるのは辛いな‥‥≫[vp]
+≪脳に刻み込まれているとはいえ、あれを何回も見せられるのは辛いな‥‥≫[vp]
 
 あれ、というのは夢の内容のことである。[vp]
 
@@ -191,4 +182,14 @@
 [se s="se/door_open.mp3" loop="false"]
 [vostop]
 
-[scenejumpNormal sc="a_2.ks"]
+/*
+今後ファイルをまたぐシーンチェンジの際には、アイキャッチ（[EC]）を使うつもりです。
+またチャプターの始まりではサブタイトルを表示する演出を入れ込む予定です。（各チャプターごとに演出のマクロを組む予定）
+このa_1に関してはサブタイを表示したいタイミングとファイルをまたぐタイミングが一緒なので、
+[chap1]のマクロに関してはファイルをまたぐ機能まで入れ込もうかと思っています。
+現在は仕様がまだ確定していないので、一旦動作確認もかねてアイキャッチでシーンチェンジをしています。
+*/
+
+[chap1]
+
+[EC sc="a_2.ks"]

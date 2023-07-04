@@ -59,6 +59,38 @@
 ;------------------------------------------------------------------------------------------------------
 ; マスク類
 ;------------------------------------------------------------------------------------------------------
+
+;アイキャッチ付きシーンチェンジマクロ
+[macro name="EC"]
+
+    ;アイキャッチの画像が用意出来次第、実装予定
+    [mask time="3000" effect="fadeIn"]
+    [stopse]
+	[resetdelay]
+	[reset_camera layer="0" time="10" ]
+	[reset_camera layer="base" time="10" ]
+	[chara_hide_all time="10"]
+    @layopt layer="message0" visible="false"
+    [layopt layer="fix" visible="false"]
+
+    ;アイキャッチ画像表示（これは仮）
+    [bg2 storage="title.png" time=10]
+    [mask_off effect="fadeOut" time="2000"]
+    ;美寿花、文永、ロズ、ラズの「パストーン」のボイスの中からランダムで再生？（音声素材未作成）
+    [better_wait time="5000"]
+
+    [mask time="3000" effect="fadeIn"]
+
+    @jump storage="&mp.sc"
+    
+[endmacro]
+
+[macro name="ECout"]
+    @layopt layer="message0" visible="true"
+    [layopt layer="fix" visible="true"]
+    [mask_off effect="fadeOut" time="2000"]
+[endmacro]
+
 ;シーンジャンプ用マクロ
 [macro name="scenejumpNormal"]
     [mask time="1200" effect="slideInLeft"]
@@ -89,6 +121,16 @@
 ;マスク効果を切るときのマクロ
 [macro name="bgchangemask_off"]
 	[mask_off effect="slideOutLeft"]
+[endmacro]
+
+;------------------------------------------------------------------------------------------------------
+; チャプター変更
+;------------------------------------------------------------------------------------------------------
+
+;チャプター1
+[macro name="chap1"]
+    ;チャプターが始まる際にサブタイトルを表示したい。
+    ;動画を作成して流すかスクリプトの装飾文字で対応するかは検討中
 [endmacro]
 
 ;------------------------------------------------------------------------------------------------------
