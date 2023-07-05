@@ -154,7 +154,8 @@ if (typeof TYRANO.kag.stat.tempura === "undefined") {
             ,
             hatena: {
                 file: "hatena.png",
-                sound: "se7.ogg",
+                // sound: "se7.ogg",
+                sound: "無音.mp3",
                 in_effect: "flipInY",
                 in_time: 2,
                 time: 0.8,

@@ -6,7 +6,7 @@
 ;
 
 ;オートスキップ拡張機能プラグイン
-[autoskip_ex]
+;[autoskip_ex]
 ;漫符プラグイン
 [manpu_reset]
 ;ボイス機能拡張プラグイン

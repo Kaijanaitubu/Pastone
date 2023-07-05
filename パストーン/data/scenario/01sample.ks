@@ -1,7 +1,7 @@
 [startoption]
 
 [bg storage="living.png" time="10" ]
-[chara_show name="mizuka" top="20" wait="true" layer=0]
+[mizuka f="aseri"]
 [black_band_init]
 
 #
@@ -14,7 +14,7 @@
 
 #
 拡大演出[np]
-
+[chara_hide_all]
 [mizuka_big f=aseri wait="false" time="500"]
 
 

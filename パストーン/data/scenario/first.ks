@@ -46,6 +46,10 @@
 ; [logrepeat_config]element=".backlog_chara_name" insert="intoafter"]
 ; [logrepeat_config]element=".backlog_chara_name" insert="self"]
 
+[button fix="true" name="role_button" role="auto" graphic="button/auto_1.png" enterimg="button/auto_2.png" autoimg="button/auto_2.png" x=1187 y=510]
+[button fix="true" name="role_button" role="skip" graphic="button/skip_1.png" enterimg="button/skip_2.png" skipimg="button/skip_2.png" x=1187 y=580]
+[button fix="true" name="role_button" role="menu" graphic="button/menu_1.png" enterimg="button/menu_2.png" x=1190 y=658]
+[layopt layer="fix" visible="false" ]
 
 ;タイトル画面へ移動
 @jump storage="title.ks"

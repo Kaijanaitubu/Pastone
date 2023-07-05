@@ -25,7 +25,8 @@
 [macro name="startoption"]
 	[cm]
 	[start_keyconfig]
-
+    [fadeoutbgm time="300"]
+	[freeimage layer="0"]
 	;メッセージウィンドウの表示
 	@layopt layer="message0" visible="true"
 
@@ -55,26 +56,41 @@
 	[endif]
 [endmacro]
 
-;シーンジャンプ用マクロ
-[macro name="scenejumpNormal"]
-    [mask time="1200" effect="slideInLeft"]
+;------------------------------------------------------------------------------------------------------
+; マスク類
+;------------------------------------------------------------------------------------------------------
 
-	[stopse]
+;アイキャッチ付きシーンチェンジマクロ
+[macro name="EC"]
+
+    ;アイキャッチの画像が用意出来次第、実装予定
+    [mask time="3000" effect="fadeIn"]
+    [stopse]
 	[resetdelay]
 	[reset_camera layer="0" time="10" ]
 	[reset_camera layer="base" time="10" ]
 	[chara_hide_all time="10"]
-	
+    @layopt layer="message0" visible="false"
+    [layopt layer="fix" visible="false"]
+
+    ;アイキャッチ画像表示（これは仮）
+    [bg2 storage="title.png" time=10]
+    [mask_off effect="fadeOut" time="2000"]
+    ;美寿花、文永、ロズ、ラズの「パストーン」のボイスの中からランダムで再生？（音声素材未作成）
+    [better_wait time="5000"]
+
+    [mask time="3000" effect="fadeIn"]
+
     @jump storage="&mp.sc"
-
-    [endlink]
-	[cm]
-
+    
 [endmacro]
 
-;------------------------------------------------------------------------------------------------------
-; マスク類
-;------------------------------------------------------------------------------------------------------
+[macro name="ECout"]
+    @layopt layer="message0" visible="true"
+    [layopt layer="fix" visible="true"]
+    [mask_off effect="fadeOut" time="2000"]
+[endmacro]
+
 ;シーンジャンプ用マクロ
 [macro name="scenejumpNormal"]
     [mask time="1200" effect="slideInLeft"]
@@ -108,23 +124,32 @@
 [endmacro]
 
 ;------------------------------------------------------------------------------------------------------
+; チャプター変更
+;------------------------------------------------------------------------------------------------------
+
+;チャプター1
+[macro name="chap1"]
+    ;チャプターが始まる際にサブタイトルを表示したい。
+    ;動画を作成して流すかスクリプトの装飾文字で対応するかは検討中
+[endmacro]
+
+;------------------------------------------------------------------------------------------------------
 ; 演出関係
 ;------------------------------------------------------------------------------------------------------
 
 ;各キャラの表情表示マクロ
-;使用するときはlayerの数値を指定してください
 [macro name="mizuka"]
-    [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|false" time="%time" ]
+    [chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600" ]
     [chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
 [endmacro]
 
 [macro name="RozLaz"]
-    [chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|false" time="%time"]
+    [chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|false" time="%m_time|600"]
     [chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
 [macro name="kouki"]
-    [chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%time"]
+    [chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600"]
     [chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
@@ -135,7 +160,7 @@
 
 ;効果音再生
 [macro name="se"]
-    [playse storage="%s" volume="30" loop="%loop|true"]
+    [playse storage="%s" volume="30" loop="%loop|true" buf="1" ]
 [endmacro]
 
 ;画像表示用
@@ -151,27 +176,27 @@
 
 ;ズーム用
 [macro name="mizuka_big"]
-    [chara_mod name="mizuka_big" face="%f" cross="false" wait="%m_wait|false" time="%time" ]
-    [chara_show name="mizuka_big" top="20|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000" ] 
+    [chara_mod name="mizuka_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200" ]
+    [chara_show name="mizuka_big" top="-50|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000" ] 
 [endmacro]
 
 [macro name="laz_big"]
-    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|false" time="%time"]
+    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200"]
     [chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
 [endmacro]
 
 [macro name="roz_big"]
-    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|false" time="%time"]
+    [chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200"]
     [chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
 [endmacro]
 
 [macro name="kouki_big"]
-    [chara_mod name="kouki_big" face="%f" cross="false" wait="%m_wait|false" time="%time"]
+    [chara_mod name="kouki_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200"]
     [chara_show name="kouki_big" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|1" time="%time|1000"]
 [endmacro]
 
 [macro name="ayana_big"]
-    [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|false" time="%time"]
+    [chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200"]
     [chara_show name="ayana_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
 [endmacro]
 
