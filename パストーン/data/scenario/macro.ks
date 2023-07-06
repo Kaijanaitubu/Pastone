@@ -120,17 +120,42 @@
 
 ;マスク効果を切るときのマクロ
 [macro name="bgchangemask_off"]
-	[mask_off effect="slideOutLeft"]
+	[mask_off effect="slideOutLeft" time="1200"]
 [endmacro]
 
 ;------------------------------------------------------------------------------------------------------
-; チャプター変更
+; チャプター変更 
 ;------------------------------------------------------------------------------------------------------
 
 ;チャプター1
 [macro name="chap1"]
     ;チャプターが始まる際にサブタイトルを表示したい。
     ;動画を作成して流すかスクリプトの装飾文字で対応するかは検討中
+[endmacro]
+
+;チャプター2
+[macro name="chap2"]
+    
+[endmacro]
+
+;チャプター3
+[macro name="chap3"]
+    
+[endmacro]
+
+;チャプター4
+[macro name="chap4"]
+    
+[endmacro]
+
+;チャプター5
+[macro name="chap5"]
+    
+[endmacro]
+
+;チャプター6
+[macro name="chap6"]
+    
 [endmacro]
 
 ;------------------------------------------------------------------------------------------------------
@@ -165,7 +190,7 @@
 
 ;画像表示用
 [macro name="cg" ]
-    [image storage="%s" width="%w|1280" height="%h|720" layer="%layer|1" visible="%visible|true" time="%time|1000" name="%name|cg" ]
+    [image storage="%s" x="%x|0" y="%y|0" width="%w|1280" height="%h|720" layer="%layer|1" visible="%visible|true" time="%time|1000" name="%name|cg" ]
 [endmacro]
 
 ;画像削除用

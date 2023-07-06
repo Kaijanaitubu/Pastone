@@ -2,7 +2,7 @@
 ; キャラ名定義
 ;------------------------------------------------------------------------------------------------------
 
-[chara_new  name="mizuka" storage="chara/mizuka/kushou.png" width="868" height="1227"]
+[chara_new  name="mizuka" storage="chara/mizuka/kushou.png" width="642" height="1227"]
 [chara_new  name="kouki" storage="chara/kouki/bishou.png" width="1003" height="1418"]
 ; [chara_new  name="roz" storage="chara/RozLaz/roz_neutral.png" jname="ロズ" ]
 ; [chara_new  name="laz" storage="chara/RozLaz/laz_normal.png" jname="ラズ" ]
@@ -121,7 +121,11 @@
 [chara_face name="mizuka" face="namidame" storage="chara/mizuka/namidame.png"] 
 [chara_face name="mizuka" face="shinpai_n" storage="chara/mizuka/shinpai_n.png"]
 [chara_face name="mizuka" face="teremoji" storage="chara/mizuka/teremoji.png"]
-[chara_face name="mizuka" face="niconico" storage="chara/mizuka/niconico.png"]
+[chara_face name="mizuka" face="niconico" storage="chara/mizuka/nikoniko_niko_saga_niko_te.png"]
+[chara_face name="mizuka" face="agarimayu" storage="chara/mizuka/agarimayu_n_aga_niko.png"]
+[chara_face name="mizuka" face="ho" storage="chara/mizuka/ho_n_aga_chobo.png"]
+[chara_face name="mizuka" face="terekushou2" storage="chara/mizuka/terekushou2_niko_koma_wara_te_ctere.png"]
+
 
 ;黄樹
 [chara_face name="kouki" face="bishou" storage="chara/kouki/bishou.png"]
