@@ -9,10 +9,8 @@
 [voconfig sebuf=5 name="黄樹" vostorage="voice/a_2/kouki_{number}.mp3" number=1]
 [vostart]
 
-[bgmovie storage="first_1.mp4" time="2000"]
-[anim layer="message0" time="1000" opacity="255"]
-[wa]
-[layopt layer="fix" visible="true" ]
+
+[bg2 storage="daysky.png" time="1"]
 [wait time="500"]
 
 怒涛の初日から一夜明け、翌日。[vp]
