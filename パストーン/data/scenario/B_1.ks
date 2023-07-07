@@ -1,3 +1,20 @@
+*start
+[startoption]
+;ロズラズのボイスはファイル名変えてない環境だと動かない
+[voconfig sebuf=2 name="ロズ" vostorage="voice/a_1/roz_{number}.mp3" number=2 ]
+[voconfig sebuf=3 name="ラズ" vostorage="voice/a_1/laz_{number}.mp3" number=2 ]
+[voconfig sebuf=4 name="???" vostorage="voice/a_1/rozlaz_{number}.mp3" number=1 ]
+;ボイスがあるかわからないからとりあえずnumber=1
+[voconfig sebuf=2 name="美寿花" vostorage="voice/a_2/mizuka_{number}.mp3" number=1]
+[voconfig sebuf=5 name="黄樹" vostorage="voice/a_2/kouki_{number}.mp3" number=1]
+[vostart]
+
+[bgmovie storage="first_1.mp4" time="2000"]
+[anim layer="message0" time="1000" opacity="255"]
+[wa]
+[layopt layer="fix" visible="true" ]
+[wait time="500"]
+
 怒涛の初日から一夜明け、翌日。[vp]
 8月31日、夏休み最後の日という事で一部の学生は憂鬱な気分に包まれることだろう。[vp]
 
