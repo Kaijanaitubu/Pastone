@@ -5,10 +5,9 @@
 [voconfig sebuf=3 name="ラズ" vostorage="voice/a_1/laz_{number}.mp3" number=2 ]
 [voconfig sebuf=4 name="???" vostorage="voice/a_1/rozlaz_{number}.mp3" number=1 ]
 ;ボイスがあるかわからないからとりあえずnumber=1
-[voconfig sebuf=2 name="美寿花" vostorage="voice/a_2/mizuka_{number}.mp3" number=1]
+;[voconfig sebuf=2 name="美寿花" vostorage="voice/a_2/mizuka_{number}.mp3" number=1]
 [voconfig sebuf=5 name="黄樹" vostorage="voice/a_2/kouki_{number}.mp3" number=1]
 [vostart]
-
 
 [bg2 storage="daysky.png" time="1"]
 [wait time="500"]
@@ -19,6 +18,13 @@
 #雪翔
 （まぁ、俺にはあまり関係ないけど）[vp]
 というわけで、今日も変わらず作業する‥‥はずだったのだが、[vp]
+
+[bgchangemask]
+
+[bg2 storage="myroom.png" time="10"]
+[mizuka f="r_kangae_2"]
+
+[bgchangemask_off]
 
 #美寿花
 「‥‥‥‥」[vp]
@@ -43,8 +49,11 @@
 
 流石に休憩入れるか‥‥と立ち上がり、ヘッドホンを外す。[vp]
 
+[mizuka f="r_kyoton"]
 #美寿花
 「お。お疲れ様～‥‥っと」[vp]
+
+[mizuka f="r_bishou"]
 
 そう言いながら、やっぱり同じ体勢じゃ辛かったのか、大きく伸びをして僕の肩に手を伸ばす。[vp]
 
@@ -55,8 +64,9 @@
 ‥‥今考えてみれば、俺と会話している間、ずっと美寿花はどこかに触れてないといけないわけで‥‥[vp]
 どんな罰ゲームだよ‥‥と思いながらも、仕方なく美寿花の手を肩に乗せる。[vp]
 
+[mizuka f="r_kangae"]
 #美寿花
-さっきの部分、結構時間かかってたね。どうしたの？」[vp]
+「さっきの部分、結構時間かかってたね。どうしたの？」[vp]
 
 #雪翔
 ≪あ～、なんか納得いかなくて‥‥≫[vp]
@@ -64,17 +74,20 @@
 #雪翔
 ≪いやそうじゃなくて、何でいるの。ここに≫[vp]
 
+[mizuka f="r_kyoton"]
 #美寿花
-ん～、暇だった‥‥からかな？」[vp]
+「ん～、暇だった‥‥からかな？」[vp]
 
 #雪翔
 ≪自分の部屋あるでしょ‥‥そこで時間つぶせばいいのに‥‥≫[vp]
 
 我が家に一つだけある空き部屋。クーラーもあるので空調面で問題はないはずだが‥‥[vp]
 
+[mizuka f="r_kushou_2"]
 #美寿花
 「一人でいるの苦手なんだよね～。結局、昨日はあの後すぐ寝ちゃったし」[vp]
 
+[mizuka f="r_egao"]
 #美寿花
 「結構面白いね。人が何かしてるのを見るのって」[vp]
 
@@ -85,34 +98,46 @@
 
 そんな嫌な予感を抱きながら、美寿花から離れ部屋から出る。[vp]
 
+[bgchangemask]
+
+[bg2 storage="living.png" time="10"]
+[chara_hide_all]
+
+[bgchangemask_off]
+
 #美寿花
 「あれ、どこ行くの？」[vp]
 ;美寿花の立ち絵をセリフの後に表示[vp]
+[mizuka f="r_kyoton"]
 
 #雪翔
 ≪喉乾いたから飲み物‥‥ってあー‥‥≫[vp]
 
 少し迷った結果、冷蔵庫を指さす。[vp]
 
-#美寿花「ああ、休憩ね。了解了解」[vp]
+[mizuka f="r_egao_2"]
+#美寿花
+「ああ、休憩ね。了解了解」[vp]
 
 やっぱり、触れてないと伝わらないのか‥‥[vp]
 改めて、喋れないことの不便さが浮き彫りになる。[vp]
 
+[mizuka f="r_shinpai"]
 #美寿花
 「そういえばさ、君って学校どうしてるの？」[vp]
 
 #雪翔
 ≪‥‥学校？≫[vp]
 
+[mizuka f="r_kyoton_2"]
 俺が首を傾げると、美寿花も『あれ？』と同じことをする。[vp]
 
+[mizuka f="r_kangae_2"]
 #美寿花
 「大学だよ大学。声が出ないんじゃ、色々と大変じゃないかな～って」[vp]
 
 あ、そういうことか。[vp]
-#美寿花
-の言わんとしていることを察し、答えようとする‥‥が[vp]
+美寿花の言わんとしていることを察し、答えようとする‥‥が[vp]
 
 #雪翔
 ≪‥‥えーと‥‥≫[vp]
@@ -120,6 +145,7 @@
 どうやって伝えようか‥‥[vp]
 何かに書いて、と思ったが、取りに行くのもなんだか面倒くさい。[vp]
 
+[mizuka f="r_jitome"]
 #美寿花
 「‥‥いや、変な意地張ってないで素直に来なよ。私も相手の声聞けた方が話しやすいし」[vp]
 
@@ -132,6 +158,7 @@
 #雪翔
 ≪‥‥学校、ずっと行ってないんだ≫[vp]
 
+[mizuka f="r_odoroki"]
 #美寿花
 「‥‥ずっと？」[vp]
 
@@ -141,6 +168,7 @@
 #美寿花
 「‥‥」[vp]
 
+[mizuka f="r_kyoton"]
 #美寿花
 「ニート、ってこと‥‥？」[vp]
 
@@ -148,9 +176,11 @@
 ≪その通りだけどその表現は止めてくれるかな！？≫[vp]
 ;テキストボックスを揺らす[vp]
 
+[mizuka f="r_kushou"]
 #美寿花
 「ああごめんごめん」[vp]
 
+[mizuka f="r_fuan"]
 #美寿花
 「‥‥でもそっか。学校行けてないのか‥‥」[vp]
 
@@ -158,6 +188,7 @@
 
 同時に、そこはかとなく嫌な予感。[vp]
 
+[mizuka f="r_yaruki"]
 #美寿花
 「じゃあ、一緒に学校行こうよ！」[vp]
 
@@ -169,15 +200,18 @@
 #雪翔
 ≪それにめんどくさいし≫[vp]
 
+[mizuka f="r_kangae"]
 #美寿花
 「それはどうかな？　多分、雪翔君の目標の一歩にはなると思うよ？」[vp]
 
 #雪翔
 ≪‥‥というと？≫[vp]
 
+[mizuka f="r_odoroki"]
 #美寿花
 「考えたんだけどさ」[vp]
 
+[mizuka f="r_kangae_2"]
 #美寿花
 「雪翔君が声を出せないのって『喋る必要性がない生活』のせいなんじゃないかな～って」[vp]
 
@@ -188,25 +222,32 @@
 実際、美寿花が来るまでは人に会うとしても父さんぐらい。[vp]
 しかも、頻度は3日に一度ぐらいなわけで‥‥[vp]
 
+[mizuka f="r_shinken"]
 #美寿花
 「前までは、人に何か伝えることが大変だったかもしれないけど‥‥今は私っていう『声』もいる」[vp]
 
+[mizuka f="r_fuan"]
 #美寿花
 「めんどくさいのは‥‥私じゃどうにもできないかもしれないけど‥‥」[vp]
 
+[mizuka f="r_bishou"]
 #美寿花
 「それでも、行ってみない？　学校」[vp]
 
 #雪翔
 ≪って言われてもなぁ‥‥≫[vp]
 
+[mizuka f="r_bishou"]
 #美寿花
 「まぁ、考えといてよ。といっても、学校明日からだけどね」[vp]
 
 そう言って苦笑を浮かべる美寿花だが、ふと時計を確認すると、[vp]
 
+[mizuka f="r_odoroki"]
 #美寿花
 「‥‥ってもうこんな時間！？　作業ちょっとだけ見たら買い物しようと思ってたのに‥‥」[vp]
+
+[chara_hide_all]
 
 外を見ると、もう空は橙色に染まっている。[vp]
 
@@ -226,6 +267,15 @@
 
 ‥‥作業、戻るか。[vp]
 ここで待っていても仕方ないので、自分の部屋に戻る。[vp]
+
+[bgchangemask]
+
+;雪翔の部屋
+[bg2 storage="myroom.png" time=0]
+;部屋のドアを閉める音
+[voice2 vf2="se/doorclose_1.ogg"]
+
+[bgchangemask_off]
 
 #雪翔
 ≪大学、か≫[vp]
@@ -255,10 +305,12 @@
 
 #雪翔
 ≪‥‥ロズか≫[vp]
+[chara_show name="RozLaz" top="10" left="200" width="753.12" height="795.614" face="roz_neutral" wait="true"]
 
 まぁ、勿論ラズもいるんだろうが。[vp]
 ‥‥というか、[vp]
 
+[chara_mod name="RozLaz" face="roz_okori"]
 #ロズ
 「む～‥‥」[vp]
 
