@@ -322,18 +322,35 @@
 
 スマホでそう文字を打ち込み、謝罪の念を伝える。[vp]
 
+[chara_mod name="RozLaz" face="roz_akire"]
 #ロズ
 「まぁ、それに関してはもういいんやけどさ‥‥」[vp]
 
 #雪翔
 ≪ラズにも伝えといてくれ。あの子怒らせるのが一番怖い≫[vp]
 
+[chara_mod name="RozLaz" face="roz_itome"]
 #ロズ
-
 「はいは～い」[vp]
 
 ちょっと不満げだが、それ以降は声が聞こえなくなる。[vp]
 そういえばあいつら、なんで美寿花の前に出てこないんだ‥‥？[vp]
+
+[iscript]
+   tf.is_skip = TG.stat.is_skip;
+[endscript]
+
+[if exp="tf.is_skip != true"]
+    [mask effect="fadeIn" time="2000"]
+    [chara_hide_all time=10 wait="true"]
+    [bg2 storage="black.jpg" time=10]
+    [mask_off effect="fadeOut" time="2000"]
+[else]
+    [mask effect="fadeIn" time="10"]
+    [chara_hide_all time=10 wait="true"]
+    [bg2 storage="black.jpg" time=10]
+    [mask_off effect="fadeOut" time="10"]
+[endif]
 
 #ラズ
 「ふむ‥‥ご主人様を大学に？」[vp]
