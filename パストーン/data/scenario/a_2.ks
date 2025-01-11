@@ -202,6 +202,8 @@
 
 [mask time="1200" effect="slideInLeft"]
 
+;ここでサブタイトル表示でもいいかも（2024年12月17日つぶ）
+
 [mizuka f="bishou" time="10"]
 [kouki f="straight" time="10"]
 

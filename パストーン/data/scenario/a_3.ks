@@ -1,5 +1,7 @@
 *start
 
+;なぜかa3の内容がa2にまとめられているので、このファイルは必要ないかもしれません
+
 [startoption]
 [voconfig sebuf="2" name="美寿花" vostorage="mizuka/mizuka1-3_{number}.ogg" number="1"]
 [voconfig sebuf="5" name="黄樹" vostorage="kouki/kouki1-3_{number}.ogg" number="1"]
