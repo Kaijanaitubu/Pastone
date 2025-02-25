@@ -63,8 +63,6 @@
 
 [stopse buf="1"]
 
-;ここから辻つくった
-
 ;画面 暗転
 [mask effect="fadeIn" time="1000"]
 
