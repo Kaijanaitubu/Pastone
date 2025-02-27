@@ -41,7 +41,7 @@
 [glink text="f_4　" size=20 width=50 x=750 y=150 color="white" storage="f_4.ks"]
 
 [glink text="title　" size=20 width=50 x=900 y=0 color="white" storage="title.ks"]
-[glink text="badend　" size=20 width=50 x=900 y=50 color="white" storage="_badend.ks"]
+[glink text="badend　" size=20 width=50 x=900 y=50 color="white" storage="g_badend.ks"]
 
 [endnowait]
 
