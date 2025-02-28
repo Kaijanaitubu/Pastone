@@ -1,7 +1,17 @@
+*start
+
+[startoption]
+[bg2 storage="" ]
+[voconfig sebuf=2 name="美寿花" vostorage="voice/c_6/mizuka_{number}.mp3" number=1]
+[voconfig sebuf="3" name="ロズ" vostorage="voice/c_6/roz_{number}.ogg" number="1"]
+[voconfig sebuf="4" name="ラズ" vostorage="voice/c_6/laz_{number}.ogg" number="1"]
+[vostart]
+
 そして、帰宅。[vp]
 
 #雪翔
 ≪やっとついた‥‥ふあぁ‥‥≫[vp]
+
 と、同時に小さく欠伸が出る。[vp]
 講義で緊張した分、ちょっと疲れていたのかもしれない。[vp]
 ‥‥今日は作業少なめにして、早めに寝た方がいいかもしれないな。[vp]
@@ -155,4 +165,5 @@
 ≪え？　ああ、分かった≫[vp]
 
 おかしな子と出会ったり、妙な恥をかいたり‥‥今日は忙しい日だな。と階段を下りながら思うのだった。[vp]
-[vp]
+
+[EC sc="d_1.ks"]

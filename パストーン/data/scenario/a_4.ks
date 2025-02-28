@@ -3,8 +3,8 @@
 [startoption]
 [bg2 storage="myroom_night.png" ]
 [voconfig sebuf="2" name="美寿花" vostorage="mizuka/mizuka1-4_{number}.ogg" number="1"]
-[voconfig sebuf="2" name="ロズ" vostorage="roz/roz1-4_{number}.ogg" number="1"]
-[voconfig sebuf="2" name="ラズ" vostorage="laz/laz1-4_{number}.ogg" number="1"]
+[voconfig sebuf="3" name="ロズ" vostorage="roz/roz1-4_{number}.ogg" number="1"]
+[voconfig sebuf="4" name="ラズ" vostorage="laz/laz1-4_{number}.ogg" number="1"]
 [vostart]
 
 #雪翔

@@ -1,3 +1,10 @@
+*start
+
+[startoption]
+[bg2 storage="" ]
+[voconfig sebuf="2" name="美寿花" vostorage="b_3/mizuka_{number}.ogg" number="1"]
+[vostart]
+
 ラズが促してくれたおかげで、ギリギリではあったものの無事大学にたどり着いた。[vp]
 そして、間もなくして1限目の講義が始まる。[vp]
 

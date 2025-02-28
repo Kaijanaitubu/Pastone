@@ -1,8 +1,10 @@
+*start
+
 [startoption]
 [bg2 storage="classroom.png" ]
-;[voconfig sebuf=2 name="美寿花" vostorage="voice/c_1/mizuka_{number}.mp3" number=1]
-;[vostart]
-[chap3]
+[voconfig sebuf=2 name="美寿花" vostorage="voice/c_1/mizuka_{number}.mp3" number=1]
+[vostart]
+[chap_c]
 
 翌日。[vp]
 午前の講義が終わった後、俺たちは美寿花の作ってくれた弁当を食べるために、空き教室で落ち合っていた。[vp]

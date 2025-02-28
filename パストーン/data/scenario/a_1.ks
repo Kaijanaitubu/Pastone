@@ -2,9 +2,9 @@
 *start
 [startoption]
 ;ロズラズのボイスはファイル名変えてない環境だと動かない
-[voconfig sebuf=2 name="ロズ" vostorage="voice/a_1/roz_{number}.mp3" number=2 ]
-[voconfig sebuf=3 name="ラズ" vostorage="voice/a_1/laz_{number}.mp3" number=2 ]
-[voconfig sebuf=4 name="???" vostorage="voice/a_1/rozlaz_{number}.mp3" number=1 ]
+[voconfig sebuf=3 name="ロズ" vostorage="voice/a_1/roz_{number}.mp3" number=2 ]
+[voconfig sebuf=4 name="ラズ" vostorage="voice/a_1/laz_{number}.mp3" number=2 ]
+[voconfig sebuf=3 name="？？？" vostorage="voice/a_1/rozlaz_{number}.mp3" number=1 ]
 [vostart]
 
 [bg2 storage="white.png" ]
@@ -120,11 +120,10 @@
 それが母親だったというだけのこと。[r]
 薄情かもしれないが割り切るしかない。[vp]
 
-
-#???
+#？？？
 「なぁなぁ、もう８時やで？　早う起きた方がええんやないの？」[vp]
 
-#???
+#？？？
 「いいではありませんか。今雪翔様の学校は夏休み、むしろ早起きなほうではなくて？」[vp]
 
 #雪翔
@@ -188,6 +187,6 @@
 現在は仕様がまだ確定していないので、一旦動作確認もかねてアイキャッチでシーンチェンジをしています。
 */
 
-[chap1]
+[chap_a]
 
 [EC sc="a_2.ks"]

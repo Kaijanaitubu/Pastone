@@ -1,3 +1,13 @@
+*start
+
+[startoption]
+[bg2 storage="" ]
+[voconfig sebuf="2" name="美寿花" vostorage="b_2/mizuka_{number}.ogg" number="1"]
+[voconfig sebuf="3" name="ロズ" vostorage="b_2/roz_{number}.ogg" number="1"]
+[voconfig sebuf="4" name="ラズ" vostorage="b_2/laz_{number}.ogg" number="3"]
+[voconfig sebuf="4" name="？？？" vostorage="b_2/laz_{number}.ogg" number="1"]
+[vostart]
+
 #美寿花
 「‥‥本当に大丈夫なの？何か、今すぐにでも倒れそうだけど‥‥」[vp]
 

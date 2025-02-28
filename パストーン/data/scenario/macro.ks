@@ -128,33 +128,33 @@
 ;------------------------------------------------------------------------------------------------------
 
 ;チャプター1
-[macro name="chap1"]
+[macro name="chap_a"]
 	;チャプターが始まる際にサブタイトルを表示したい。
 	;動画を作成して流すかスクリプトの装飾文字で対応するかは検討中
 [endmacro]
 
 ;チャプター2
-[macro name="chap2"]
+[macro name="chap_b"]
 	
 [endmacro]
 
 ;チャプター3
-[macro name="chap3"]
+[macro name="chap_c"]
 	
 [endmacro]
 
 ;チャプター4
-[macro name="chap4"]
+[macro name="chap_d"]
 	
 [endmacro]
 
 ;チャプター5
-[macro name="chap5"]
+[macro name="chap_e"]
 	
 [endmacro]
 
 ;チャプター6
-[macro name="chap6"]
+[macro name="chap_f"]
 	
 [endmacro]
 
