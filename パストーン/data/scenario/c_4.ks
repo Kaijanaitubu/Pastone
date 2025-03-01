@@ -1,3 +1,11 @@
+*start
+
+[startoption]
+[bg2 storage="" ]
+[voconfig sebuf=2 name="美寿花" vostorage="voice/c_4/mizuka_{number}.mp3" number=1]
+[voconfig sebuf=5 name="黄樹" vostorage="voice/c_4/kouki_{number}.mp3" number=2]
+[vostart]
+
 どんなに大変だと思っていたことでも、時間さえかければ慣れてしまうものらしい。[vp]
 
 #雪翔
@@ -148,4 +156,4 @@
 
 美寿花に頷いて見せ、俺は講義室を後にした。[vp]
 
-[EC sc="c_6.ks"]
+[EC sc="c_5.ks"]

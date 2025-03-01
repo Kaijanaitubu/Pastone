@@ -1,8 +1,20 @@
+*start
+
+[startoption]
+[bg2 storage="myroom.png" ]
+[voconfig sebuf="2" name="美寿花" vostorage="b_1/mizuka_{number}.ogg" number="1"]
+[voconfig sebuf="3" name="ロズ" vostorage="b_1/roz_{number}.ogg" number="1"]
+[voconfig sebuf="4" name="ラズ" vostorage="b_1/laz_{number}.ogg" number="1"]
+[vostart]
+[chap_b]
+
+
 怒涛の初日から一夜明け、翌日。[vp]
 8月31日、夏休み最後の日という事で一部の学生は憂鬱な気分に包まれることだろう。[vp]
 
 #雪翔
 （まぁ、俺にはあまり関係ないけど）[vp]
+
 というわけで、今日も変わらず作業する‥‥はずだったのだが、[vp]
 
 #美寿花

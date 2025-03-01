@@ -1,3 +1,11 @@
+*start
+
+[startoption]
+[bg2 storage="" ]
+[voconfig sebuf=2 name="美寿花" vostorage="voice/c_2/mizuka_{number}.mp3" number=1]
+[voconfig sebuf=6 name="文永" vostorage="voice/c_2/mizuka_{number}.mp3" number=1]
+[vostart]
+
 #美寿花
 「何だかんだで私も初めてなんだよねぇ～カラオケ！」[vp]
 
@@ -129,3 +137,5 @@
 
 #美寿花
 「待って帰ろうとしないで！　文永とも一緒に歌うから～！！」[vp]
+
+[EC sc="c_3.ks"]

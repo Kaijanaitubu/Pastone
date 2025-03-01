@@ -2,7 +2,7 @@
 [startoption]
 [voconfig sebuf=2 name="美寿花" vostorage="voice/a_2/mizuka_{number}.mp3" number=2]
 [voconfig sebuf=5 name="黄樹" vostorage="voice/a_2/kouki_{number}.mp3" number=2]
-[voconfig sebuf=6 name="???" vostorage="voice/a_2/a_2_{number}.mp3" number=1]
+[voconfig sebuf=2 name="？？？" vostorage="voice/a_2/a_2_{number}.mp3" number=1]
 [vostart]
 [ambient_light_off]
 
@@ -11,7 +11,6 @@
 
 [ECout]
 
-#???
 「───あと、食材はここにあるから、後で‥‥」[vp]
 
 ‥‥ん？[vp]
@@ -34,7 +33,7 @@
 話してる内容はよくわからないが、何かを説明してるのか？[vp]
 
 ;ボイス更新予定
-#???
+#？？？
 「なるほど、では昼や夜は私が作るってことでいいんですよね？」[vp]
 
 ;ボイス更新予定

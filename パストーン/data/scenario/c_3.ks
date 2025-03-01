@@ -1,3 +1,13 @@
+*start
+
+[startoption]
+[bg2 storage="" ]
+[voconfig sebuf="2" name="美寿花" vostorage="voice/c_3/mizuka_{number}.mp3" number=1]
+[voconfig sebuf="3" name="ロズ" vostorage="voice/c_3/roz_{number}.ogg" number="1"]
+[voconfig sebuf="4" name="ラズ" vostorage="voice/c_3/laz_{number}.ogg" number="1"]
+[voconfig sebuf="6" name="文永" vostorage="voice/c_3/mizuka_{number}.mp3" number=1]
+[vostart]
+
 #文永
 「ふぅー‥‥」[vp]
 
@@ -155,3 +165,5 @@
 勿論、美寿花と一緒じゃないと歌えないので、どういう曲かを教えながらだが。[vp]
 ‥‥‥‥[vp]
 こいつら、人と関わらせる時は十分警戒していたほうがいいな‥‥[vp]
+
+[EC sc="c_4.ks"]
