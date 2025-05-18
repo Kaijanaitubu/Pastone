@@ -1,4 +1,4 @@
-*start[vp]
+*start
 
 [startoption][vp]
 [bg2 storage="" ][vp]
