@@ -191,4 +191,4 @@
 
 [chap_a]
 
-[EC sc="a_2.ks"]
+[EC sc="~a_2.ks"]

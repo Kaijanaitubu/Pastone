@@ -399,4 +399,4 @@
 俺は一人悶々とするのであった‥‥。[vp]
 
 [fadeoutbgm time="2000"]
-[EC sc="a_4.ks"]
+[EC sc="~a_4.ks"]

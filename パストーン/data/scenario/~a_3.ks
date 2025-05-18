@@ -205,4 +205,4 @@
 [chara_hide_all time="1000" wait="true"]
 [bg storage="daysky.png" time="1000"]
 
-@jump storage="a_4.ks"
+@jump storage="~a_4.ks"

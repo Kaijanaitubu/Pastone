@@ -39,8 +39,8 @@
 [clearfix name="title" ]
 ;一番最初のシナリオファイルへジャンプする
 [mask time="3000" effect="fadeIn" color="0xffffff" ]
-@jump storage="a_1.ks"
+@jump storage="~a_1.ks"
 
 *select
 [clearfix name="title" ]
-@jump storage="_debug.ks"
+@jump storage="debug.ks"
