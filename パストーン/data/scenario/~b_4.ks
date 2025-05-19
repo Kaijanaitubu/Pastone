@@ -1,9 +1,9 @@
 *start
 
-[startoption][vp]
-[bg2 storage="" ][vp]
-[voconfig sebuf="2" name="美寿花" vostorage="b_4/mizuka_{number}.ogg" number="1"][vp]
-[vostart][vp]
+[startoption]
+[bg2 storage="" ]
+[voconfig sebuf="2" name="美寿花" vostorage="b_4/mizuka_{number}.ogg" number="1"]
+[vostart]
 
 ;背景 道
 
