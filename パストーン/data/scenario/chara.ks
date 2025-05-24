@@ -28,7 +28,7 @@
 [chara_face name="mizuka" face="aseganizindaegao" storage="chara/mizuka/aseganizindaegao.png"]
 [chara_face name="mizuka" face="aseri" storage="chara/mizuka/aseri.png"]
 [chara_face name="mizuka" face="bishou" storage="chara/mizuka/bishou.png"]
-[chara_face name="mizuka" face="choiterewarai" storage="chara/mizuka/choiterewarai.png"]      
+[chara_face name="mizuka" face="choiterewarai" storage="chara/mizuka/choiterewarai.png"]
 [chara_face name="mizuka" face="complaint" storage="chara/mizuka/complaint.png"]
 [chara_face name="mizuka" face="doya" storage="chara/mizuka/doya.png"]
 [chara_face name="mizuka" face="egao" storage="chara/mizuka/egao.png"]
@@ -239,7 +239,7 @@
 [chara_face name="mizuka_big" face="aseganizindaegao" storage="chara/mizuka/aseganizindaegao.png"]
 [chara_face name="mizuka_big" face="aseri" storage="chara/mizuka/aseri.png"]
 [chara_face name="mizuka_big" face="bishou" storage="chara/mizuka/bishou.png"]
-[chara_face name="mizuka_big" face="choiterewarai" storage="chara/mizuka/choiterewarai.png"]      
+[chara_face name="mizuka_big" face="choiterewarai" storage="chara/mizuka/choiterewarai.png"]
 [chara_face name="mizuka_big" face="complaint" storage="chara/mizuka/complaint.png"]
 [chara_face name="mizuka_big" face="doya" storage="chara/mizuka/doya.png"]
 [chara_face name="mizuka_big" face="egao" storage="chara/mizuka/egao.png"]
@@ -449,3 +449,70 @@
 [chara_face name="CG" face="2_4_n" storage="singlepic/2_4/n.png" ]
 [chara_face name="CG" face="2_4_shikame" storage="singlepic/2_4/shikame.png" ]
 [chara_face name="CG" face="2_4_tere" storage="singlepic/2_4/tere.png" ]
+
+;------------------------------------------------------------------------------------------------------
+; キャラ表示
+;------------------------------------------------------------------------------------------------------
+
+;各キャラの表情表示マクロ
+[macro name="mizuka"]
+	[chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600" ]
+	[chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
+[endmacro]
+
+[macro name="RozLaz"]
+	[chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|false" time="%m_time|600"]
+	[chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%time|1000"]
+[endmacro]
+
+[macro name="kouki"]
+	[chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600"]
+	[chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%time|1000"]
+[endmacro]
+
+[macro name="ayana"]
+	[chara_mod name="ayana" face="%f" cross="false" wait="%m_wait|false" time="%time|1000"]
+	[chara_show name="ayana" top="%top|40" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000"]
+[endmacro]
+
+;効果音再生
+[macro name="se"]
+	[playse storage="%s" volume="30" loop="%loop|true" buf="1" ]
+[endmacro]
+
+;画像表示用
+[macro name="cg" ]
+	[image storage="%s" x="%x|0" y="%y|0" width="%w|1280" height="%h|720" layer="%layer|1" visible="%visible|true" time="%time|1000" name="%name|cg" ]
+[endmacro]
+
+;画像削除用
+[macro name="freecg" ]
+	[free layer="%layer|1" name="cg" time="10" ]
+	[freeimage layer="%layer|1" time="%time|1000" wait="%wait|true" ]
+[endmacro]
+
+;ズーム用
+[macro name="mizuka_big"]
+	[chara_mod name="mizuka_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200" ]
+	[chara_show name="mizuka_big" top="-100|%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000" ] 
+[endmacro]
+
+[macro name="laz_big"]
+	[chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200"]
+	[chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
+[endmacro]
+
+[macro name="roz_big"]
+	[chara_mod name="RozLaz_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200"]
+	[chara_show name="RozLaz_big" top="%top" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
+[endmacro]
+
+[macro name="kouki_big"]
+	[chara_mod name="kouki_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200"]
+	[chara_show name="kouki_big" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|1" time="%time|1000"]
+[endmacro]
+
+[macro name="ayana_big"]
+	[chara_mod name="ayana_big" face="%f" cross="false" wait="%m_wait|false" time="%time|1200"]
+	[chara_show name="ayana_big" top="%top|-100" zindex="%z" wait="%s_wait|true" layer="%layer|1" time="%time|1000"]
+[endmacro]
