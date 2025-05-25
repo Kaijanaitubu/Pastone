@@ -2,7 +2,7 @@
 ; キャラ名定義
 ;------------------------------------------------------------------------------------------------------
 
-[chara_new  name="mizuka" storage="chara/mizuka/kushou.png" width="642" height="1227"]
+[chara_new  name="mizuka" storage="chara/mizuka/blank.png" width="642" height="1701"]
 [chara_new  name="kouki" storage="chara/kouki/bishou.png" width="1003" height="1418"]
 ; [chara_new  name="roz" storage="chara/RozLaz/roz_neutral.png" jname="ロズ" ]
 ; [chara_new  name="laz" storage="chara/RozLaz/laz_normal.png" jname="ラズ" ]
@@ -22,6 +22,17 @@
 ;------------------------------------------------------------------------------------------------------
 ; キャラ表情定義
 ;------------------------------------------------------------------------------------------------------
+
+;美寿花レイヤー
+[chara_layer name="mizuka" part=body id=n storage="chara/mizuka/body/n.png" zindex="0" ]
+[chara_layer name="mizuka" part=body id=noarm storage="chara/mizuka/body/noarm.png" zindex="0" ]
+[chara_layer name="mizuka" part=body id=r storage="chara/mizuka/body/r.png" zindex="0" ]
+[chara_layer name="mizuka" part=body id=r_noarm storage="chara/mizuka/body/r_noarm.png" zindex="0" ]
+[chara_layer name="mizuka" part=mouth id=oko storage="chara/mizuka/mouth/oko.png" zindex="1" ]
+[chara_layer name="mizuka" part=eyes id=n storage="chara/mizuka/eyes/n.png" zindex="2" ]
+[chara_layer name="mizuka" part=brow id=fuman storage="chara/mizuka/brow/fuman.png" zindex="3"]
+[chara_layer name="mizuka" part=effects id=none storage="none" zindex="4"]
+[chara_layer name="mizuka" part=arm id=none storage="none" zindex="5"]
 
 ;美寿花
 [chara_face name="mizuka" face="akire" storage="chara/mizuka/akire.png"]
