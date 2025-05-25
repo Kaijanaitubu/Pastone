@@ -14,7 +14,6 @@
 [glink text="b_2　" size=20 width=50 x=150 y=50 color="white" storage="~b_2.ks"]
 [glink text="b_3　" size=20 width=50 x=150 y=100 color="white" storage="~b_3.ks"]
 [glink text="b_4　" size=20 width=50 x=150 y=150 color="white" storage="~b_4.ks"]
-[glink text="b_5　" size=20 width=50 x=150 y=200 color="white" storage="~b_5.ks"]
 
 [glink text="c_1　" size=20 width=50 x=300 y=0 color="white" storage="~c_1.ks"]
 [glink text="c_2　" size=20 width=50 x=300 y=50 color="white" storage="~c_2.ks"]
@@ -50,6 +49,3 @@
 
 *go
 [startoption]
-
-@jump storage=~e_2.ks storage=*e_3
-

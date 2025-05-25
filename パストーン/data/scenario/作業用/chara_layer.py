@@ -1,33 +1,36 @@
 import os
 import re
 
-# 相対パス設定
-CHARA_DIR = "../../fgimage/chara"
-OUTPUT_FILE = "../chara_layer.ks"
+# パスの設定
+CHARA_DIR = "c:/Users/advan/Desktop/Pastone/パストーン/data/fgimage/chara"
+OUTPUT_FILE = "c:/Users/advan/Desktop/Pastone/パストーン/data/scenario/chara_layer.ks"
 
-# 固定zindexマップ（4以降は動的に割り当て）
+# 固定zindex定義
 base_zindex_map = {
-    "base": 0,
-    "body": 1,
-    "mouth": 2,
-    "eyes": 3,
-    "brow": 4,
+    "body": 0,
+    "mouth": 1,
+    "eyes": 2,
+    "brow": 3,
 }
 
-# 出力行を保持：タプル (zindex, line)
-output_entries = []
-
+# フォルダ存在確認
 if not os.path.isdir(CHARA_DIR):
     raise FileNotFoundError(f"キャラフォルダが見つかりません: {CHARA_DIR}")
 
-# キャラクターごとの処理
-for character in os.listdir(CHARA_DIR):
+# 全出力をここに
+final_output_lines = []
+
+# 各キャラクターごとに処理
+for character in sorted(os.listdir(CHARA_DIR)):
     character_path = os.path.join(CHARA_DIR, character)
     if not os.path.isdir(character_path):
         continue
 
     dynamic_zindex_map = {}
-    next_zindex = 5
+    next_zindex = 4
+
+    # 一時的にキャラクターの出力を格納（zindex, 行）
+    char_lines = []
 
     for part in sorted(os.listdir(character_path)):
         part_path = os.path.join(character_path, part)
@@ -43,25 +46,31 @@ for character in os.listdir(CHARA_DIR):
                 next_zindex += 1
             zindex = dynamic_zindex_map[part]
 
-        # その他パートには none 行を追加
-        if part not in base_zindex_map:
-            line = f'[chara_layer name="{character}" part={part} id=none storage="none" zindex="{zindex}"]'
-            output_entries.append((zindex, line))
+        # none 行を先に追加
+        line = f'[chara_layer name="{character}" part={part} id=none storage="none" zindex="{zindex}"]'
+        char_lines.append((zindex, line))
 
-        # 各画像ファイルから出力行生成
+        # 実画像ファイルを追加
         for filename in sorted(os.listdir(part_path)):
             if filename.endswith(".png"):
                 id_name = filename[:-4]
                 rel_path = os.path.join("chara", character, part, filename).replace("\\", "/")
                 line = f'[chara_layer name="{character}" part={part} id={id_name} storage="{rel_path}" zindex="{zindex}" ]'
-                output_entries.append((zindex, line))
+                char_lines.append((zindex, line))
 
-# zindex 昇順でソート
-output_entries.sort(key=lambda x: x[0])
+    # キャラクター名コメント行を追加
+    final_output_lines.append(f";{character}")
 
-# 出力
+    # zindex昇順に並べた出力行を追加
+    for _, line in sorted(char_lines, key=lambda x: x[0]):
+        final_output_lines.append(line)
+
+    # キャラクターの終わりに空行を追加
+    final_output_lines.append("")
+
+# ファイルに書き出し
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    for _, line in output_entries:
+    for line in final_output_lines:
         f.write(line + "\n")
 
-print(f"完了: {OUTPUT_FILE} に zindex 昇順で出力しました。")
+print(f"完了: {OUTPUT_FILE} にキャラクター別・zindex昇順で出力しました。")
