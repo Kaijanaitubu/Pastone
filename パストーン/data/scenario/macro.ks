@@ -201,6 +201,13 @@
 	[chara_config pos_mode="true" ]
 [endmacro]
 
+;カメラズーム演出
+[macro name="zoom" ]
+	[filter layer="base" blur="5" ]
+	[camera zoom=1.35 y="42" time=1000 ease_type="ease" wait="false" ]
+	[better_wait time="300"]
+[endmacro]
+
 ;効果音再生
 [macro name="se"]
 	[playse storage="%s" volume="30" loop="%loop|true" buf="1" ]
@@ -223,33 +230,75 @@
 
 ;各キャラの表情表示マクロ
 [macro name="mizuka"]
-	[chara_part name="mizuka" eyes="%e" brow="%b" mouth="%m" arm="%arm" effects="%effects" wait="%p_wait|true" time="%p_time|600" ]
+	[chara_part name="mizuka" eyes="%e" brow="%b" mouth="%m" arm="%arm|n" effects="%effects|none" wait="%p_wait|false" time="%p_time|600" ]
 	[chara_show name="mizuka" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="%top|80" width="642" height="1489"]
 [endmacro]
 
 [macro name="mizuka_r"]
-	[chara_part name="mizuka_r" eyes="%e" brow="%b" mouth="%m" arm="%arm" effects="%effects" wait="%p_wait|true" time="%p_time|600" ]
+	[chara_part name="mizuka_r" eyes="%e" brow="%b" mouth="%m" arm="%arm" effects="%effects" wait="%p_wait|false" time="%p_time|600" ]
 	[chara_show name="mizuka_r" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="%top|80" width="642" height="1489"]
 [endmacro]
 
 [macro name="roz"]
-	[chara_part name="mizuka_r" eyes="%e" brow="%b" mouth="%m" arm="%arm" effects="%effects" wait="%p_wait|true" time="%p_time|600" ]
-	[chara_show name="mizuka_r" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="%top|80" width="642" height="1489"]
+	[eval exp="tf.roz_eye = 'roz_' + mp.e"]
+	[eval exp="tf.roz_brow = 'roz_' + mp.b"]
+	[eval exp="tf.roz_mouth = 'roz_' + mp.m"]
+
+	[if exp="mp.size == 'b'"]
+		[eval exp="tf.top = 55" ]
+	[else]
+		[eval exp="tf.top = 150" ]
+	[endif]
+
+	[chara_part name="RozLaz" body="roz" eyes="&tf.roz_eye" brow="&tf.roz_brow" mouth="&tf.roz_mouth" wait="%p_wait|false" time="%p_time|600" ]
+	[chara_show name="RozLaz" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="&tf.top" width="574" height="579"]
 [endmacro]
 
-[macro name="RozLaz"]
-	[chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|false" time="%m_time|600"]
-	[chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%time|1000"]
+[macro name="laz"]
+	[eval exp="tf.laz_eye = 'laz_' + mp.e"]
+	[eval exp="tf.laz_brow = 'laz_' + mp.b"]
+	[eval exp="tf.laz_mouth = 'laz_' + mp.m"]
+
+	[if exp="mp.size == 'b'"]
+		[eval exp="tf.top = 55" ]
+	[else]
+		[eval exp="tf.top = 150" ]
+	[endif]
+
+	[chara_part name="RozLaz" body="laz" eyes="&tf.laz_eye" brow="&tf.laz_brow" mouth="&tf.laz_mouth" wait="%p_wait|false" time="%p_time|600" ]
+	[chara_show name="RozLaz" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="&tf.top" width="574" height="579"]
+[endmacro]
+
+[macro name="laz_ojigi"]
+	[if exp="mp.size == 'b'"]
+		[eval exp="tf.top = 55" ]
+	[else]
+		[eval exp="tf.top = 150" ]
+	[endif]
+
+	[chara_part name="RozLaz" body="laz_ojigi" wait="%p_wait|false" time="%p_time|600"]
+	[chara_show name="RozLaz" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="&tf.top" width="574" height="579"]
+[endmacro]
+
+[macro name="rozlaz"]
+	[if exp="mp.size == 'b'"]
+		[eval exp="tf.top = 55" ]
+	[else]
+		[eval exp="tf.top = 150" ]
+	[endif]
+
+	[chara_part name="RozLaz" body="rozlaz" wait="%p_wait|false" time="%p_time|600"]
+	[chara_show name="RozLaz" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="&tf.top" width="574" height="579"]
 [endmacro]
 
 [macro name="kouki"]
-	[chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600"]
-	[chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%time|1000"]
+	[chara_part name="kouki" eyes="%e" brow="%b" mouth="%m" wait="%p_wait|false" time="%p_time|600"]
+	[chara_show name="kouki" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="%top|-20" width="542" height="1792"]
 [endmacro]
 
 [macro name="ayana"]
-	[chara_mod name="ayana" face="%f" cross="false" wait="%m_wait|false" time="%time|1000"]
-	[chara_show name="ayana" top="%top|40" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000"]
+	[chara_part name="ayana" eyes="%e" brow="%b" mouth="%m" wait="%p_wait|false" time="%p_time|600"]
+	[chara_show name="ayana" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="%top|80" width="502" height="1414"]
 [endmacro]
 
 ;------------------------------------------------------------------------------------------------------
