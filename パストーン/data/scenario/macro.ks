@@ -179,31 +179,78 @@
 	[frame p="50%" y="-20"]
 [endkeyframe]
 
-;マクロ定義
-[macro name="black_band_init"]
-;黒帯使うための初期化
-	[chara_config pos_mode="false"]
+;黒帯キャラ定義
+[chara_new name="black_top" storage="singlepic/演出/black.png" width="1280" height="720"]
+[chara_new name="black_bottom" storage="singlepic/演出/black.png" width="1280" height="720"]
+
+;黒帯を画面に出す
+[macro name="black_band_show"]
 	[chara_show name="black_top" layer="%layer|base" top="-720" time="0"]
 	[chara_show name="black_bottom" layer="%layer|base" top="720" time="0"]
-	[chara_config pos_mode="true"]
-[endmacro]
-
-[macro name="black_band_show"]
-;黒帯を画面に出す
 	[chara_config pos_mode="false" ]
 	[chara_move name="black_top" top="+=120" wait="false" anim="true" ]
 	[chara_move name="black_bottom" top="-=120" wait="false" anim="true"]
 	[chara_config pos_mode="true" ]
 [endmacro]
 
-[macro name="black_band_hide"]
 ;黒帯を隠す
+[macro name="black_band_hide"]
 	[chara_config pos_mode="false" ]
 	[chara_move name="black_top" top="-=120" wait="false" anim="true" ]
 	[chara_move name="black_bottom" top="+=120" wait="false" anim="true"]
 	[chara_config pos_mode="true" ]
 [endmacro]
-;マクロ定義終わり
+
+;効果音再生
+[macro name="se"]
+	[playse storage="%s" volume="30" loop="%loop|true" buf="1" ]
+[endmacro]
+
+;画像表示用
+[macro name="cg" ]
+	[image storage="%s" x="%x|0" y="%y|0" width="%w|1280" height="%h|720" layer="%layer|1" visible="%visible|true" time="%time|1000" name="%name|cg" ]
+[endmacro]
+
+;画像削除用
+[macro name="freecg" ]
+	[free layer="%layer|1" name="cg" time="10" ]
+	[freeimage layer="%layer|1" time="%time|1000" wait="%wait|true" ]
+[endmacro]
+
+;------------------------------------------------------------------------------------------------------
+; キャラ表示
+;------------------------------------------------------------------------------------------------------
+
+;各キャラの表情表示マクロ
+[macro name="mizuka"]
+	[chara_part name="mizuka" eyes="%e" brow="%b" mouth="%m" arm="%arm" effects="%effects" wait="%p_wait|true" time="%p_time|600" ]
+	[chara_show name="mizuka" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="%top|80" width="642" height="1489"]
+[endmacro]
+
+[macro name="mizuka_r"]
+	[chara_part name="mizuka_r" eyes="%e" brow="%b" mouth="%m" arm="%arm" effects="%effects" wait="%p_wait|true" time="%p_time|600" ]
+	[chara_show name="mizuka_r" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="%top|80" width="642" height="1489"]
+[endmacro]
+
+[macro name="roz"]
+	[chara_part name="mizuka_r" eyes="%e" brow="%b" mouth="%m" arm="%arm" effects="%effects" wait="%p_wait|true" time="%p_time|600" ]
+	[chara_show name="mizuka_r" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" top="%top|80" width="642" height="1489"]
+[endmacro]
+
+[macro name="RozLaz"]
+	[chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|false" time="%m_time|600"]
+	[chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%time|1000"]
+[endmacro]
+
+[macro name="kouki"]
+	[chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600"]
+	[chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%time|1000"]
+[endmacro]
+
+[macro name="ayana"]
+	[chara_mod name="ayana" face="%f" cross="false" wait="%m_wait|false" time="%time|1000"]
+	[chara_show name="ayana" top="%top|40" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000"]
+[endmacro]
 
 ;------------------------------------------------------------------------------------------------------
 ; BGM設定
