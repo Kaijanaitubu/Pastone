@@ -1,6 +1,7 @@
 import os
+import re
 
-# パスの再定義（リセット後のため）
+# パスの設定
 CHARA_DIR = "c:/Users/kouty/Desktop/Pastone/パストーン/data/fgimage/chara"
 OUTPUT_FILE = "c:/Users/kouty/Desktop/Pastone/パストーン/data/scenario/chara.ks"
 
@@ -16,6 +17,10 @@ base_zindex_map = {
 MIZUKA_R_NAME = "mizuka_r"
 MIZUKA_NAME = "mizuka"
 
+# フォルダ存在確認
+if not os.path.isdir(CHARA_DIR):
+    raise FileNotFoundError(f"キャラフォルダが見つかりません: {CHARA_DIR}")
+
 # 出力バッファ
 final_output_lines = []
 
@@ -30,14 +35,11 @@ for character in sorted(os.listdir(CHARA_DIR)):
     if os.path.exists(base_image):
         rel_path = f"chara/{character}/base.png"
         character_defs.append(f'[chara_new  name="{character}" storage="{rel_path}"]')
-        # big_ 定義も追加
-        character_defs.append(f'[chara_new  name="big_{character}" storage="{rel_path}"]')
 
 # mizuka_r 追加（base_r.png を参照）
 mizuka_r_base = os.path.join(CHARA_DIR, MIZUKA_NAME, "base_r.png")
 if os.path.exists(mizuka_r_base):
     character_defs.append(f'[chara_new  name="{MIZUKA_R_NAME}" storage="chara/{MIZUKA_NAME}/base_r.png"]')
-    character_defs.append(f'[chara_new  name="big_{MIZUKA_R_NAME}" storage="chara/{MIZUKA_NAME}/base_r.png"]')
 
 # 先頭にキャラクター定義を出力
 final_output_lines.extend(character_defs)
@@ -61,6 +63,7 @@ def process_character(character, is_mizuka_r=False):
         if os.path.isdir(os.path.join(character_path, d))
     ])
 
+    # mizuka_rのとき、_r付きフォルダとそれ以外を区別
     parts_to_process = []
     r_parts_map = {}
 
@@ -77,7 +80,7 @@ def process_character(character, is_mizuka_r=False):
     if is_mizuka_r:
         parts_to_process.extend(r_parts_map.keys())
 
-    for part in sorted(set(parts_to_process)):
+    for part in sorted(parts_to_process):
         if is_mizuka_r and part in r_parts_map:
             real_part = r_parts_map[part]
             part_path = os.path.join(CHARA_DIR, base_character, real_part)
@@ -88,6 +91,7 @@ def process_character(character, is_mizuka_r=False):
         if not os.path.isdir(part_path):
             continue
 
+        # zindex の決定
         if part in base_zindex_map:
             zindex = base_zindex_map[part]
         else:
@@ -98,33 +102,30 @@ def process_character(character, is_mizuka_r=False):
 
         filenames = sorted(f for f in os.listdir(part_path) if f.endswith(".png"))
 
+        # 特別対応：armパートの順序（nを先に）
         if part == "arm":
             if "n.png" in filenames:
                 line = f'[chara_layer name="{character}" part={part} id=n storage="chara/{base_character}/{real_part}/n.png" zindex="{zindex}"]'
                 char_lines.append((zindex, line))
-                big_line = f'[chara_layer name="big_{character}" part={part} id=n storage="chara/{base_character}/{real_part}/n.png" zindex="{zindex}"]'
-                char_lines.append((zindex, big_line))
                 filenames.remove("n.png")
 
-        none_line = f'[chara_layer name="{character}" part={part} id=none storage="none" zindex="{zindex}"]'
-        big_none_line = f'[chara_layer name="big_{character}" part={part} id=none storage="none" zindex="{zindex}"]'
-        char_lines.append((zindex, none_line))
-        char_lines.append((zindex, big_none_line))
+        # none（ただしarmはnの後に追加）
+        line = f'[chara_layer name="{character}" part={part} id=none storage="none" zindex="{zindex}"]'
+        char_lines.append((zindex, line))
 
         for filename in filenames:
             id_name = filename[:-4]
             rel_path = f"chara/{base_character}/{real_part}/{filename}"
             line = f'[chara_layer name="{character}" part={part} id={id_name} storage="{rel_path}" zindex="{zindex}"]'
-            big_line = f'[chara_layer name="big_{character}" part={part} id={id_name} storage="{rel_path}" zindex="{zindex}"]'
             char_lines.append((zindex, line))
-            char_lines.append((zindex, big_line))
 
+    # キャラクター名コメント行を追加
     final_output_lines.append(f";{character}")
     for _, line in sorted(char_lines, key=lambda x: x[0]):
         final_output_lines.append(line)
     final_output_lines.append("")
 
-# ===== 全キャラ処理 =====
+# ===== 2. 通常キャラの処理 =====
 for character in sorted(os.listdir(CHARA_DIR)):
     character_path = os.path.join(CHARA_DIR, character)
     if not os.path.isdir(character_path):
@@ -132,6 +133,7 @@ for character in sorted(os.listdir(CHARA_DIR)):
     if character != MIZUKA_NAME:
         process_character(character)
 
+# ===== 3. mizukaとmizuka_rの個別処理 =====
 process_character(MIZUKA_NAME)
 process_character(MIZUKA_R_NAME, is_mizuka_r=True)
 

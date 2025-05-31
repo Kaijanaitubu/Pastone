@@ -113,7 +113,7 @@
 
 #雪翔
 ≪‥‥起き抜けに考えることじゃないな≫[vp]
-
+*debug
 [bg2 storage="myroom.png" time="400"]
 
 頭を振り、脳裏によぎった記憶をさっさと追い出す。[vp]
@@ -132,13 +132,13 @@
 
 寝起きに似つかわしくない騒音が、スマホから聞こえてくる。[vp]
 
-;立ち絵 ロズ拡大版 roz_taunt
-[roz_big f="roz_taunt" top="-50"]
+[zoom]
+[roz e="jito" b="koma" m="wara"]
 #ロズ
 「そうやってラズが甘やかすから、どんどんマスターの生活リズムが崩れていくんやで？」[vp]
 
 ;立ち絵 ラズ拡大版 laz_kushou
-[laz_big f="laz_kushou" top="-50"]
+[laz e="jito" b="koma" m="n"]
 #ラズ
 「止めなかったのは貴方も同じでしょうロズ？　それに、雪翔様の眠りを妨げるのはいかがなものかと思いますが」[vp]
 
@@ -148,27 +148,24 @@
 俺の言葉を無視し、携帯からの声達はどんどん険悪な雰囲気になっていく。[vp]
 
 ;立ち絵 ロズ拡大版 roz_okori_2
-[roz_big f="roz_okori_2" top="-50"]
+[roz e="niko" b="oko" m="niko"]
 #ロズ
 「どうやら、今日こそ決着つけなあかんみたいやな」[vp]
 
 ;立ち絵 ラズ拡大版 laz_confident
 ;漫符 tameiki？
-[laz_big f="laz_confident" top="-50"]
+[laz e="toji" b="koma" m="wara"]
 [manpu layer="1" type="tameiki" x="550" y="80" sound="null.mp3"]
 #ラズ
 「勝てるとお思いで？　私、貴方に負けたことないでしょう？」[vp]
 
-;☆
-;立ち絵 ロズ拡大版 roz_okori_3
 ;漫符 muka
-[roz_big f="roz_okori_3" top="-50"]
+[roz e="jito" b="oko" m="O"]
 [manpu layer="1" type="muka" x="700" y="50" sound="null.mp3"]
 #ロズ
 「当たりまえやろ毎回引き分けなんやから！！　とにかく、覚悟──」[vp]
-;画面が静か、BGMがない影響もある？
 
-[chara_hide_all layer="1"]
+[zoomout_hide]
 
 何やら決闘が始まりそうなので、これ以上うるさくならないうちに、黙ってもらおう。[vp]
 そう思ってスマホを操作し、彼女たちをミュートにしてしまう。[vp]

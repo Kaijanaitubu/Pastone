@@ -1,8 +1,8 @@
 *start
 [startoption]
-[voconfig sebuf=2 name="美寿花" vostorage="voice/a_2/mizuka_{number}.mp3" number=2]
-[voconfig sebuf=5 name="黄樹" vostorage="voice/a_2/kouki_{number}.mp3" number=2]
-[voconfig sebuf=2 name="？？？" vostorage="voice/a_2/a_2_{number}.mp3" number=1]
+; [voconfig sebuf=2 name="美寿花" vostorage="voice/a_2/mizuka_{number}.mp3" number=2]
+; [voconfig sebuf=5 name="黄樹" vostorage="voice/a_2/kouki_{number}.mp3" number=2]
+; [voconfig sebuf=2 name="？？？" vostorage="voice/a_2/a_2_{number}.mp3" number=1]
 [vostart]
 [ambient_light_off]
 
@@ -49,11 +49,14 @@
 心の中で結論にもなっていない結論を出し、俺はそうっと階段を下りる。[vp]
 [reset_camera]
 
-[kouki f="bishou"]
+
+[bg2 storage="living.png" time=10]
+
+[kouki e=n b=n m=n]
 #黄樹
 「お、やっと起きた」[vp]
 
-[kouki f="egao"]
+[kouki e=niko b=koma m=n]
 #黄樹
 「中々降りてこなかったから体調でも悪いのかと思ったんだが‥‥」[vp]
 
@@ -86,8 +89,7 @@
 
 [bgm_mizuka]
 
-[mizuka_big f="egao" layer=2 time=700]
-;[manpu type="onpu" x="700" y="60"]
+[mizuka b="n" e="niko" m="niko" layer="1"]
 #美寿花
 「雪翔君、だよね？　おはよう」[vp]
 
@@ -101,7 +103,7 @@
 だとしても、非日常な光景であることには変わりない。[vp]
 父さんがこの家に人を呼ぶなんてこと、今まであっただろうか？[vp]
 
-[chara_hide_all time="500" layer=2]
+[chara_hide_all time="500" layer="1" wait="false"]
 
 [freecg layer=0 time="800"]
 [reset_camera time="1000" wait="true" layer="0"]

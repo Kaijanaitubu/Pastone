@@ -1,5 +1,6 @@
 *start
 [cm]
+[startoption]
 [bg2 storage=makkuro.jpg time=10]
 [start_keyconfig]
 [fadeoutbgm time="300"]
@@ -42,6 +43,7 @@
 [glink text="title　" size=20 width=50 x=900 y=0 color="white" storage="title.ks"]
 [glink text="badend　" size=20 width=50 x=900 y=50 color="white" storage="~g_badend.ks"]
 [glink text="playground　" size=20 width=50 x=900 y=100 color="white" storage="playground.ks"]
+[glink text="debug　" size=20 width=50 x=900 y=150 color="white" storage="~a_1.ks" target="*debug" ]
 
 [endnowait]
 
