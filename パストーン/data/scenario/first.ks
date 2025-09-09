@@ -38,7 +38,7 @@
 @call storage="macro.ks"
 
 ;このゲームで登場するキャラクターを宣言(立ち絵は仮)
-@call storage="chara.ks"
+@call storage="chara_layer.ks"
 
 ;ボタン関連
 ; [vrepeat_config graphic=".button_voice.png" x="400" y="500"]
