@@ -6,6 +6,11 @@
 
 [chara_show name="mizuka_r" top="20" wait="true" layer="0" time="1000" ] 
 
+[backlay]
+
+
+
+
 美寿花表示[vp]
 
 *select1
