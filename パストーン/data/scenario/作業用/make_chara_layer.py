@@ -1,8 +1,8 @@
 import os
 
 # パスの設定
-CHARA_DIR = "c:/Users/kouty/Documents/GitHub/Pastone/パストーン/data/fgimage/chara"
-OUTPUT_FILE = "c:/Users/kouty/Documents/GitHub/Pastone/パストーン/data/scenario/chara_layer.ks"
+CHARA_DIR = "../../fgimage/chara"
+OUTPUT_FILE = "../../scenario/chara_layer.ks"
 
 # 固定zindex定義
 base_zindex_map = {
