@@ -1,8 +1,9 @@
 import os
 
 # パスの設定
-CHARA_DIR = "../../fgimage/chara"
-OUTPUT_FILE = "../../scenario/chara_layer.ks"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+CHARA_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "..", "fgimage", "chara"))
+OUTPUT_FILE = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "chara_layer.ks"))
 
 # 固定zindex定義
 base_zindex_map = {
