@@ -33,6 +33,7 @@
 [plugin name="slider_ui"]
 [plugin name="auto_indent"]
 [plugin name=manpu]
+[plugin name="chara_part_blend"]
 
 ;マクロやキーフレームの定義
 @call storage="macro.ks"
