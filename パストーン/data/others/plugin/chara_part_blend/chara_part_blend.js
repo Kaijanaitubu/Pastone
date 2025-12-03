@@ -75,13 +75,20 @@ TYRANO.kag.ftag.master_tag["chara_part_blend"] = {
                         var part = map_part[key];
                         var j_img = target_obj.find(".part." + key);
                         
-                        // Canvas要素を作成
+                        // Canvas要素を作成（表示サイズに合わせる：透明プレースホルダ対策）
                         var canvas = document.createElement('canvas');
-                        var img_width = j_img.width();
-                        var img_height = j_img.height();
+                        var domImg = j_img.get(0);
+                        var isTransparentPlaceholder = /transparent\.png$/.test(j_img.attr('src'));
+                        var naturalW = domImg.naturalWidth || 0;
+                        var naturalH = domImg.naturalHeight || 0;
+                        // プレースホルダや未ロードの場合は、要素の表示サイズ（CSS適用後）を使う
+                        var img_width = (!isTransparentPlaceholder && naturalW > 1) ? naturalW : (j_img.width() || j_img.get(0).clientWidth || 1);
+                        var img_height = (!isTransparentPlaceholder && naturalH > 1) ? naturalH : (j_img.height() || j_img.get(0).clientHeight || 1);
                         canvas.width = img_width;
                         canvas.height = img_height;
                         var ctx = canvas.getContext('2d');
+                        // 補間の差異を減らす
+                        ctx.imageSmoothingEnabled = true;
                         
                         // 現在の画像と新しい画像をロード
                         var img_a = new Image();
@@ -119,7 +126,11 @@ TYRANO.kag.ftag.master_tag["chara_part_blend"] = {
                             var ctxA = canvasA.getContext('2d');
                             var ctxB = canvasB.getContext('2d');
                             
-                            // 各画像を一度だけ描画
+                            // 各画像を一度だけ描画（キャンバスサイズにスケール）
+                            ctxA.imageSmoothingEnabled = true;
+                            ctxB.imageSmoothingEnabled = true;
+                            ctxA.clearRect(0,0,canvas.width,canvas.height);
+                            ctxB.clearRect(0,0,canvas.width,canvas.height);
                             ctxA.drawImage(img_a, 0, 0, canvas.width, canvas.height);
                             ctxB.drawImage(img_b, 0, 0, canvas.width, canvas.height);
                             
@@ -128,58 +139,89 @@ TYRANO.kag.ftag.master_tag["chara_part_blend"] = {
                             var imageDataB = ctxB.getImageData(0, 0, canvas.width, canvas.height);
                             var dataA = imageDataA.data;
                             var dataB = imageDataB.data;
+
+                            // 領域限定ブレンド用：差分のバウンディングボックスを計算
+                            var minX = canvas.width, minY = canvas.height, maxX = -1, maxY = -1;
+                            for (var y = 0; y < canvas.height; y++) {
+                                for (var x = 0; x < canvas.width; x++) {
+                                    var i = (y * canvas.width + x) * 4;
+                                    // 色またはアルファに変化があるピクセルのみ対象
+                                    if (dataA[i] !== dataB[i] || dataA[i+1] !== dataB[i+1] || dataA[i+2] !== dataB[i+2] || dataA[i+3] !== dataB[i+3]) {
+                                        if (x < minX) minX = x;
+                                        if (y < minY) minY = y;
+                                        if (x > maxX) maxX = x;
+                                        if (y > maxY) maxY = y;
+                                    }
+                                }
+                            }
+                            // 差分がない場合は即座に切替
+                            if (maxX < 0) {
+                                if ("none" != part.storage) {
+                                    j_img.attr("src", "./data/fgimage/" + part.storage);
+                                } else {
+                                    j_img.attr("src", "./tyrano/images/system/transparent.png");
+                                }
+                                if (pm[key + "_zindex"]) {
+                                    j_img.css("z-index", pm[key + "_zindex"]);
+                                } else {
+                                    j_img.css("z-index", chara_part[key].zindex);
+                                }
+                                n++;
+                                if ("true" == pm.wait && cnt == n) {
+                                    TYRANO.kag.ftag.nextOrder();
+                                }
+                                return;
+                            }
+                            var boxW = Math.max(1, maxX - minX + 1);
+                            var boxH = Math.max(1, maxY - minY + 1);
                             
                             var animate = function() {
                                 var elapsed = Date.now() - startTime;
                                 var t = Math.min(elapsed / duration, 1.0);
                                 
-                                // 出力用の画像データを作成
-                                var outputData = ctx.createImageData(canvas.width, canvas.height);
-                                var data = outputData.data;
+                                // 出力用の画像データ（差分領域のみ）を作成
+                                var outputData = ctx.createImageData(boxW, boxH);
+                                var out = outputData.data;
                                 
-                                // ピクセルごとに正しいアルファ合成
-                                for (var i = 0; i < data.length; i += 4) {
-                                    var rA = dataA[i];
-                                    var gA = dataA[i + 1];
-                                    var bA = dataA[i + 2];
-                                    var aA = dataA[i + 3] / 255.0;
-                                    
-                                    var rB = dataB[i];
-                                    var gB = dataB[i + 1];
-                                    var bB = dataB[i + 2];
-                                    var aB = dataB[i + 3] / 255.0;
-                                    
-                                    // プリマルチプライドアルファに変換
-                                    var rA_pre = rA * aA;
-                                    var gA_pre = gA * aA;
-                                    var bA_pre = bA * aA;
-                                    
-                                    var rB_pre = rB * aB;
-                                    var gB_pre = gB * aB;
-                                    var bB_pre = bB * aB;
-                                    
-                                    // クロスフェード係数でブレンド
-                                    var r_pre = (1 - t) * rA_pre + t * rB_pre;
-                                    var g_pre = (1 - t) * gA_pre + t * gB_pre;
-                                    var b_pre = (1 - t) * bA_pre + t * bB_pre;
-                                    var a_out = (1 - t) * aA + t * aB;
-                                    
-                                    // アンプリマルチプライ（アルファで割る）
-                                    if (a_out > 0) {
-                                        data[i] = r_pre / a_out;
-                                        data[i + 1] = g_pre / a_out;
-                                        data[i + 2] = b_pre / a_out;
-                                    } else {
-                                        data[i] = 0;
-                                        data[i + 1] = 0;
-                                        data[i + 2] = 0;
+                                // 差分領域のみピクセル合成
+                                for (var yy = 0; yy < boxH; yy++) {
+                                    for (var xx = 0; xx < boxW; xx++) {
+                                        var srcIndex = ((yy + minY) * canvas.width + (xx + minX)) * 4;
+                                        var dstIndex = (yy * boxW + xx) * 4;
+                                        var rA = dataA[srcIndex];
+                                        var gA = dataA[srcIndex + 1];
+                                        var bA = dataA[srcIndex + 2];
+                                        var aA = dataA[srcIndex + 3] / 255.0;
+                                        var rB = dataB[srcIndex];
+                                        var gB = dataB[srcIndex + 1];
+                                        var bB = dataB[srcIndex + 2];
+                                        var aB = dataB[srcIndex + 3] / 255.0;
+                                        var rA_pre = rA * aA;
+                                        var gA_pre = gA * aA;
+                                        var bA_pre = bA * aA;
+                                        var rB_pre = rB * aB;
+                                        var gB_pre = gB * aB;
+                                        var bB_pre = bB * aB;
+                                        var r_pre = (1 - t) * rA_pre + t * rB_pre;
+                                        var g_pre = (1 - t) * gA_pre + t * gB_pre;
+                                        var b_pre = (1 - t) * bA_pre + t * bB_pre;
+                                        var a_out = (1 - t) * aA + t * aB;
+                                        if (a_out > 0) {
+                                            out[dstIndex] = r_pre / a_out;
+                                            out[dstIndex + 1] = g_pre / a_out;
+                                            out[dstIndex + 2] = b_pre / a_out;
+                                        } else {
+                                            out[dstIndex] = 0;
+                                            out[dstIndex + 1] = 0;
+                                            out[dstIndex + 2] = 0;
+                                        }
+                                        out[dstIndex + 3] = a_out * 255;
                                     }
-                                    data[i + 3] = a_out * 255;
                                 }
                                 
-                                // Canvasに描画
-                                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                                ctx.putImageData(outputData, 0, 0);
+                                // 差分領域のみCanvasに描画
+                                ctx.clearRect(minX, minY, boxW, boxH);
+                                ctx.putImageData(outputData, minX, minY);
                                 
                                 // Canvas の内容を img に適用
                                 j_img.attr('src', canvas.toDataURL('image/png'));
