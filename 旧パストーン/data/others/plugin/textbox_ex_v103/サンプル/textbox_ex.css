@@ -1,0 +1,10 @@
+
+/*
+  エディット欄にフォーカスしたときのアウトラインをなくすCSSです
+  使用する場合はtyrano.cssの最後にペーストしてください
+*/
+
+input[type="text"]:focus{
+  border : none;
+  outline: 0;
+}

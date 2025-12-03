@@ -1,0 +1,22 @@
+
+【サンプルシナリオの起動方法】
+
+１．新規プロジェクトを作成する
+２．imageフォルダにbutton.png, button2.png, patern.jpgを入れる
+３．テキストボックス拡張プラグインを導入する
+４．scenarioフォルダにsample.ksを入れる
+５．scene1.ksの頭に[jump storage="sample.ks"]と書く
+
+ヽ(・∀・ )ﾉ < おわり！
+
+
+【textbox_ex.cssの使い方】
+
+※テキストボックスにカーソルを合わせたときに表示されるアウトラインを消すCSSです
+　見た目が気になる場合はご利用ください（あまりユーザーさんには優しくないですが）
+
+１．tyrano > tyrano.cssを開く
+２．一番下の方に textbox_ex.css の内容をコピペする
+
+ヽ(・∀・ )ﾉ < おわり！
+
