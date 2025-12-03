@@ -53,7 +53,7 @@ def compute_global_bbox(psd, include_hidden: bool) -> Optional[Tuple[int,int,int
         if ly2 > y2: y2 = ly2
     return (x1, y1, x2, y2) if has_any else None
 
-def export_layers(psd, outdir: str, include_hidden: bool):
+def export_layers(psd, outdir: str, include_hidden: bool, scale: float = 1.0):
     gb = compute_global_bbox(psd, include_hidden)
     if gb is None:
         print("⚠️ 出力対象のレイヤーがありません（全部非表示or空）。")
@@ -61,8 +61,10 @@ def export_layers(psd, outdir: str, include_hidden: bool):
     gx1, gy1, gx2, gy2 = gb
     wrap_w, wrap_h = max(1, gx2 - gx1), max(1, gy2 - gy1)
     print(f"📐 ラップ範囲: ({gx1},{gy1})-({gx2},{gy2})  ->  size={wrap_w}x{wrap_h}")
+    if scale != 1.0:
+        print(f"🔍 倍率: {scale}x  ->  出力サイズ={int(wrap_w*scale)}x{int(wrap_h*scale)}")
 
-    def recurse(node, base_dir: str, parent_visible: bool, prefix: str=""):
+    def recurse(node, base_dir: str, parent_visible: bool):
         for layer in node:
             visible = parent_visible and layer.is_visible()
             if layer.is_group():
@@ -71,7 +73,7 @@ def export_layers(psd, outdir: str, include_hidden: bool):
                 gname = safe_name(layer.name)
                 subdir = os.path.join(base_dir, gname)
                 os.makedirs(subdir, exist_ok=True)
-                recurse(layer, subdir, visible, prefix + gname + "_")
+                recurse(layer, subdir, visible)
             else:
                 if not include_hidden and not visible:
                     continue
@@ -89,6 +91,12 @@ def export_layers(psd, outdir: str, include_hidden: bool):
                 # マスク指定でアルファ保持
                 full.paste(img, (ox, oy), img)
 
+                # スケーリング処理
+                if scale != 1.0:
+                    new_w = max(1, int(wrap_w * scale))
+                    new_h = max(1, int(wrap_h * scale))
+                    full = full.resize((new_w, new_h), Image.LANCZOS)
+
                 name = safe_name(layer.name)
                 out_path = os.path.join(base_dir, f"{name}.png")
                 full.save(out_path, "PNG")
@@ -101,6 +109,7 @@ def main():
     ap.add_argument("psd", help="入力PSDファイル")
     ap.add_argument("-o", "--outdir", help="出力フォルダ（省略時: <PSD名>_layers_wrapped）")
     ap.add_argument("--include-hidden", action="store_true", help="非表示レイヤーも含める（既定は無視）")
+    ap.add_argument("-s", "--scale", type=float, default=1.0, help="出力PNGの倍率（例: 0.5で半分, 2.0で2倍）既定=1.0")
     args = ap.parse_args()
 
     if not os.path.exists(args.psd):
@@ -110,8 +119,12 @@ def main():
     outdir = args.outdir or (os.path.splitext(args.psd)[0] + "_layers_wrapped")
     os.makedirs(outdir, exist_ok=True)
 
+    if args.scale <= 0:
+        print("❌ --scale は正の数を指定してください")
+        sys.exit(1)
+
     psd = PSDImage.open(args.psd)
-    export_layers(psd, outdir, include_hidden=args.include_hidden)
+    export_layers(psd, outdir, include_hidden=args.include_hidden, scale=args.scale)
     print("✅ 完了！")
 
 if __name__ == "__main__":
