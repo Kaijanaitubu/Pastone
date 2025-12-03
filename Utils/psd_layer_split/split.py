@@ -90,7 +90,7 @@ def export_layers(psd, outdir: str, include_hidden: bool):
                 full.paste(img, (ox, oy), img)
 
                 name = safe_name(layer.name)
-                out_path = os.path.join(base_dir, f"{prefix}{name}.png")
+                out_path = os.path.join(base_dir, f"{name}.png")
                 full.save(out_path, "PNG")
                 print("saved:", out_path)
 
