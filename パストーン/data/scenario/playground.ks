@@ -5,6 +5,7 @@
 [bg2 storage="living.png" time=10]
 
 [chara_show name="mizuka_r" top="20" wait="true" layer="0" time="1000" ] 
+[chara_show name="ayana" top="40" wait="true" layer="0" time="1000" ]
 
 [backlay]
 
@@ -86,6 +87,38 @@
 [chara_part name="mizuka_r" effect="ctere"]effect = ctere[vp]
 [chara_part name="mizuka_r" effect="tere"]effect = tere[vp]
 
+
+文永表示[vp]
+[chara_part name="ayana" mouth = "biku"] mouth = biku[vp]
+[chara_part name="ayana" mouth = "chobo"] mouth = chobo[vp]
+[chara_part name="ayana" mouth = "hira"] mouth = hira[vp]
+[chara_part name="ayana" mouth = "mu"] mouth = mu[vp]
+[chara_part name="ayana" mouth = "n"] mouth = n[vp]
+[chara_part name="ayana" mouth = "niko"] mouth = niko[vp]
+[chara_part name="ayana" mouth = "yoko"] mouth = yoko[vp]
+
+[chara_part name="ayana" brow = "aga"] brow = aga[vp]
+[chara_part name="ayana" brow = "hei"] brow = hei[vp]
+[chara_part name="ayana" brow = "koma"] brow = koma[vp]
+[chara_part name="ayana" brow = "koma2"] brow = koma2[vp]
+[chara_part name="ayana" brow = "n"] brow = n[vp]
+[chara_part name="ayana" brow = "niga"] brow = niga[vp]
+[chara_part name="ayana" brow = "saga"] brow = saga[vp]
+
+[chara_part name="ayana" effects = "ase"] effects = ase[vp]
+
+[chara_part name="ayana" eyes = "biku"] eyes = biku[vp]
+[chara_part name="ayana" eyes = "hira"] eyes = hira[vp]
+[chara_part name="ayana" eyes = "jito"] eyes = jito[vp]
+[chara_part name="ayana" eyes = "jito2"] eyes = jito2[vp]
+[chara_part name="ayana" eyes = "n"] eyes = n[vp]
+[chara_part name="ayana" eyes = "niko"] eyes = niko[vp]
+[chara_part name="ayana" eyes = "rape"] eyes = rape[vp]
+[chara_part name="ayana" eyes = "sora"] eyes = sora[vp]
+[chara_part name="ayana" eyes = "toji"] eyes = toji[vp]
+[chara_part name="ayana" eyes = "toji2"] eyes = toji2[vp]
+[chara_part name="ayana" eyes = "ue"] eyes = ue[vp]
+[chara_part name="ayana" eyes = "x"] eyes = x[vp]
 
 [link target=*select1]最初に戻る[endlink][r]
 [s]

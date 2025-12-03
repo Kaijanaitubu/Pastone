@@ -1,4 +1,4 @@
-# export_layers_minwrap.py
+# split.py
 
 PSDファイル内のレイヤーを、**全レイヤーを包む最小の長方形サイズ**にトリミングした透過PNGとして出力します。
 出力された各PNGは、PSD上の位置関係を正確に維持します。
@@ -24,7 +24,7 @@ PSDファイル内のレイヤーを、**全レイヤーを包む最小の長方
 ## 🚀 使い方
 
 ```bash
-python export_layers_minwrap.py input.psd
+python split.py input.psd
 ```
 
 ### オプション
@@ -33,6 +33,7 @@ python export_layers_minwrap.py input.psd
 | ------------------ | --------------------------------------- |
 | `-o <フォルダ名>`       | 出力フォルダを指定（省略時は `<PSD名>_layers_wrapped`） |
 | `--include-hidden` | 非表示レイヤーも出力対象に含める                        |
+| `-s <倍率>`          | 出力PNGの倍率を指定（例: 0.5で半分、2.0で2倍）既定=1.0    |
 
 ---
 

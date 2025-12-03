@@ -87,7 +87,7 @@ def export_layers(psd, outdir: str, include_hidden: bool, scale: float = 1.0):
 
                 # ラップ左上を原点(0,0)にオフセット
                 ox, oy = lx1 - gx1, ly1 - gy1
-                full = Image.new("RGBA", (wrap_w, wrap_h), (0,0,0,0))
+                full = Image.new("RGBA", (wrap_w, wrap_h), (255,255,255,0))
                 # マスク指定でアルファ保持
                 full.paste(img, (ox, oy), img)
 
