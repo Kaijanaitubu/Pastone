@@ -34,6 +34,7 @@
 [plugin name="auto_indent"]
 [plugin name=manpu]
 [plugin name="chara_part_blend"]
+[plugin name="chara_zoom"]
 
 ;マクロやキーフレームの定義
 @call storage="macro.ks"
