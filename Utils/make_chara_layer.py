@@ -2,8 +2,8 @@ import os
 
 # パスの設定
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-CHARA_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "..", "fgimage", "chara"))
-OUTPUT_FILE = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "chara_layer.ks"))
+CHARA_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "パストーン", "data", "fgimage", "chara"))
+OUTPUT_FILE = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "パストーン", "data", "scenario", "chara_layer.ks"))
 
 # 固定zindex定義
 base_zindex_map = {
@@ -28,8 +28,6 @@ for character in sorted(os.listdir(CHARA_DIR)):
         rel_path = f"chara/{character}/base.png"
         # 通常
         character_defs.append(f'[chara_new  name="{character}" storage="{rel_path}"]')
-        # big_ も追加
-        character_defs.append(f'[chara_new  name="big_{character}" storage="{rel_path}"]')
 
 # 出力に追加
 final_output_lines.extend(character_defs)
@@ -69,19 +67,16 @@ def process_character(character):
         if part == "arm" and "n.png" in filenames:
             rel_path = f"chara/{base_character}/{part}/n.png"
             char_lines.append((zindex, f'[chara_layer name="{character}" part={part} id=n storage="{rel_path}" zindex="{zindex}"]'))
-            char_lines.append((zindex, f'[chara_layer name="big_{character}" part={part} id=n storage="{rel_path}" zindex="{zindex}"]'))
             filenames.remove("n.png")
 
         # none 定義
         char_lines.append((zindex, f'[chara_layer name="{character}" part={part} id=none storage="none" zindex="{zindex}"]'))
-        char_lines.append((zindex, f'[chara_layer name="big_{character}" part={part} id=none storage="none" zindex="{zindex}"]'))
 
         # 各差分
         for filename in filenames:
             id_name = filename[:-4]
             rel_path = f"chara/{base_character}/{part}/{filename}"
             char_lines.append((zindex, f'[chara_layer name="{character}" part={part} id={id_name} storage="{rel_path}" zindex="{zindex}"]'))
-            char_lines.append((zindex, f'[chara_layer name="big_{character}" part={part} id={id_name} storage="{rel_path}" zindex="{zindex}"]'))
 
     # 出力
     final_output_lines.append(f";{character}")
