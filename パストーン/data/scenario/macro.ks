@@ -165,27 +165,47 @@
 ;各キャラの表情表示マクロ
 [macro name="mizuka"]
 	[chara_part_blend name="mizuka" brow="%b" eyes="%e" mouth="%m" arm="%arm" effect="%effect" wait="%m_wait|false" time="%m_time|600"]
-	[chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
+	[chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" ] 
 [endmacro]
 
 [macro name="mizuka_r"]
 	[chara_part_blend name="mizuka_r" brow="%b" eyes="%e" mouth="%m" arm="%arm" effect="%effect" wait="%m_wait|false" time="%m_time|600"]
-	[chara_show name="mizuka_r" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
+	[chara_show name="mizuka_r" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000" ] 
 [endmacro]
 
-[macro name="RozLaz"]
-	[chara_mod name="RozLaz" face="f" cross="false" wait="m_wait|false" time="%m_time|600"]
-	[chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%time|1000"]
+[macro name="roz"]
+	[chara_part_blend name="roz" roz_brow="%b" roz_eyes="%e" roz_mouth="%m" wait="%m_wait|false" time="%m_time|600"]
+	[chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%s_time|1000"]
+[endmacro]
+
+[macro name="laz"]
+	[chara_part_blend name="laz" laz_brow="%b" laz_eyes="%e" laz_mouth="%m" wait="%m_wait|false" time="%m_time|600"]
+	[chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%s_time|1000"]
+[endmacro]
+
+[macro name="laz_bow"]
+	[chara_part_blend name="RozLaz" body="laz_bow" roz_brow="none" roz_eyes="none" roz_mouth="none" laz_brow="none" laz_eyes="none" laz_mouth="none" wait="%m_wait|false" time="%m_time|600"]
+	[chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%s_time|1000"]
+[endmacro]
+
+[macro name="rozlaz"]
+	[chara_part_blend name="RozLaz" body="rozlaz" roz_brow="none" roz_eyes="none" roz_mouth="none" laz_brow="none" laz_eyes="none" laz_mouth="none" wait="%m_wait|false" time="%m_time|600"]
+	[chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%s_time|1000"]
+[endmacro]
+
+[macro name="rozlaz_inai"]
+	[chara_part_blend name="RozLaz" body="none" roz_brow="none" roz_eyes="none" roz_mouth="none" laz_brow="none" laz_eyes="none" laz_mouth="none" wait="%m_wait|false" time="%m_time|600"]
+	[chara_show name="RozLaz" top="%top" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%s_time|1000"]
 [endmacro]
 
 [macro name="kouki"]
 	[chara_part_blend name="kouki" brow="%b" eyes="%e" mouth="%m" wait="%m_wait|false" time="%m_time|600"]
-	[chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%time|1000"]
+	[chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%s_time|1000"]
 [endmacro]
 
 [macro name="ayana"]
 	[chara_part_blend name="ayana" brow="%b" eyes="%e" mouth="%m" wait="%m_wait|false" time="%m_time|600"]
-	[chara_show name="ayana" top="%top|40" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000"]
+	[chara_show name="ayana" top="%top|40" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%s_time|1000"]
 [endmacro]
 
 ;効果音再生

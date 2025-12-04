@@ -42,41 +42,46 @@ def process_character(character):
     next_zindex = 4
     char_lines = []
 
-    part_dirs = sorted([
-        d for d in os.listdir(character_path)
-        if os.path.isdir(os.path.join(character_path, d))
-    ])
-
-    for part in sorted(part_dirs):
-        part_path = os.path.join(character_path, part)
-        if not os.path.isdir(part_path):
+    # 再帰的にパス内の画像ディレクトリを検出し、部分名はcharacter_pathからの相対パスを'_'で接続して作る
+    discovered = []
+    for root, dirs, files in os.walk(character_path):
+        pngs = [f for f in files if f.endswith(".png")]
+        if not pngs:
             continue
+        rel = os.path.relpath(root, character_path)
+        if rel == ".":
+            # ルート直下の画像 (通常は base.png など) はスキップ
+            continue
+        part_name = rel.replace(os.sep, "_")
+        base_part = os.path.basename(root)
+        discovered.append((part_name, root, base_part, sorted(pngs)))
 
-        # zindex の決定
-        if part in base_zindex_map:
-            zindex = base_zindex_map[part]
+    for part_name, part_path, base_part, filenames in sorted(discovered, key=lambda x: x[0]):
+        # zindex の決定: ディレクトリの basename が固定定義にある場合はそれを優先
+        if base_part in base_zindex_map:
+            zindex = base_zindex_map[base_part]
+        elif part_name in base_zindex_map:
+            zindex = base_zindex_map[part_name]
         else:
-            if part not in dynamic_zindex_map:
-                dynamic_zindex_map[part] = next_zindex
+            if part_name not in dynamic_zindex_map:
+                dynamic_zindex_map[part_name] = next_zindex
                 next_zindex += 1
-            zindex = dynamic_zindex_map[part]
+            zindex = dynamic_zindex_map[part_name]
 
-        filenames = sorted(f for f in os.listdir(part_path) if f.endswith(".png"))
-
-        # 特別対応: armパートの "n.png" を先に出す
-        if part == "arm" and "n.png" in filenames:
-            rel_path = f"chara/{base_character}/{part}/n.png"
-            char_lines.append((zindex, f'[chara_layer name="{character}" part={part} id=n storage="{rel_path}" zindex="{zindex}"]'))
-            filenames.remove("n.png")
+        # 特別対応: armパートの "n.png" を先に出す（ディレクトリの basename が arm の場合）
+        if base_part == "arm" and "n.png" in filenames:
+            rel_path = f"chara/{base_character}/{rel.replace(os.sep, '/')}/n.png"
+            char_lines.append((zindex, f'[chara_layer name="{character}" part={part_name} id=n storage="{rel_path}" zindex="{zindex}"]'))
+            filenames = [f for f in filenames if f != "n.png"]
 
         # none 定義
-        char_lines.append((zindex, f'[chara_layer name="{character}" part={part} id=none storage="none" zindex="{zindex}"]'))
+        char_lines.append((zindex, f'[chara_layer name="{character}" part={part_name} id=none storage="none" zindex="{zindex}"]'))
 
         # 各差分
         for filename in filenames:
             id_name = filename[:-4]
-            rel_path = f"chara/{base_character}/{part}/{filename}"
-            char_lines.append((zindex, f'[chara_layer name="{character}" part={part} id={id_name} storage="{rel_path}" zindex="{zindex}"]'))
+            rel_path = f"chara/{base_character}/{part_name.replace('_', '/')}/{filename}"
+            char_lines.append((zindex, f'[chara_layer name="{character}" part={part_name} id={id_name} storage="{rel_path}" zindex="{zindex}"]'))
 
     # 出力
     final_output_lines.append(f";{character}")
