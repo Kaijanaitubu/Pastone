@@ -175,6 +175,23 @@ TYRANO.kag.ftag.master_tag["chara_part_blend"] = {
                             var boxW = Math.max(1, maxX - minX + 1);
                             var boxH = Math.max(1, maxY - minY + 1);
                             
+                            // Canvasを<img>の代わりに直接表示
+                            var $canvas = $(canvas);
+                            $canvas.css({
+                                position: "absolute",
+                                left: 0,
+                                top: 0,
+                                width: "100%",
+                                height: "100%",
+                                "z-index": j_img.css("z-index")
+                            });
+                            $canvas.addClass("part");
+                            $canvas.addClass(key);
+                            
+                            // imgを非表示にしてcanvasを挿入
+                            j_img.css("visibility", "hidden");
+                            j_img.after($canvas);
+                            
                             var animate = function() {
                                 var elapsed = Date.now() - startTime;
                                 var t = Math.min(elapsed / duration, 1.0);
@@ -223,13 +240,13 @@ TYRANO.kag.ftag.master_tag["chara_part_blend"] = {
                                 ctx.clearRect(minX, minY, boxW, boxH);
                                 ctx.putImageData(outputData, minX, minY);
                                 
-                                // Canvas の内容を img に適用
-                                j_img.attr('src', canvas.toDataURL('image/png'));
-                                
                                 if (t < 1.0) {
                                     requestAnimationFrame(animate);
                                 } else {
-                                    // アニメーション完了
+                                    // アニメーション完了：Canvasを削除してimgに戻す
+                                    $canvas.remove();
+                                    j_img.css("visibility", "visible");
+                                    
                                     // 最終的な画像を設定
                                     if ("none" != part.storage) {
                                         j_img.attr("src", "./data/fgimage/" + part.storage);
