@@ -10,7 +10,7 @@ TYRANO.kag.ftag.master_tag["chara_part_blend"] = {
     pm: {
         name: "",
         allow_storage: "false",
-        time: "",
+        time: "600",
         wait: "true"
     },
     

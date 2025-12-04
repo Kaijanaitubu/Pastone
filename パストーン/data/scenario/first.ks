@@ -35,6 +35,7 @@
 [plugin name=manpu]
 [plugin name="chara_part_blend"]
 [plugin name="zoom_fade"]
+[plugin name="layer_blur"]
 
 ;マクロやキーフレームの定義
 @call storage="macro.ks"

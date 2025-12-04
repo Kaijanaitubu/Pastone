@@ -184,7 +184,7 @@ TYRANO.kag.ftag.master_tag["bg_zoom"] = {
         origin_y: "50%"
     },
     start: function(pm) {
-        var pageName = pm.page || "back";
+        var pageName = pm.page || "fore";
         var layerId = "base_" + pageName;  // base_back または base_fore
         
         // クラス名で直接検索（背景は base_fore, base_back）
