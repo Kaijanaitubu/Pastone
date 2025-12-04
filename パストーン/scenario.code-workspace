@@ -7,5 +7,14 @@
 			"path": "../../Paston/パストーン/data/scenario"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"[tyrano]": {
+			"editor.defaultFormatter": null
+		}
+	},
+	"tyrano.customTags": [
+		"chara_zoom",
+		"bg_zoom",
+		"chara_part_blend",
+	]
 }

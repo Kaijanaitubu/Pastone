@@ -12,7 +12,8 @@
 *select1
 
 文永表示[vp]
-[chara_zoom name="ayana" scale="1.6" time="2000", origin_x="50%" origin_y="20%"] zoom = 1.6[vp]
+[bg_zoom scale="1.3" time="1000" wait="false"]
+[chara_zoom name="ayana" scale="1.2" time="1000", origin_x="50%" origin_y="20%" wait="true"] zoom = 1.2[vp]
 [chara_part_blend name="ayana" eyes = "biku" time="600"] eyes = biku[vp]
 [chara_part_blend name="ayana" eyes = "hira" time="600"] eyes = hira[vp]
 [chara_part_blend name="ayana" eyes = "jito" time="600"] eyes = jito[vp]
