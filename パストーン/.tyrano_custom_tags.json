@@ -1,0 +1,110 @@
+{
+  "customTags": [
+    {
+      "name": "chara_zoom",
+      "description": "キャラクター立ち絵を拡大縮小（クロスフェード）",
+      "attributes": {
+        "name": {
+          "required": true,
+          "description": "対象キャラクター名"
+        },
+        "scale": {
+          "required": false,
+          "default": "1.0",
+          "description": "拡大率（1.0=等倍）"
+        },
+        "time": {
+          "required": false,
+          "default": "600",
+          "description": "アニメーション時間（ミリ秒）"
+        },
+        "origin_x": {
+          "required": false,
+          "default": "50%",
+          "description": "拡大の中心点X座標"
+        },
+        "origin_y": {
+          "required": false,
+          "default": "50%",
+          "description": "拡大の中心点Y座標"
+        },
+        "wait": {
+          "required": false,
+          "default": "true",
+          "description": "アニメーション完了を待つか"
+        }
+      }
+    },
+    {
+      "name": "bg_zoom",
+      "description": "背景レイヤーを拡大縮小（クロスフェード）",
+      "attributes": {
+        "layer": {
+          "required": false,
+          "default": "0",
+          "description": "対象レイヤー番号"
+        },
+        "scale": {
+          "required": false,
+          "default": "1.0",
+          "description": "拡大率（1.0=等倍）"
+        },
+        "time": {
+          "required": false,
+          "default": "600",
+          "description": "アニメーション時間（ミリ秒）"
+        },
+        "origin_x": {
+          "required": false,
+          "default": "50%",
+          "description": "拡大の中心点X座標"
+        },
+        "origin_y": {
+          "required": false,
+          "default": "50%",
+          "description": "拡大の中心点Y座標"
+        },
+        "wait": {
+          "required": false,
+          "default": "true",
+          "description": "アニメーション完了を待つか"
+        }
+      }
+    },
+    {
+      "name": "chara_part_blend",
+      "description": "キャラクターパーツをクロスフェード（背景透過対応）",
+      "attributes": {
+        "name": {
+          "required": true,
+          "description": "対象キャラクター名"
+        },
+        "brow": {
+          "required": false,
+          "description": "眉差分ファイル名"
+        },
+        "eyes": {
+          "required": false,
+          "description": "目差分ファイル名"
+        },
+        "mouth": {
+          "required": false,
+          "description": "口差分ファイル名"
+        },
+        "arm": {
+          "required": false,
+          "description": "腕差分ファイル名"
+        },
+        "effect": {
+          "required": false,
+          "description": "エフェクト差分ファイル名"
+        },
+        "time": {
+          "required": false,
+          "default": "600",
+          "description": "ブレンド時間（ミリ秒）"
+        }
+      }
+    }
+  ]
+}
