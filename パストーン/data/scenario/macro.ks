@@ -164,8 +164,13 @@
 
 ;各キャラの表情表示マクロ
 [macro name="mizuka"]
-	[chara_mod name="mizuka" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600" ]
+	[chara_part_blend name="mizuka" brow="%b" eyes="%e" mouth="%m" arm="%arm" effect="%effect" wait="%m_wait|false" time="%m_time|600"]
 	[chara_show name="mizuka" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
+[endmacro]
+
+[macro name="mizuka_r"]
+	[chara_part_blend name="mizuka_r" brow="%b" eyes="%e" mouth="%m" arm="%arm" effect="%effect" wait="%m_wait|false" time="%m_time|600"]
+	[chara_show name="mizuka_r" top="%top|20" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000" ] 
 [endmacro]
 
 [macro name="RozLaz"]
@@ -174,12 +179,12 @@
 [endmacro]
 
 [macro name="kouki"]
-	[chara_mod name="kouki" face="%f" cross="false" wait="%m_wait|false" time="%m_time|600"]
+	[chara_part_blend name="kouki" brow="%b" eyes="%e" mouth="%m" wait="%m_wait|false" time="%m_time|600"]
 	[chara_show name="kouki" zindex="%z" wait="%s_wait|true" top="%top|-50" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
 [macro name="ayana"]
-	[chara_mod name="ayana" face="%f" cross="false" wait="%m_wait|false" time="%time|1000"]
+	[chara_part_blend name="ayana" brow="%b" eyes="%e" mouth="%m" wait="%m_wait|false" time="%m_time|600"]
 	[chara_show name="ayana" top="%top|40" zindex="%z" wait="%s_wait|true" layer="%layer|0" time="%time|1000"]
 [endmacro]
 
