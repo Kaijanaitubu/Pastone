@@ -75,9 +75,24 @@ TYRANO.kag.ftag.master_tag["chara_part_blend"] = {
                         var part = map_part[key];
                         var j_img = target_obj.find(".part." + key);
                         
+                        // 画像要素が見つからない場合はスキップ
+                        if (j_img.length === 0) {
+                            console.warn("パーツ画像が見つかりません: " + key);
+                            n++;
+                            return;
+                        }
+                        
                         // Canvas要素を作成（表示サイズに合わせる：透明プレースホルダ対策）
                         var canvas = document.createElement('canvas');
                         var domImg = j_img.get(0);
+                        
+                        // domImgが存在することを確認
+                        if (!domImg) {
+                            console.warn("DOM要素取得失敗: " + key);
+                            n++;
+                            return;
+                        }
+                        
                         var isTransparentPlaceholder = /transparent\.png$/.test(j_img.attr('src'));
                         var naturalW = domImg.naturalWidth || 0;
                         var naturalH = domImg.naturalHeight || 0;
