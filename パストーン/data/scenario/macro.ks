@@ -255,6 +255,13 @@
 	[frame p="50%" y="20"]
 [endkeyframe]
 
+;うんうん
+[keyframe name="unun"]
+	[frame p="25%" y="20"]
+	[frame p="50%" y="-20"]
+	[frame p="750" y="20"]
+[endkeyframe]
+
 ;ぴょんぴょん
 [keyframe name="pyonpyon"]
 	[frame p="25%" y="-20"]
@@ -277,7 +284,7 @@
 [endkeyframe]
 
 [macro name="focus_out"]
-	[filter name="%name" saturate="80" brightness="85"]
+	[filter name="%name" saturate="70" brightness="50"]
 	[kanim keyframe="focus_out_anim" name="%name" time="600"]
 [endmacro]
 

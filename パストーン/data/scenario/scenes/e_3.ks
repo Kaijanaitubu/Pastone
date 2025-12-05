@@ -1,4 +1,6 @@
 [startoption]
+;[ambient_light_off]
+;↑切った方がいい？
 [bg2 storage="park_night.png" time="1000" ]
 
 外に出ると虫の合唱が、嫌でも耳に入る。[vp]
@@ -59,7 +61,8 @@
 #雪翔
 ≪‥‥‥‥≫[vp]
 
-[kanim keyframe="un" name="ayana" time="500"]
+[kanim keyframe="un" name="ayana" time="500" ]
+[better_wait time="500"]
 [ayana e="n" m="yoko" b="aga"]
 #文永
 「‥‥否定しないということは、肯定と捉えていいんですよね？」[vp]
@@ -68,9 +71,9 @@
 ≪‥‥ああ、そうだよ≫[vp]
 
 [ayana e="toji" m="hira" b="n"]
-俺が頷いてみせると、無表情だった文永の顔が一瞬安堵のものに変わった。[vp]
+俺が頷いてみせると、無表情だった文永の顔が一瞬安堵のものに変わった。
+[ayana e="n" m="n" b="n"][vp]
 
-[ayana e="n" m="n" b="n"]
 #文永
 「‥‥よかった。これで全然違っていたらどうしようかと」[vp]
 
@@ -85,12 +88,19 @@
 
 そう一言おいて、しばらく沈黙が続く。[vp]
 
+
+[anim name="ayana" time="500" effect="easeInCubic" left="-=40" top="+=20" ]
+[better_wait time="500"]
+[anim name="ayana" time="500" effect="easeOutCubic" left="-=10" top="-=20" ]
 #文永
 「‥‥覚えていますか？　ここの公園」[vp]
 
 #文永
 「あなたと、『みずねぇ』が初めて会った場所です」[vp]
-
+[anim name="ayana" time="500" effect="easeInCubic" left="+=40" top="+=20" ]
+[better_wait time="500"]
+[anim name="ayana" time="500" effect="easeOutCubic" left="+=10" top="-=20" ]
+[better_wait time="500"]
 [ayana e="hira"]
 #文永
 「そう、ですよね？」[vp]
@@ -180,6 +190,7 @@
 俺は、あの時から逃げ続けていたんだ。[vp]
 
 [focus_in name="ayana"]
+[better_wait time="600"]
 [ayana e="n" m="yoko" b="n"]
 #文永
 「‥‥これが、父が必死になって調べ上げた‥‥『悲劇の事故』です」[vp]

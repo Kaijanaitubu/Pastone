@@ -17,6 +17,11 @@
 
 というわけで、今日も変わらず作業する‥‥はずだったのだが、[vp]
 
+[backlay]
+[chara_part name="mizuka" brow="n" mouth="niko" wait="false" time="0"]
+[chara_show name="mizuka" top="20" left="640" time="0" wait="false" page="back" ]
+[trans layer="0" time="1600" method="fadeInRight" ]
+[better_wait time="2000"]
 #美寿花
 「‥‥‥‥」[vp]
 
@@ -27,6 +32,7 @@
 それを後ろからじっと見つめる美寿花。[vp]
 ‥‥なんだこの空間。[vp]
 
+[kanim keyframe="unun" name="mizuka" time="800" ]
 #美寿花
 「‥‥‥‥‥‥‥‥」[vp]
 
@@ -40,17 +46,24 @@
 
 流石に休憩入れるか‥‥と立ち上がり、ヘッドホンを外す。[vp]
 
+[anim name="mizuka" time="600" top="+=40" opacity="0" effect="easeInQuad"]
+[better_wait time="1000"]
+;[wa]だと動かなくなる？
+[chara_hide name="mizuka" time="0" ]
+[mizuka b="nemu" m="hwara" effect="ase" ]
 #美寿花
 「お。お疲れ様～‥‥っと」[vp]
 
 そう言いながら、やっぱり同じ体勢じゃ辛かったのか、大きく伸びをして僕の肩に手を置く。[vp]
 
+[mizuka m="niko" effect="none"]
 #雪翔
 ≪‥‥‥‥≫[vp]
 
 ‥‥美寿花にとっては喋りたいってだけなんだろうけど‥‥[vp]
 意識外から触れられると否応なしにドキッとしてしまうのは、俺が女の子に耐性がないからだろうか。[vp]
 
+[mizuka e="none" m="chi"]
 #美寿花
 「さっきの部分、結構時間かかってたね。どうしたの？」[vp]
 
@@ -60,6 +73,7 @@
 #雪翔
 ≪いやそうじゃなくて、何でいるの。ここに≫[vp]
 
+[mizuka b="saga" m="neko" arm="te"]
 #美寿花
 「ん～、暇だった‥‥からかな？」[vp]
 
@@ -68,6 +82,7 @@
 
 我が家に一つだけある空き部屋。クーラーもあるので空調面で問題はないはずだが‥‥[vp]
 
+[mizuka b="n" m="niko" arm="none"]
 #美寿花
 「一人でいるの、なんか苦手なんだよね。それに人が何かしてるのって、見てて面白いし」[vp]
 
