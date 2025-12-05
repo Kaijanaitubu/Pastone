@@ -267,6 +267,26 @@
 	[frame p="50%" y="-20"]
 [endkeyframe]
 
+;フォーカスアウト・復帰
+[keyframe name="focus_out_anim"]
+	[frame p="100%" y="20"]
+[endkeyframe]
+
+[keyframe name="focus_in_anim" ]
+	[frame p="100%" y="-20"]
+[endkeyframe]
+
+[macro name="focus_out"]
+	[filter name="%name" saturate="80" brightness="85"]
+	[kanim keyframe="focus_out_anim" name="%name" time="600"]
+[endmacro]
+
+[macro name="focus_in"]
+	;なぜか個別指定だと効かない？
+	[free_filter]
+	[kanim keyframe="focus_in_anim" name="%name" time="600"]
+[endmacro]
+
 ;マクロ定義
 [macro name="black_band_init"]
 ;黒帯使うための初期化
