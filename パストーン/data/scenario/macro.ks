@@ -259,7 +259,7 @@
 [keyframe name="unun"]
 	[frame p="25%" y="20"]
 	[frame p="50%" y="-20"]
-	[frame p="750" y="20"]
+	[frame p="75%" y="20"]
 [endkeyframe]
 
 ;ぴょんぴょん

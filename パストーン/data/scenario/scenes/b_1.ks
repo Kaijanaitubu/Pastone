@@ -2,6 +2,7 @@
 
 [startoption]
 [bg2 storage="myroom.png" ]
+[ambient_light_off]
 [voconfig sebuf="2" name="美寿花" vostorage="b_1/mizuka_{number}.ogg" number="1"]
 [voconfig sebuf="3" name="ロズ" vostorage="b_1/roz_{number}.ogg" number="1"]
 [voconfig sebuf="4" name="ラズ" vostorage="b_1/laz_{number}.ogg" number="1"]
@@ -16,12 +17,15 @@
 （まぁ、俺にはあまり関係ないけど）[vp]
 
 というわけで、今日も変わらず作業する‥‥はずだったのだが、[vp]
-
-[backlay]
-[chara_part name="mizuka" brow="n" mouth="niko" wait="false" time="0"]
-[chara_show name="mizuka" top="20" left="640" time="0" wait="false" page="back" ]
-[trans layer="0" time="1600" method="fadeInRight" ]
-[better_wait time="2000"]
+    [backlay]
+    [chara_part name="mizuka" brow="n" mouth="niko" wait="false" time="0"]
+[if exp="tf.is_skip != true"]
+    [chara_show name="mizuka" top="20" left="640" time="0" wait="false" page="back" ]
+    [trans layer="0" time="1600" method="fadeInRight" ]
+    [wait time="2000"]
+[else]
+    [chara_show name="mizuka" top="20" left="640" time="10" wait="true" ]
+[endif]
 #美寿花
 「‥‥‥‥」[vp]
 
@@ -45,10 +49,10 @@
 そうはいっても、かれこれ数時間はこの状態。[vp]
 
 流石に休憩入れるか‥‥と立ち上がり、ヘッドホンを外す。[vp]
-
-[anim name="mizuka" time="600" top="+=40" opacity="0" effect="easeInQuad"]
-[better_wait time="1000"]
-;[wa]だと動かなくなる？
+[if exp="tf.is_skip != true"]
+    [anim name="mizuka" time="600" top="+=40" opacity="0" effect="easeInQuad"]
+    [wait time="1000"]
+[endif]
 [chara_hide name="mizuka" time="0" ]
 [mizuka b="nemu" m="hwara" effect="ase" ]
 #美寿花
@@ -105,7 +109,8 @@
 
 少し迷った結果、冷蔵庫を指さす。[vp]
 
-#美寿花「ああ、休憩ね。了解了解」[vp]
+#美寿花
+「ああ、休憩ね。了解了解」[vp]
 
 やっぱり、触れてないと伝わらないのか‥‥[vp]
 改めて、喋れないことの不便さが浮き彫りになる。[vp]
