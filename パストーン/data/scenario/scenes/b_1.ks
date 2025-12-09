@@ -17,8 +17,8 @@
 （まぁ、俺にはあまり関係ないけど）[vp]
 
 というわけで、今日も変わらず作業する‥‥はずだったのだが、[vp]
-    [backlay]
-    [chara_part name="mizuka" brow="n" mouth="niko" wait="false" time="0"]
+[backlay]
+[chara_part name="mizuka" brow="n" mouth="niko" wait="false" time="0"]
 [if exp="tf.is_skip != true"]
     [chara_show name="mizuka" top="20" left="640" time="0" wait="false" page="back" ]
     [trans layer="0" time="1600" method="fadeInRight" ]
@@ -96,39 +96,53 @@
 #雪翔
 ≪俺は全く集中できないんだけどね‥‥≫[vp]
 
+[chara_hide name="mizuka"]
 まさか、これからもここに入り浸るつもりなのだろうか？[vp]
 
 そんな嫌な予感を抱きながら、美寿花から離れ部屋から出る。[vp]
 
+[bg2 storage="living.png" time="1000" ]
+
 #美寿花
 「あれ、どこ行くの？」[vp]
 ;美寿花の立ち絵をセリフの後に表示
-
+[backlay]
+[chara_part name="mizuka" brow="n" mouth="niko" wait="false" time="0"]
+[if exp="tf.is_skip != true"]
+    [chara_show name="mizuka" top="20" left="600" time="0" wait="false" page="back" ]
+    [trans layer="0" time="800" method="fadeInRight" ]
+    [wait time="1000"]
+[else]
+    [chara_show name="mizuka" top="20" left="600" time="10" wait="true" ]
+[endif]
 #雪翔
 ≪喉乾いたから飲み物‥‥ってあー‥‥≫[vp]
 
 少し迷った結果、冷蔵庫を指さす。[vp]
 
+[mizuka e="n" m="yoko" b="n"]
 #美寿花
 「ああ、休憩ね。了解了解」[vp]
 
 やっぱり、触れてないと伝わらないのか‥‥[vp]
 改めて、喋れないことの不便さが浮き彫りになる。[vp]
 
+[mizuka m="niko"]
 #美寿花
 「そういえばさ、君って学校どうしてるの？」[vp]
 
 #雪翔
 ≪‥‥学校？≫[vp]
 
+[mizuka m="mu" arm="kan"]
 俺が首を傾げると、美寿花も『あれ？』と同じことをする。[vp]
 
+[mizuka b="ken"]
 #美寿花
 「大学だよ大学。声が出ないんじゃ、色々と大変じゃないかな～って」[vp]
 
 あ、そういうことか。[vp]
-#美寿花
-の言わんとしていることを察し、答えようとする‥‥が[vp]
+美寿花の言わんとしていることを察し、答えようとする‥‥が[vp]
 
 #雪翔
 ≪‥‥えーと‥‥≫[vp]
@@ -136,14 +150,26 @@
 どうやって伝えようか‥‥[vp]
 何かに書いて、と思ったが、取りに行くのもなんだか面倒くさい。[vp]
 
+[mizuka b="saga" arm="none" m="yoko"]
 #美寿花
 「‥‥いや、変な意地張ってないで素直に来なよ。私も相手の声聞けた方が話しやすいし」[vp]
 
 #雪翔
 ≪そ、れはそうかもしれないけど‥‥≫[vp]
 
+[mizuka m="niko"]
 ‥‥‥‥‥[vp]
-数秒間の葛藤の末、結局美寿花に頼ることにする。[vp]
+
+[better_wait time="1000"]
+数秒間の葛藤の末、結局美寿花に頼ることにする。
+[if exp="tf.is_skip != true"]
+    [anim name="mizuka" time="800" left="360" effect="easeInOutQuad" ]
+    [wait time="1000"]
+[else]
+    [anim name="mizuka" time="10" left="480" ]
+    [wait time="10"]
+[endif]
+[vp]
 
 #雪翔
 ≪‥‥学校、ずっと行ってないんだ≫[vp]
@@ -155,26 +181,34 @@
 #雪翔
 ≪ああ、ずっと≫[vp]
 
+[mizuka e="toji"]
 #美寿花
 「‥‥」[vp]
 
+[better_wait time="1000"]
+[mizuka e="jito" m="hawa" b="koma"]
 #美寿花
-「ニート、ってこと‥‥？」[vp]
+「ニート、[better_wait time="400"]ってこと‥‥？」[vp]
 
 #雪翔
 ≪その通りだけどその表現は止めてくれるかな！？≫[vp]
 ;テキストボックスを揺らす演出？
 
+[mizuka e="biku" m="chi" b="aga"]
 #美寿花
 「ああごめんごめん」[vp]
 
+[mizuka e="kana" b="koma"]
 #美寿花
 「‥‥でもそっか。学校行けてないのか‥‥」[vp]
 
-そこまで言って、あ、と何か閃いたように目が輝きだす。[vp]
+そこまで言って、[mizuka e="kira" m="chi" b="n" time="200"]あ、[better_wait time="300"]と何か閃いたように目が輝きだす。[vp]
 
 同時に、そこはかとなく嫌な予感。[vp]
 
+[mizuka m="wara" e="x" b="shaki"] 
+;やりすぎか？
+[kanim keyframe="unun" name="mizuka" time="800" ]
 #美寿花
 「じゃあ、一緒に学校行こうよ！」[vp]
 
@@ -186,15 +220,18 @@
 #雪翔
 ≪それにめんどくさいし≫[vp]
 
+[mizuka arm="kan" e="none" m="chi" ]
 #美寿花
 「それはどうかな？　多分、雪翔君の目標の一歩にはなると思うよ？」[vp]
 
 #雪翔
 ≪‥‥というと？≫[vp]
 
+[mizuka e="toji" m="toji"]
 #美寿花
 「考えたんだけどさ」[vp]
 
+[mizuka arm="none" e="none" m="chi" b="n"]
 #美寿花
 「雪翔君が声を出せないのって『喋る必要性がない生活』のせいなんじゃないかな～って」[vp]
 
@@ -208,20 +245,24 @@
 #美寿花
 「前までは、人に何か伝えることが大変だったかもしれないけど‥‥今は私っていう『声』もいる」[vp]
 
+[mizuka m="toji" b="saga"]
 #美寿花
 「めんどくさいのは‥‥私じゃどうにもできないかもしれないけど‥‥」[vp]
 
+[mizuka b="shin" m="niko"]
 #美寿花
 「それでも、行ってみない？　学校」[vp]
 
 #雪翔
 ≪って言われてもなぁ‥‥≫[vp]
 
+[mizuka b="n"]
 #美寿花
 「まぁ、考えといてよ。といっても、学校明日からだけどね」[vp]
 
 そう言って苦笑を浮かべる美寿花だが、ふと時計を確認すると、[vp]
 
+[mizuka arm="te" e="biku" m="biku"]
 #美寿花
 「‥‥ってもうこんな時間！？　作業ちょっとだけ見たら買い物しようと思ってたのに‥‥」[vp]
 
@@ -230,13 +271,15 @@
 #雪翔
 ≪別に、家に残ってるので適当に作れば‥‥≫[vp]
 
+[mizuka b="fuman" e="none" arm="none" m="toji"]
 そう言い終わる前に、スマホに何やら打ち込んでいく美寿花。[vp]
 
+[mizuka m="chi"]
 #美寿花
 「待ってて！　ちょっと色々買ってくるから！」[vp]
-
+[anim name="mizuka" time="600" left="+=800" opacity="0" effect="easeInBack"]
 ‥‥行ってしまった。[vp]
-
+[chara_hide name="mizuka" time="0" ]
 #雪翔
 ≪‥‥‥‥≫[vp]
 
