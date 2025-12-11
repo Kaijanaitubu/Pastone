@@ -44,6 +44,8 @@ def process_character(character):
 
     # 再帰的にパス内の画像ディレクトリを検出し、部分名はcharacter_pathからの相対パスを'_'で接続して作る
     discovered = []
+    arm_n_png_path = None
+    
     for root, dirs, files in os.walk(character_path):
         pngs = [f for f in files if f.endswith(".png")]
         if not pngs:
@@ -54,7 +56,19 @@ def process_character(character):
             continue
         part_name = rel.replace(os.sep, "_")
         base_part = os.path.basename(root)
+        
+        # arm フォルダの直下で n.png を見つけたら保存
+        if base_part == "arm" and rel.count(os.sep) == 0 and "n.png" in pngs:
+            arm_n_png_path = f"chara/{base_character}/arm/n.png"
+        
         discovered.append((part_name, root, base_part, sorted(pngs)))
+
+    # arm の n.png が見つかった場合、最初に出力
+    arm_parts = [x for x in discovered if x[2] == "arm"]
+    if arm_n_png_path and arm_parts:
+        first_arm = arm_parts[0]
+        zindex = base_zindex_map.get("arm", 4)
+        char_lines.append((zindex, f'[chara_layer name="{character}" part=arm id=n storage="{arm_n_png_path}" zindex="{zindex}"]'))
 
     for part_name, part_path, base_part, filenames in sorted(discovered, key=lambda x: x[0]):
         # zindex の決定: ディレクトリの basename が固定定義にある場合はそれを優先
@@ -68,10 +82,8 @@ def process_character(character):
                 next_zindex += 1
             zindex = dynamic_zindex_map[part_name]
 
-        # 特別対応: armパートの "n.png" を先に出す（ディレクトリの basename が arm の場合）
-        if base_part == "arm" and "n.png" in filenames:
-            rel_path = f"chara/{base_character}/{rel.replace(os.sep, '/')}/n.png"
-            char_lines.append((zindex, f'[chara_layer name="{character}" part={part_name} id=n storage="{rel_path}" zindex="{zindex}"]'))
+        # arm フォルダ直下の n.png は既に出力済みのためスキップ
+        if base_part == "arm" and "n.png" in filenames and part_name == "arm":
             filenames = [f for f in filenames if f != "n.png"]
 
         # none 定義
