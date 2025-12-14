@@ -4,10 +4,8 @@
 
 [bg2 storage="living.png" time=10]
 
-[chara_show name="mizuka_r" top="20" wait="true" layer="0" time="1000" ] 
-[chara_show name="ayana" top="40" wait="true" layer="0" time="1000" ]
-
-[backlay]
+[roz m="O" e="biku" b="arch"]
+[mizuka m="n" e="niko" b="n"]
 
 *select1
 

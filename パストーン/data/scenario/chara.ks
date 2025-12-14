@@ -1,11 +1,14 @@
 ; ;------------------------------------------------------------------------------------------------------
 ; ; キャラ名定義
-; ;------------------------------------------------------------------------------------------------------
+; ;------------------------------------------------------------------------------------------------------v
 
+[chara_new  name="ayana" storage="chara/ayana/base.png"]
+[chara_new  name="kouki" storage="chara/kouki/base.png"]
+[chara_new  name="mizuka" storage="chara/mizuka/base.png"]
+[chara_new  name="mizuka_r" storage="chara/mizuka_r/base.png"]
+[chara_new  name="rozlaz" storage="chara/rozlaz/base.png" width="463.16" height="571.66"]
 ; [chara_new  name="mizuka" storage="chara/mizuka/kushou.png" width="642" height="1227"]
 ; [chara_new  name="kouki" storage="chara/kouki/bishou.png" width="1003" height="1418"]
-; ; [chara_new  name="roz" storage="chara/RozLaz/roz_neutral.png" jname="ロズ" ]
-; ; [chara_new  name="laz" storage="chara/RozLaz/laz_normal.png" jname="ラズ" ]
 ; [chara_new  name="ayana" storage="chara/ayana/normal.png" width="868" height="1227"]
 ; [chara_new  name="RozLaz" storage="chara/RozLaz/normal.png" width="523" height="552.51"]
 ; ; [chara_new  name="eijyurou" storage="chara/eijyurou.png" width="320" height="720" jname="永寿郎"  ]

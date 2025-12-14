@@ -40,8 +40,12 @@
 ;マクロやキーフレームの定義
 @call storage="macro.ks"
 
-;このゲームで登場するキャラクターを宣言(立ち絵は仮)
+;このゲームで登場するキャラクターを宣言
+@call storage="chara.ks"
 @call storage="chara_layer.ks"
+
+;環境光設定の定義
+@call storage="ambient_light_def.ks"
 
 ;ボタン関連
 ; [vrepeat_config graphic=".button_voice.png" x="400" y="500"]

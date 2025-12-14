@@ -1,9 +1,3 @@
-[chara_new  name="ayana" storage="chara/ayana/base.png"]
-[chara_new  name="kouki" storage="chara/kouki/base.png"]
-[chara_new  name="mizuka" storage="chara/mizuka/base.png"]
-[chara_new  name="mizuka_r" storage="chara/mizuka_r/base.png"]
-[chara_new  name="rozlaz" storage="chara/rozlaz/base.png"]
-
 ;ayana
 [chara_layer name="ayana" part=mouth id=none storage="none" zindex="1"]
 [chara_layer name="ayana" part=mouth id=biku storage="chara/ayana/mouth/biku.png" zindex="1"]
