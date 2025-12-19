@@ -179,7 +179,7 @@
 [endmacro]
 
 [macro name="laz"]
-	[chara_part name="rozlaz" body="laz" laz_brow="none" laz_eyes="none" laz_mouth="none" roz_brow="none" roz_eyes="none" roz_mouth="none" wait="%m_wait|false" time="%m_time|600"]
+	[chara_part name="rozlaz" body="laz" laz_brow="%b" laz_eyes="%e" laz_mouth="%m" roz_brow="none" roz_eyes="none" roz_mouth="none" wait="%m_wait|false" time="%m_time|600"]
 	[chara_show name="rozlaz" top="%top|150" zindex="%z"  wait="s_wait|true" layer="%layer|0" time="%s_time|1000"]
 [endmacro]
 
