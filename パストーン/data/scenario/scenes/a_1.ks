@@ -145,13 +145,13 @@
 俺の言葉を無視し、携帯からの声達はどんどん険悪な雰囲気になっていく。[vp]
 
 ;立ち絵 ロズ拡大版 roz_okori_2
-[roz_big f="roz_okori_2" top="-50"]
+[roz b="oko" e="jito" m="a"]
 #ロズ
 「どうやら、今日こそ決着つけなあかんみたいやな」[vp]
 
 ;立ち絵 ラズ拡大版 laz_confident
 ;漫符 tameiki？
-[laz_big f="laz_confident" top="-50"]
+[laz b="n" e="toji" m="wara"]
 [manpu layer="1" type="tameiki" x="550" y="80" sound="null.mp3"]
 #ラズ
 「勝てるとお思いで？　私、貴方に負けたことないでしょう？」[vp]
@@ -159,7 +159,7 @@
 ;☆
 ;立ち絵 ロズ拡大版 roz_okori_3
 ;漫符 muka
-[roz_big f="roz_okori_3" top="-50"]
+[roz b="oko" e="jito" m="O"]
 [manpu layer="1" type="muka" x="700" y="50" sound="null.mp3"]
 #ロズ
 「当たりまえやろ毎回引き分けなんやから！！　とにかく、覚悟──」[vp]
